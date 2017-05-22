@@ -62,8 +62,9 @@ public class JanggiApp extends JFrame {
 		btnstart.setFont(new Font("±¼¸²", Font.PLAIN, 30));
 		btnstart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				PlayerScreen PS = new PlayerScreen();
-				PS.go();
+				dispose();
+				PlayerScreen ps = new PlayerScreen();
+				ps.go();
 			}
 		});
 		btnstart.setForeground(new Color(160, 82, 45));

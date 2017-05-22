@@ -42,7 +42,7 @@ public class PlayerScreen extends JFrame implements ActionListener {
 	public PlayerScreen() {
 		setBounds(100, 100, 688, 533);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(255, 218, 185));
+		contentPane.setBackground(JanggiApp.c);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 
@@ -63,8 +63,8 @@ public class PlayerScreen extends JFrame implements ActionListener {
 		textField_1.setColumns(10);
 
 		JButton btnStart = new JButton("START");
-		btnStart.setForeground(new Color(221, 160, 221));
-		btnStart.setBackground(new Color(255, 218, 185));
+		btnStart.setForeground(new Color(160, 82, 45));
+		btnStart.setBackground(JanggiApp.c);
 		btnStart.addActionListener(this);
 
 		JLabel lblNewLabel = new JLabel("PRODUCTION BY TEEMU WARRIORS");
