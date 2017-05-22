@@ -19,6 +19,7 @@ public class JanggiApp extends JFrame {
 	
 	static Color c=new Color(255, 218, 185);
 	private JPanel contentPane;
+	private JLabel lblintro;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
 	/**
@@ -72,7 +73,7 @@ public class JanggiApp extends JFrame {
 		btnstart.setBounds(193, 182, 179, 64);
 		contentPane.add(btnstart);
 		
-		JLabel lblintro = new JLabel("PRODUCTION BY TEEMU WARRIOUS");
+		lblintro = new JLabel("PRODUCTION BY TEEMU WARRIOUS");
 		lblintro.setFont(new Font("±¼¸²", Font.PLAIN, 20));
 		lblintro.setForeground(new Color(169, 169, 169));
 		lblintro.setBounds(121, 459, 326, 18);

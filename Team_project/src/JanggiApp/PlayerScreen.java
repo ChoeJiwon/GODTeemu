@@ -20,9 +20,10 @@ import javax.swing.JButton;
 public class PlayerScreen extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
-	private JTextField textField;
-	private JTextField textField_1;
-
+	private JTextField p1text;
+	private JTextField p2text;
+	private JLabel lblOopWithJanggi,lblPlayer1,lblPlayer2,labelintro;
+	private JButton btnStart;
 	/**
 	 * Launch the application.
 	 */
@@ -46,29 +47,29 @@ public class PlayerScreen extends JFrame implements ActionListener {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 
-		JLabel lblOopWithJanggi = new JLabel("OOP WITH JANGGI");
+		lblOopWithJanggi = new JLabel("OOP WITH JANGGI");
 		lblOopWithJanggi.setForeground(new Color(160, 82, 45));
 		lblOopWithJanggi.setFont(new Font("±¼¸²", Font.PLAIN, 50));
 
-		JLabel lblPlayer = new JLabel("Player1 :");
-		lblPlayer.setForeground(new Color(169, 169, 169));
+		lblPlayer1 = new JLabel("Player1 :");
+		lblPlayer1.setForeground(new Color(169, 169, 169));
 
-		textField = new JTextField();
-		textField.setColumns(10);
+		p1text = new JTextField();
+		p1text.setColumns(10);
 
-		JLabel lblPlayer_1 = new JLabel("Player2 :");
-		lblPlayer_1.setForeground(new Color(169, 169, 169));
+		lblPlayer2 = new JLabel("Player2 :");
+		lblPlayer2.setForeground(new Color(169, 169, 169));
 
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
+		p2text = new JTextField();
+		p2text.setColumns(10);
 
-		JButton btnStart = new JButton("START");
+		btnStart = new JButton("START");
 		btnStart.setForeground(new Color(160, 82, 45));
 		btnStart.setBackground(JanggiApp.c);
 		btnStart.addActionListener(this);
 
-		JLabel lblNewLabel = new JLabel("PRODUCTION BY TEEMU WARRIORS");
-		lblNewLabel.setForeground(new Color(169, 169, 169));
+		labelintro = new JLabel("PRODUCTION BY TEEMU WARRIORS");
+		labelintro.setForeground(new Color(169, 169, 169));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING).addGroup(gl_contentPane
 				.createSequentialGroup()
@@ -79,13 +80,13 @@ public class PlayerScreen extends JFrame implements ActionListener {
 						.addGroup(gl_contentPane.createSequentialGroup().addGap(293).addComponent(btnStart))
 						.addGroup(gl_contentPane.createSequentialGroup().addGap(198).addGroup(gl_contentPane
 								.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPane.createSequentialGroup().addGap(18).addComponent(lblPlayer)
-										.addGap(18).addComponent(textField, GroupLayout.PREFERRED_SIZE,
+								.addGroup(gl_contentPane.createSequentialGroup().addGap(18).addComponent(lblPlayer1)
+										.addGap(18).addComponent(p1text, GroupLayout.PREFERRED_SIZE,
 												GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
 								.addGroup(gl_contentPane.createSequentialGroup().addGap(18).addGroup(gl_contentPane
-										.createParallelGroup(Alignment.LEADING).addComponent(lblNewLabel)
-										.addGroup(gl_contentPane.createSequentialGroup().addComponent(lblPlayer_1)
-												.addGap(18).addComponent(textField_1, GroupLayout.PREFERRED_SIZE,
+										.createParallelGroup(Alignment.LEADING).addComponent(labelintro)
+										.addGroup(gl_contentPane.createSequentialGroup().addComponent(lblPlayer2)
+												.addGap(18).addComponent(p2text, GroupLayout.PREFERRED_SIZE,
 														GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))))))
 				.addContainerGap(113, Short.MAX_VALUE)));
 		gl_contentPane.setVerticalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -93,22 +94,25 @@ public class PlayerScreen extends JFrame implements ActionListener {
 						.addComponent(lblOopWithJanggi, GroupLayout.PREFERRED_SIZE, 64, GroupLayout.PREFERRED_SIZE)
 						.addGap(93)
 						.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								.addComponent(p1text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
 										GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblPlayer))
+								.addComponent(lblPlayer1))
 						.addGap(33)
 						.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
+								.addComponent(p2text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
 										GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblPlayer_1))
-						.addGap(51).addComponent(btnStart).addGap(86).addComponent(lblNewLabel).addContainerGap()));
+								.addComponent(lblPlayer2))
+						.addGap(51).addComponent(btnStart).addGap(86).addComponent(labelintro).addContainerGap()));
 		contentPane.setLayout(gl_contentPane);
 	}
 
-	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-
+		if(p1text.getText().length()!=0 && p2text.getText().length()!=0)
+		{
+			dispose();
+			MainFrame mf=new MainFrame();
+			mf.go();
+		}
 	}
 
 }
