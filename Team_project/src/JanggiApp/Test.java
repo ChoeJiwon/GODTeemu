@@ -1,3 +1,4 @@
+package JanggiApp;
 
 public class Test {
 
