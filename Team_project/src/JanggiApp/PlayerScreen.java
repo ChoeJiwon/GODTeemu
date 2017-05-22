@@ -20,13 +20,11 @@ import javax.swing.JButton;
 public class PlayerScreen extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
+
 	private JTextField p1text;
 	private JTextField p2text;
 	private JLabel lblOopWithJanggi,lblPlayer1,lblPlayer2,labelintro;
 	private JButton btnStart;
-	/**
-	 * Launch the application.
-	 */
 
 	public void go() {
 		try {
@@ -37,9 +35,6 @@ public class PlayerScreen extends JFrame implements ActionListener {
 		}
 	}
 
-	/**
-	 * Create the frame.
-	 */
 	public PlayerScreen() {
 		setBounds(100, 100, 688, 533);
 		contentPane = new JPanel();
