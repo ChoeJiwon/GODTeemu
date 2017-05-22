@@ -16,14 +16,15 @@ import java.awt.Font;
 import javax.swing.ButtonGroup;
 
 public class JanggiApp extends JFrame {
-
+	
+	static Color c=new Color(255, 218, 185);
 	private JPanel contentPane;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public void go() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -44,7 +45,7 @@ public class JanggiApp extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 594, 568);
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(255, 218, 185));
+		contentPane.setBackground(c);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -65,8 +66,8 @@ public class JanggiApp extends JFrame {
 				PS.go();
 			}
 		});
-		btnstart.setForeground(new Color(221, 160, 221));
-		btnstart.setBackground(new Color(255, 218, 185));
+		btnstart.setForeground(new Color(160, 82, 45));
+		btnstart.setBackground(c);
 		btnstart.setBounds(193, 182, 179, 64);
 		contentPane.add(btnstart);
 		
@@ -79,10 +80,11 @@ public class JanggiApp extends JFrame {
 		JButton btnset = new JButton("SETTING");
 		buttonGroup.add(btnset);
 		btnset.setFont(new Font("±¼¸²", Font.PLAIN, 30));
-		btnset.setForeground(new Color(221, 160, 221));
-		btnset.setBackground(new Color(255, 218, 185));
+		btnset.setForeground(new Color(160, 82, 45));
+		btnset.setBackground(c);
 		btnset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				dispose();
 				SettingFrame set = new SettingFrame();
 				set.go();
 			}
