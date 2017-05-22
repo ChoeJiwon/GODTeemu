@@ -40,7 +40,6 @@ public class PlayerScreen extends JFrame implements ActionListener {
 	 * Create the frame.
 	 */
 	public PlayerScreen() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 688, 533);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(255, 218, 185));
