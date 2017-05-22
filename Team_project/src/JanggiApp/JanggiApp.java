@@ -16,7 +16,6 @@ import java.awt.Font;
 import javax.swing.ButtonGroup;
 
 public class JanggiApp extends JFrame {
-	//z
 	static Color c=new Color(255, 218, 185);
 	private JPanel contentPane;
 	private JLabel lblintro;

@@ -147,7 +147,7 @@ public class SettingFrame extends JFrame {
 				}
 				if (comboBox.getSelectedItem().equals("BEIGE")==true)
 				{
-					//a
+
 					JanggiApp.c=new Color(255,218,185);
 					Pane.setBackground(JanggiApp.c);
 					rdbtnOn.setBackground(JanggiApp.c);

@@ -105,7 +105,7 @@ public class PlayerScreen extends JFrame implements ActionListener {
 						.addGap(51).addComponent(btnStart).addGap(86).addComponent(labelintro).addContainerGap()));
 		contentPane.setLayout(gl_contentPane);
 	}
-//a
+	
 	public void actionPerformed(ActionEvent e) {
 		if(p1text.getText().length()!=0 && p2text.getText().length()!=0)
 		{
