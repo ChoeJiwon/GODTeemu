@@ -22,7 +22,8 @@ public class PlayerScreen extends JFrame implements ActionListener {
 	private JPanel contentPane;
 	private JTextField textField;
 	private JTextField textField_1;
-
+	private JLabel lblPlayer = new JLabel("Player1 :");
+	private JLabel lblPlayer_1 = new JLabel("Player2 :");
 	/**
 	 * Launch the application.
 	 */
@@ -50,13 +51,13 @@ public class PlayerScreen extends JFrame implements ActionListener {
 		lblOopWithJanggi.setForeground(new Color(160, 82, 45));
 		lblOopWithJanggi.setFont(new Font("±¼¸²", Font.PLAIN, 50));
 
-		JLabel lblPlayer = new JLabel("Player1 :");
+		
 		lblPlayer.setForeground(new Color(169, 169, 169));
 
 		textField = new JTextField();
 		textField.setColumns(10);
 
-		JLabel lblPlayer_1 = new JLabel("Player2 :");
+		
 		lblPlayer_1.setForeground(new Color(169, 169, 169));
 
 		textField_1 = new JTextField();
