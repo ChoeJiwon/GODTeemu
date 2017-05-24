@@ -49,7 +49,7 @@ public class SettingFrame extends JFrame {
 		setTitle("Setting");
 		setBounds(100, 100, 594, 568);
 		Pane = new JPanel();
-		Pane.setBackground(JanggiApp.c);
+		Pane.setBackground(KoreanChess.c);
 		Pane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(Pane);
 		Pane.setLayout(null);
@@ -70,93 +70,24 @@ public class SettingFrame extends JFrame {
 		btnset = new JButton("SETTING");
 		btnset.setFont(new Font("±¼¸²", Font.PLAIN, 30));
 		btnset.setForeground(new Color(160, 82, 45));
-		btnset.setBackground(JanggiApp.c);
+		btnset.setBackground(KoreanChess.c);
 		btnset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (comboBox.getSelectedItem().equals("GRAY")==true)
-				{
-					
-					JanggiApp.c=Color.LIGHT_GRAY;
-					Pane.setBackground(JanggiApp.c);
-					rdbtnOn.setBackground(JanggiApp.c);
-					rdbtnOff.setBackground(JanggiApp.c);
-					btnset.setBackground(JanggiApp.c);
-					dispose();
-					JanggiApp ja=new JanggiApp();
-					ja.go();
-				}
-				if (comboBox.getSelectedItem().equals("PINK")==true)
-				{
-					
-					JanggiApp.c=Color.PINK;
-					Pane.setBackground(JanggiApp.c);
-					rdbtnOn.setBackground(JanggiApp.c);
-					rdbtnOff.setBackground(JanggiApp.c);
-					btnset.setBackground(JanggiApp.c);
-					dispose();
-					JanggiApp ja=new JanggiApp();
-					ja.go();
-				}
-				if (comboBox.getSelectedItem().equals("BLUE")==true)
-				{
-					
-					JanggiApp.c=new Color(0,206,209);
-					Pane.setBackground(JanggiApp.c);
-					rdbtnOn.setBackground(JanggiApp.c);
-					rdbtnOff.setBackground(JanggiApp.c);
-					btnset.setBackground(JanggiApp.c);
-					dispose();
-					JanggiApp ja=new JanggiApp();
-					ja.go();
-				}
-				if (comboBox.getSelectedItem().equals("WHITE")==true)
-				{
-					
-					JanggiApp.c=Color.WHITE;
-					Pane.setBackground(JanggiApp.c);
-					rdbtnOn.setBackground(JanggiApp.c);
-					rdbtnOff.setBackground(JanggiApp.c);
-					btnset.setBackground(JanggiApp.c);
-					dispose();
-					JanggiApp ja=new JanggiApp();
-					ja.go();
-				}
-				if (comboBox.getSelectedItem().equals("YELLOW")==true)
-				{
-					
-					JanggiApp.c=Color.YELLOW;
-					Pane.setBackground(JanggiApp.c);
-					rdbtnOn.setBackground(JanggiApp.c);
-					rdbtnOff.setBackground(JanggiApp.c);
-					btnset.setBackground(JanggiApp.c);
-					dispose();
-					JanggiApp ja=new JanggiApp();
-					ja.go();
-				}
-				if (comboBox.getSelectedItem().equals("GREEN")==true)
-				{
-					
-					JanggiApp.c=new Color(154,205,50);
-					Pane.setBackground(JanggiApp.c);
-					rdbtnOn.setBackground(JanggiApp.c);
-					rdbtnOff.setBackground(JanggiApp.c);
-					btnset.setBackground(JanggiApp.c);
-					dispose();
-					JanggiApp ja=new JanggiApp();
-					ja.go();
-				}
-				if (comboBox.getSelectedItem().equals("BEIGE")==true)
-				{
-
-					JanggiApp.c=new Color(255,218,185);
-					Pane.setBackground(JanggiApp.c);
-					rdbtnOn.setBackground(JanggiApp.c);
-					rdbtnOff.setBackground(JanggiApp.c);
-					btnset.setBackground(JanggiApp.c);
-					dispose();
-					JanggiApp ja=new JanggiApp();
-					ja.go();
-				}
+				if (comboBox.getSelectedItem().equals("GRAY")==true) KoreanChess.c=Color.LIGHT_GRAY;
+				if (comboBox.getSelectedItem().equals("PINK")==true) KoreanChess.c=Color.PINK;
+				if (comboBox.getSelectedItem().equals("BLUE")==true) KoreanChess.c=new Color(0,206,209);
+				if (comboBox.getSelectedItem().equals("WHITE")==true) KoreanChess.c=Color.WHITE;
+				if (comboBox.getSelectedItem().equals("YELLOW")==true) KoreanChess.c=Color.YELLOW;
+				if (comboBox.getSelectedItem().equals("GREEN")==true) KoreanChess.c=new Color(154,205,50);
+				if (comboBox.getSelectedItem().equals("BEIGE")==true) KoreanChess.c=new Color(255,218,185);
+				
+				Pane.setBackground(KoreanChess.c);
+				rdbtnOn.setBackground(KoreanChess.c);
+				rdbtnOff.setBackground(KoreanChess.c);
+				btnset.setBackground(KoreanChess.c);
+				dispose();
+				KoreanChess kc=new KoreanChess();
+				kc.go();
 			}
 		});
 		btnset.setBounds(198, 314, 178, 64);
@@ -174,14 +105,14 @@ public class SettingFrame extends JFrame {
 		
 		rdbtnOff = new JRadioButton("OFF");
 		buttonGroup.add(rdbtnOff);
-		rdbtnOff.setBackground(JanggiApp.c);
+		rdbtnOff.setBackground(KoreanChess.c);
 		rdbtnOff.setFont(new Font("±¼¸²", Font.PLAIN, 18));
 		rdbtnOff.setBounds(336, 156, 66, 47);
 		Pane.add(rdbtnOff);
 		
 		rdbtnOn = new JRadioButton("ON");
 		buttonGroup.add(rdbtnOn);
-		rdbtnOn.setBackground(JanggiApp.c);
+		rdbtnOn.setBackground(KoreanChess.c);
 		rdbtnOn.setFont(new Font("±¼¸²", Font.PLAIN, 18));
 		rdbtnOn.setBounds(272, 156, 58, 47);
 		Pane.add(rdbtnOn);

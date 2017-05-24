@@ -38,7 +38,7 @@ public class PlayerScreen extends JFrame implements ActionListener {
 	public PlayerScreen() {
 		setBounds(100, 100, 688, 533);
 		contentPane = new JPanel();
-		contentPane.setBackground(JanggiApp.c);
+		contentPane.setBackground(KoreanChess.c);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 
@@ -60,7 +60,7 @@ public class PlayerScreen extends JFrame implements ActionListener {
 
 		btnStart = new JButton("START");
 		btnStart.setForeground(new Color(160, 82, 45));
-		btnStart.setBackground(JanggiApp.c);
+		btnStart.setBackground(KoreanChess.c);
 		btnStart.addActionListener(this);
 
 		labelintro = new JLabel("PRODUCTION BY TEEMU WARRIORS");

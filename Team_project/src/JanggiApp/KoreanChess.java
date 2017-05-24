@@ -15,7 +15,7 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.ButtonGroup;
 
-public class JanggiApp extends JFrame {
+public class KoreanChess extends JFrame {
 	static Color c=new Color(255, 218, 185);
 	private JPanel contentPane;
 	private JLabel lblintro;
@@ -28,7 +28,7 @@ public class JanggiApp extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					JanggiApp frame = new JanggiApp();
+					KoreanChess frame = new KoreanChess();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -40,7 +40,7 @@ public class JanggiApp extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public JanggiApp() {
+	public KoreanChess() {
 		setTitle("JANGGI APP");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 594, 568);
