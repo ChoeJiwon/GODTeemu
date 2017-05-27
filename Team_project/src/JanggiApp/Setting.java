@@ -23,7 +23,7 @@ public class Setting extends JFrame {
 	private JPanel Pane;
 	private JComboBox comboBox;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
-	private JLabel lbljanggi,lblintro,lblSound,lblColor;
+	private JLabel lblgmae,lblintro,lblSound,lblColor;
 	private JButton btnset;
 	private JRadioButton rdbtnOff,rdbtnOn;
 	/**
@@ -54,12 +54,12 @@ public class Setting extends JFrame {
 		setContentPane(Pane);
 		Pane.setLayout(null);
 		
-		lbljanggi = new JLabel("OOP WITH JANGGI");
-		lbljanggi.setForeground(new Color(160, 82, 45));
-		lbljanggi.setFont(new Font("±¼¸²", Font.PLAIN, 50));
-		lbljanggi.setBounds(14, 12, 548, 71);
-		lbljanggi.setHorizontalAlignment(SwingConstants.CENTER);
-		Pane.add(lbljanggi);
+		lblgmae = new JLabel("OOP WITH GAME");
+		lblgmae.setForeground(new Color(160, 82, 45));
+		lblgmae.setFont(new Font("±¼¸²", Font.PLAIN, 50));
+		lblgmae.setBounds(14, 12, 548, 71);
+		lblgmae.setHorizontalAlignment(SwingConstants.CENTER);
+		Pane.add(lblgmae);
 		
 		lblintro = new JLabel("PRODUCTION BY TEEMU WARRIOUS");
 		lblintro.setFont(new Font("±¼¸²", Font.PLAIN, 20));

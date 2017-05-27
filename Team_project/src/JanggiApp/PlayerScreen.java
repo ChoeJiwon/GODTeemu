@@ -23,7 +23,7 @@ public class PlayerScreen extends JFrame implements ActionListener {
 
 	private JTextField p1text;
 	private JTextField p2text;
-	private JLabel lblOopWithJanggi,lblPlayer1,lblPlayer2,labelintro;
+	private JLabel lblgame,lblPlayer1,lblPlayer2,labelintro;
 	private JButton btnStart;
 
 	public void go() {
@@ -36,15 +36,16 @@ public class PlayerScreen extends JFrame implements ActionListener {
 	}
 
 	public PlayerScreen() {
+		setTitle("Player");
 		setBounds(100, 100, 688, 533);
 		contentPane = new JPanel();
 		contentPane.setBackground(KoreanChess.c);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 
-		lblOopWithJanggi = new JLabel("OOP WITH JANGGI");
-		lblOopWithJanggi.setForeground(new Color(160, 82, 45));
-		lblOopWithJanggi.setFont(new Font("±¼¸²", Font.PLAIN, 50));
+		lblgame = new JLabel("OOP WITH GAME");
+		lblgame.setForeground(new Color(160, 82, 45));
+		lblgame.setFont(new Font("±¼¸²", Font.PLAIN, 50));
 
 		lblPlayer1 = new JLabel("Player1 :");
 		lblPlayer1.setForeground(new Color(169, 169, 169));
@@ -66,38 +67,49 @@ public class PlayerScreen extends JFrame implements ActionListener {
 		labelintro = new JLabel("PRODUCTION BY TEEMU WARRIORS");
 		labelintro.setForeground(new Color(169, 169, 169));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING).addGroup(gl_contentPane
-				.createSequentialGroup()
-				.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(
-								gl_contentPane.createSequentialGroup()
-										.addGap(100).addComponent(lblOopWithJanggi))
-						.addGroup(gl_contentPane.createSequentialGroup().addGap(293).addComponent(btnStart))
-						.addGroup(gl_contentPane.createSequentialGroup().addGap(198).addGroup(gl_contentPane
-								.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPane.createSequentialGroup().addGap(18).addComponent(lblPlayer1)
-										.addGap(18).addComponent(p1text, GroupLayout.PREFERRED_SIZE,
-												GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-								.addGroup(gl_contentPane.createSequentialGroup().addGap(18).addGroup(gl_contentPane
-										.createParallelGroup(Alignment.LEADING).addComponent(labelintro)
-										.addGroup(gl_contentPane.createSequentialGroup().addComponent(lblPlayer2)
-												.addGap(18).addComponent(p2text, GroupLayout.PREFERRED_SIZE,
-														GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))))))
-				.addContainerGap(113, Short.MAX_VALUE)));
-		gl_contentPane.setVerticalGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup().addGap(44)
-						.addComponent(lblOopWithJanggi, GroupLayout.PREFERRED_SIZE, 64, GroupLayout.PREFERRED_SIZE)
-						.addGap(93)
-						.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(p1text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
-										GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblPlayer1))
-						.addGap(33)
-						.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-								.addComponent(p2text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE,
-										GroupLayout.PREFERRED_SIZE)
-								.addComponent(lblPlayer2))
-						.addGap(51).addComponent(btnStart).addGap(86).addComponent(labelintro).addContainerGap()));
+		gl_contentPane.setHorizontalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(293)
+							.addComponent(btnStart))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(216)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addComponent(lblPlayer1)
+									.addGap(18)
+									.addComponent(p1text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+								.addComponent(labelintro)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addComponent(lblPlayer2)
+									.addGap(18)
+									.addComponent(p2text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(116)
+							.addComponent(lblgame)))
+					.addContainerGap(136, Short.MAX_VALUE))
+		);
+		gl_contentPane.setVerticalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGap(44)
+					.addComponent(lblgame, GroupLayout.PREFERRED_SIZE, 64, GroupLayout.PREFERRED_SIZE)
+					.addGap(93)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(p1text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblPlayer1))
+					.addGap(33)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(p2text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblPlayer2))
+					.addGap(51)
+					.addComponent(btnStart)
+					.addGap(86)
+					.addComponent(labelintro)
+					.addContainerGap())
+		);
 		contentPane.setLayout(gl_contentPane);
 	}
 	
