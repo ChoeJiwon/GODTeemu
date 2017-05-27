@@ -18,7 +18,7 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ButtonGroup;
 
-public class SettingFrame extends JFrame {
+public class Setting extends JFrame {
  
 	private JPanel Pane;
 	private JComboBox comboBox;
@@ -33,7 +33,7 @@ public class SettingFrame extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					SettingFrame frame2 = new SettingFrame();
+					Setting frame2 = new Setting();
 					frame2.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -45,7 +45,7 @@ public class SettingFrame extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public SettingFrame() {
+	public Setting() {
 		setTitle("Setting");
 		setBounds(100, 100, 594, 568);
 		Pane = new JPanel();

@@ -14,7 +14,7 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.ButtonGroup;
 
-public class KoreanChess extends JFrame {
+public class Menu extends JFrame {
 	static Color c=new Color(255, 218, 185);
 	private JPanel contentPane;
 	private JLabel lblintro;
@@ -27,7 +27,7 @@ public class KoreanChess extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					KoreanChess frame = new KoreanChess();
+					Menu frame = new Menu();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -39,7 +39,7 @@ public class KoreanChess extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public KoreanChess() {
+	public Menu() {
 		setTitle("JANGGI APP");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 594, 568);
@@ -56,20 +56,20 @@ public class KoreanChess extends JFrame {
 		lbljanggi.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lbljanggi);
 		
-		JButton btnstart = new JButton("START");
-		buttonGroup.add(btnstart);
-		btnstart.setFont(new Font("±¼¸²", Font.PLAIN, 30));
-		btnstart.addActionListener(new ActionListener() {
+		JButton btnscore = new JButton("SCORE");
+		buttonGroup.add(btnscore);
+		btnscore.setFont(new Font("±¼¸²", Font.PLAIN, 30));
+		btnscore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
 				PlayerScreen ps = new PlayerScreen();
 				ps.go();
 			}
 		});
-		btnstart.setForeground(new Color(160, 82, 45));
-		btnstart.setBackground(c);
-		btnstart.setBounds(193, 182, 179, 64);
-		contentPane.add(btnstart);
+		btnscore.setForeground(new Color(160, 82, 45));
+		btnscore.setBackground(c);
+		btnscore.setBounds(193, 182, 179, 64);
+		contentPane.add(btnscore);
 		
 		lblintro = new JLabel("PRODUCTION BY TEEMU WARRIOUS");
 		lblintro.setFont(new Font("±¼¸²", Font.PLAIN, 20));
@@ -77,25 +77,19 @@ public class KoreanChess extends JFrame {
 		lblintro.setBounds(121, 459, 326, 18);
 		contentPane.add(lblintro);
 		
-		JButton btnmenu = new JButton("MENU");
-		buttonGroup.add(btnmenu);
-		btnmenu.setFont(new Font("±¼¸²", Font.PLAIN, 30));
-		btnmenu.setForeground(new Color(160, 82, 45));
-		btnmenu.setBackground(c);
-		btnmenu.addActionListener(new ActionListener() {
+		JButton btnset = new JButton("SETTING");
+		buttonGroup.add(btnset);
+		btnset.setFont(new Font("±¼¸²", Font.PLAIN, 30));
+		btnset.setForeground(new Color(160, 82, 45));
+		btnset.setBackground(c);
+		btnset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				Menu manu = new Menu();
-				manu.go();
+				Setting set = new Setting();
+				set.go();
 			}
 		});
-		btnmenu.setBounds(194, 275, 178, 64);
-		contentPane.add(btnmenu);
+		btnset.setBounds(194, 275, 178, 64);
+		contentPane.add(btnset);
 	}
-
-	public static void main(String[] args) {
-		KoreanChess kc=new KoreanChess();
-		kc.go();
-	}
-
 }

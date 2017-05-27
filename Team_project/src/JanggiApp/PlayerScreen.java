@@ -105,7 +105,7 @@ public class PlayerScreen extends JFrame implements ActionListener {
 		if(p1text.getText().length()!=0 && p2text.getText().length()!=0)
 		{
 			dispose();
-			MainFrame mf=new MainFrame();
+			Main mf=new Main();
 			mf.go();
 		}
 	}
