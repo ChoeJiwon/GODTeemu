@@ -40,7 +40,7 @@ public class KoreanChess extends JFrame {
 	 * Create the frame.
 	 */
 	public KoreanChess() {
-		setTitle("JANGGI APP");
+		setTitle("KoreanChess APP");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 594, 568);
 		contentPane = new JPanel();
@@ -49,12 +49,12 @@ public class KoreanChess extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lbljanggi = new JLabel("OOP WITH JANGGI");
-		lbljanggi.setForeground(new Color(160, 82, 45));
-		lbljanggi.setFont(new Font("±¼¸²", Font.PLAIN, 50));
-		lbljanggi.setBounds(14, 12, 548, 71);
-		lbljanggi.setHorizontalAlignment(SwingConstants.CENTER);
-		contentPane.add(lbljanggi);
+		JLabel lblgame = new JLabel("OOP WITH GAME");
+		lblgame.setForeground(new Color(160, 82, 45));
+		lblgame.setFont(new Font("±¼¸²", Font.PLAIN, 50));
+		lblgame.setBounds(14, 12, 548, 71);
+		lblgame.setHorizontalAlignment(SwingConstants.CENTER);
+		contentPane.add(lblgame);
 		
 		JButton btnstart = new JButton("START");
 		buttonGroup.add(btnstart);
