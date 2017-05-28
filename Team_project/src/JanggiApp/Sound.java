@@ -6,16 +6,12 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
 public class Sound {
+		
 
-public static void main(String[] args) {
-	File sound = new File("GUNSHOT.WAV");
-	PlaySound(sound);
-}
-
-static void PlaySound(File Sound){
+public void PlaySound(){
 	try{
 		Clip clip = AudioSystem.getClip();
-		clip.open(AudioSystem.getAudioInputStream(Sound));
+		clip.open(AudioSystem.getAudioInputStream(new File("move.wav")));
 		clip.start();
 		
 		Thread.sleep(clip.getMicrosecondLength()/1000);
