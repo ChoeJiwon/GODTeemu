@@ -62,8 +62,6 @@ public class Menu extends JFrame {
 		btnscore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				PlayerScreen ps = new PlayerScreen();
-				ps.go();
 			}
 		});
 		btnscore.setForeground(new Color(160, 82, 45));

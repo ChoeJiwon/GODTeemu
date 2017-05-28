@@ -17,7 +17,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 
-public class PlayerScreen extends JFrame implements ActionListener {
+public class Player extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 
@@ -28,14 +28,14 @@ public class PlayerScreen extends JFrame implements ActionListener {
 
 	public void go() {
 		try {
-			PlayerScreen frame = new PlayerScreen();
+			Player frame = new Player();
 			frame.setVisible(true);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	public PlayerScreen() {
+	public Player() {
 		setTitle("Player");
 		setBounds(100, 100, 688, 533);
 		contentPane = new JPanel();
