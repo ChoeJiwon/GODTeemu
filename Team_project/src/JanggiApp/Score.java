@@ -28,7 +28,7 @@ public class Score extends JFrame implements ActionListener {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
+	public void go(){
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
