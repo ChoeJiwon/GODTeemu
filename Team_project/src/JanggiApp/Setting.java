@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+
 import javax.swing.JRadioButton;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
@@ -26,6 +27,7 @@ public class Setting extends JFrame {
 	private JLabel lblgame,lblintro,lblSound,lblColor;
 	private JButton btnset;
 	private JRadioButton rdbtnOff,rdbtnOn;
+	public SoundSettingFile ssf = new SoundSettingFile();
 	/**
 	 * Launch the application.
 	 */
@@ -104,6 +106,15 @@ public class Setting extends JFrame {
 		Pane.add(lblColor);
 		
 		rdbtnOff = new JRadioButton("OFF");
+		rdbtnOff.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				ssf.conductSerializing("false");
+			}
+			
+		});
 		buttonGroup.add(rdbtnOff);
 		rdbtnOff.setBackground(KoreanChess.c);
 		rdbtnOff.setFont(new Font("±¼¸²", Font.PLAIN, 18));
@@ -111,6 +122,15 @@ public class Setting extends JFrame {
 		Pane.add(rdbtnOff);
 		
 		rdbtnOn = new JRadioButton("ON");
+		rdbtnOn.addActionListener(new ActionListener(){
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				
+				ssf.conductSerializing("true");
+			}
+			
+		});
 		buttonGroup.add(rdbtnOn);
 		rdbtnOn.setBackground(KoreanChess.c);
 		rdbtnOn.setFont(new Font("±¼¸²", Font.PLAIN, 18));
