@@ -62,7 +62,7 @@ public class Menu extends JFrame {
 		btnscore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				PlayerScreen ps = new PlayerScreen();
+				Player ps = new Player();
 				ps.go();
 			}
 		});

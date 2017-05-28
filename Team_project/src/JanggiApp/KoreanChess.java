@@ -62,7 +62,7 @@ public class KoreanChess extends JFrame {
 		btnstart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				PlayerScreen ps = new PlayerScreen();
+				Player ps = new Player();
 				ps.go();
 			}
 		});
