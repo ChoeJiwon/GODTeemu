@@ -117,8 +117,8 @@ public class Player extends JFrame implements ActionListener {
 		if(p1text.getText().length()!=0 && p2text.getText().length()!=0)
 		{
 			dispose();
-			Main mf=new Main();
-			mf.go();
+			Board board=new Board();
+			board.go();
 		}
 	}
 

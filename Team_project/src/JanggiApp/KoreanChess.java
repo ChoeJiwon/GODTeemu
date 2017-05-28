@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Font;
-import javax.swing.ButtonGroup;
+import javax.swing.ButtonGroup; 
 
 public class KoreanChess extends JFrame {
 	static Color c=new Color(255, 218, 185);
