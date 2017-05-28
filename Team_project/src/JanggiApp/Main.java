@@ -39,7 +39,7 @@ public class Main extends JFrame {
       contentPane = new JPanel(){
     	  public void paintComponent(Graphics g)
     	   {
-    		   Image img=new ImageIcon("board.jpg").getImage();
+    		   Image img=new ImageIcon("board.png").getImage();
     		   g.drawImage(img, 0 ,0, null);
     	   }
       };
