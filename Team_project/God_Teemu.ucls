@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="JanggiApp.SoundSettingFile" project="Team_project" 
     file="/Team_project/src/JanggiApp/SoundSettingFile.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="863" y="344"/>    
+    <position height="-1" width="-1" x="946" y="526"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -84,10 +84,10 @@
   <association id="12">    
     <end type="SOURCE" refId="1" navigable="false">      
       <attribute id="13" name="ssf">        
-        <position height="0" width="0" x="122" y="-94"/>      
+        <position height="0" width="0" x="205" y="88"/>      
       </attribute>      
       <multiplicity id="14" minimum="0" maximum="1">        
-        <position height="0" width="0" x="122" y="-94"/>      
+        <position height="0" width="0" x="205" y="88"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
