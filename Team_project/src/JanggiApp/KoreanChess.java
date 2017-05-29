@@ -15,10 +15,13 @@ import java.awt.Font;
 import javax.swing.ButtonGroup; 
 
 public class KoreanChess extends JFrame {
+	
 	static Color c=new Color(255, 218, 185);
 	private JPanel contentPane;
 	private JLabel lblintro;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private Player ps;
+	private Menu menu;
 
 	/**
 	 * Launch the application.
@@ -62,7 +65,7 @@ public class KoreanChess extends JFrame {
 		btnstart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				Player ps = new Player();
+				ps = new Player();
 				ps.go();
 			}
 		});
@@ -85,8 +88,8 @@ public class KoreanChess extends JFrame {
 		btnmenu.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				Menu manu = new Menu();
-				manu.go();
+				menu = new Menu();
+				menu.go();
 			}
 		});
 		btnmenu.setBounds(194, 275, 178, 64);

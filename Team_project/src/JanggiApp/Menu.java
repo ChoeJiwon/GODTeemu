@@ -18,6 +18,8 @@ public class Menu extends JFrame {
 	private JPanel contentPane;
 	private JLabel lblintro;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
+	private Score score;
+	private Setting set;
 
 	/**
 	 * Launch the application.
@@ -61,7 +63,7 @@ public class Menu extends JFrame {
 		btnscore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				Score score=new Score();
+				score=new Score();
 				score.go();
 			}
 		});
@@ -84,7 +86,7 @@ public class Menu extends JFrame {
 		btnset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
-				Setting set = new Setting();
+				set = new Setting();
 				set.go();
 			}
 		});

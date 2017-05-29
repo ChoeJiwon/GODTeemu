@@ -25,6 +25,7 @@ public class Player extends JFrame implements ActionListener {
 	private JTextField p2text;
 	private JLabel lblgame,lblPlayer1,lblPlayer2,labelintro;
 	private JButton btnStart;
+	private Board board;
 
 	public void go() {
 		try {
@@ -117,7 +118,7 @@ public class Player extends JFrame implements ActionListener {
 		if(p1text.getText().length()!=0 && p2text.getText().length()!=0)
 		{
 			dispose();
-			Board board=new Board();
+			board=new Board();
 			board.go();
 		}
 	}
