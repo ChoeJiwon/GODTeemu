@@ -15,7 +15,6 @@ import java.awt.Font;
 import javax.swing.ButtonGroup;
 
 public class Menu extends JFrame {
-	static Color c=new Color(255, 218, 185);
 	private JPanel contentPane;
 	private JLabel lblintro;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
@@ -44,7 +43,7 @@ public class Menu extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 594, 568);
 		contentPane = new JPanel();
-		contentPane.setBackground(c);
+		contentPane.setBackground(KoreanChess.c);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -67,7 +66,7 @@ public class Menu extends JFrame {
 			}
 		});
 		btnscore.setForeground(new Color(160, 82, 45));
-		btnscore.setBackground(c);
+		btnscore.setBackground(KoreanChess.c);
 		btnscore.setBounds(193, 182, 179, 64);
 		contentPane.add(btnscore);
 		
@@ -81,7 +80,7 @@ public class Menu extends JFrame {
 		buttonGroup.add(btnset);
 		btnset.setFont(new Font("±¼¸²", Font.PLAIN, 30));
 		btnset.setForeground(new Color(160, 82, 45));
-		btnset.setBackground(c);
+		btnset.setBackground(KoreanChess.c);
 		btnset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
