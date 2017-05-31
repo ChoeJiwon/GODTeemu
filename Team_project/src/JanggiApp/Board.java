@@ -195,7 +195,7 @@ public class Board extends JFrame {
 		rjang.setContentAreaFilled(false);
 		rjang.setFocusPainted(false);
 		rjang.setSize(50,50);
-		rjang.setLocation(470,125);
+		rjang.setLocation(475,125);
 		contentPane.add(rjang);
 		
 		bjang=new JButton(new ImageIcon("blue_jang.png"));
@@ -204,7 +204,7 @@ public class Board extends JFrame {
 		bjang.setContentAreaFilled(false);
 		bjang.setFocusPainted(false);
 		bjang.setSize(50,50);
-		bjang.setLocation(470,790);
+		bjang.setLocation(475,790);
 		contentPane.add(bjang);
 		
 		rcha1=new JButton(new ImageIcon("red_cha.png"));
