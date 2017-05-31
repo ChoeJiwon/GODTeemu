@@ -159,7 +159,7 @@ public class Board extends JFrame {
 		rpo1.setContentAreaFilled(false);
 		rpo1.setFocusPainted(false);
 		rpo1.setSize(50,50);
-		rpo1.setLocation(185,220);
+		rpo1.setLocation(190,220);
 		contentPane.add(rpo1);
 
 		rpo2=new JButton(new ImageIcon("red_po.png"));
@@ -168,7 +168,7 @@ public class Board extends JFrame {
 		rpo2.setContentAreaFilled(false);
 		rpo2.setFocusPainted(false);
 		rpo2.setSize(50,50);
-		rpo2.setLocation(755,220);
+		rpo2.setLocation(760,220);
 		contentPane.add(rpo2);
 		
 		bpo1=new JButton(new ImageIcon("blue_po.png"));
@@ -177,7 +177,7 @@ public class Board extends JFrame {
 		bpo1.setContentAreaFilled(false);
 		bpo1.setFocusPainted(false);
 		bpo1.setSize(50,50);
-		bpo1.setLocation(185,695);
+		bpo1.setLocation(190,695);
 		contentPane.add(bpo1);
 
 		bpo2=new JButton(new ImageIcon("blue_po.png"));
@@ -186,7 +186,7 @@ public class Board extends JFrame {
 		bpo2.setContentAreaFilled(false);
 		bpo2.setFocusPainted(false);
 		bpo2.setSize(50,50);
-		bpo2.setLocation(755,695);
+		bpo2.setLocation(760,695);
 		contentPane.add(bpo2);
 		
 		rjang=new JButton(new ImageIcon("red_jang.png"));
@@ -195,7 +195,7 @@ public class Board extends JFrame {
 		rjang.setContentAreaFilled(false);
 		rjang.setFocusPainted(false);
 		rjang.setSize(50,50);
-		rjang.setLocation(470,125);
+		rjang.setLocation(475,125);
 		contentPane.add(rjang);
 		
 		bjang=new JButton(new ImageIcon("blue_jang.png"));
@@ -204,7 +204,7 @@ public class Board extends JFrame {
 		bjang.setContentAreaFilled(false);
 		bjang.setFocusPainted(false);
 		bjang.setSize(50,50);
-		bjang.setLocation(470,790);
+		bjang.setLocation(475,795);
 		contentPane.add(bjang);
 		
 		rcha1=new JButton(new ImageIcon("red_cha.png"));
@@ -213,7 +213,7 @@ public class Board extends JFrame {
 		rcha1.setContentAreaFilled(false);
 		rcha1.setFocusPainted(false);
 		rcha1.setSize(50,50);
-		rcha1.setLocation(90,30);
+		rcha1.setLocation(95,30);
 		contentPane.add(rcha1);
 
 		rcha2=new JButton(new ImageIcon("red_cha.png"));
@@ -222,7 +222,7 @@ public class Board extends JFrame {
 		rcha2.setContentAreaFilled(false);
 		rcha2.setFocusPainted(false);
 		rcha2.setSize(50,50);
-		rcha2.setLocation(850,30);
+		rcha2.setLocation(855,30);
 		contentPane.add(rcha2);
 
 		bcha1=new JButton(new ImageIcon("blue_cha.png"));
@@ -231,7 +231,7 @@ public class Board extends JFrame {
 		bcha1.setContentAreaFilled(false);
 		bcha1.setFocusPainted(false);
 		bcha1.setSize(50,50);
-		bcha1.setLocation(90,885);
+		bcha1.setLocation(95,885);
 		contentPane.add(bcha1);
 
 		bcha2=new JButton(new ImageIcon("blue_cha.png"));
@@ -240,7 +240,7 @@ public class Board extends JFrame {
 		bcha2.setContentAreaFilled(false);
 		bcha2.setFocusPainted(false);
 		bcha2.setSize(50,50);
-		bcha2.setLocation(850,885);
+		bcha2.setLocation(855,885);
 		contentPane.add(bcha2);
 		
 		rsang1=new JButton(new ImageIcon("red_sang.png"));
@@ -249,7 +249,7 @@ public class Board extends JFrame {
 		rsang1.setContentAreaFilled(false);
 		rsang1.setFocusPainted(false);
 		rsang1.setSize(50,50);
-		rsang1.setLocation(185,30);
+		rsang1.setLocation(190,30);
 		contentPane.add(rsang1);
 		
 		rsang2=new JButton(new ImageIcon("red_sang.png"));
@@ -258,7 +258,7 @@ public class Board extends JFrame {
 		rsang2.setContentAreaFilled(false);
 		rsang2.setFocusPainted(false);
 		rsang2.setSize(50,50);
-		rsang2.setLocation(755,30);
+		rsang2.setLocation(760,30);
 		contentPane.add(rsang2);
 		
 		bsang1=new JButton(new ImageIcon("blue_sang.png"));
@@ -267,7 +267,7 @@ public class Board extends JFrame {
 		bsang1.setContentAreaFilled(false);
 		bsang1.setFocusPainted(false);
 		bsang1.setSize(50,50);
-		bsang1.setLocation(185,885);
+		bsang1.setLocation(190,885);
 		contentPane.add(bsang1);
 		
 		bsang2=new JButton(new ImageIcon("blue_sang.png"));
@@ -276,7 +276,7 @@ public class Board extends JFrame {
 		bsang2.setContentAreaFilled(false);
 		bsang2.setFocusPainted(false);
 		bsang2.setSize(50,50);
-		bsang2.setLocation(755,885);
+		bsang2.setLocation(760,885);
 		contentPane.add(bsang2);
 		
 		rma1=new JButton(new ImageIcon("red_ma.png"));
@@ -285,7 +285,7 @@ public class Board extends JFrame {
 		rma1.setContentAreaFilled(false);
 		rma1.setFocusPainted(false);
 		rma1.setSize(50,50);
-		rma1.setLocation(280,30);
+		rma1.setLocation(285,30);
 		contentPane.add(rma1);
 		
 		rma2=new JButton(new ImageIcon("red_ma.png"));
@@ -294,7 +294,7 @@ public class Board extends JFrame {
 		rma2.setContentAreaFilled(false);
 		rma2.setFocusPainted(false);
 		rma2.setSize(50,50);
-		rma2.setLocation(660,30);
+		rma2.setLocation(665,30);
 		contentPane.add(rma2);
 		
 		bma1=new JButton(new ImageIcon("blue_ma.png"));
@@ -303,7 +303,7 @@ public class Board extends JFrame {
 		bma1.setContentAreaFilled(false);
 		bma1.setFocusPainted(false);
 		bma1.setSize(50,50);
-		bma1.setLocation(280,885);
+		bma1.setLocation(285,885);
 		contentPane.add(bma1);
 		
 		bma2=new JButton(new ImageIcon("blue_ma.png"));
@@ -312,7 +312,7 @@ public class Board extends JFrame {
 		bma2.setContentAreaFilled(false);
 		bma2.setFocusPainted(false);
 		bma2.setSize(50,50);
-		bma2.setLocation(660,885);
+		bma2.setLocation(665,885);
 		contentPane.add(bma2);
 		
 		rsa1=new JButton(new ImageIcon("red_sa.png"));
@@ -321,7 +321,7 @@ public class Board extends JFrame {
 		rsa1.setContentAreaFilled(false);
 		rsa1.setFocusPainted(false);
 		rsa1.setSize(50,50);
-		rsa1.setLocation(375,30);
+		rsa1.setLocation(380,30);
 		contentPane.add(rsa1);
 		
 		rsa2=new JButton(new ImageIcon("red_sa.png"));
@@ -330,7 +330,7 @@ public class Board extends JFrame {
 		rsa2.setContentAreaFilled(false);
 		rsa2.setFocusPainted(false);
 		rsa2.setSize(50,50);
-		rsa2.setLocation(565,30);
+		rsa2.setLocation(570,30);
 		contentPane.add(rsa2);
 		
 		bsa1=new JButton(new ImageIcon("blue_sa.png"));
@@ -339,7 +339,7 @@ public class Board extends JFrame {
 		bsa1.setContentAreaFilled(false);
 		bsa1.setFocusPainted(false);
 		bsa1.setSize(50,50);
-		bsa1.setLocation(375,885);
+		bsa1.setLocation(380,885);
 		contentPane.add(bsa1);
 		
 		bsa2=new JButton(new ImageIcon("blue_sa.png"));
@@ -348,7 +348,7 @@ public class Board extends JFrame {
 		bsa2.setContentAreaFilled(false);
 		bsa2.setFocusPainted(false);
 		bsa2.setSize(50,50);
-		bsa2.setLocation(565,885);
+		bsa2.setLocation(570,885);
 		contentPane.add(bsa2);
 	}
 }
