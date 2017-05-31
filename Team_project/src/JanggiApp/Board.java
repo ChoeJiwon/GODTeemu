@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 public class Board extends JFrame {
-   static JButton jol;
+   private JButton jol1,jol2,jol3,jol4,jol5;
    private JPanel contentPane,boardpiece;
 
    /**
@@ -65,11 +65,50 @@ public class Board extends JFrame {
       setContentPane(contentPane);
       contentPane.setLayout(null);
       
-      jol=new JButton(new ImageIcon("blue_jol.png"));
- 	  jol.setBackground(Color.BLUE);
- 	  jol.setBorderPainted(false);
- 	  jol.setContentAreaFilled(false);
- 	  jol.setFocusPainted(false);
- 	  jol.setSize(50,50);
+      jol1=new JButton(new ImageIcon("red_byung.png"));
+ 	  jol1.setBackground(Color.BLUE);
+ 	  jol1.setBorderPainted(false);
+ 	  jol1.setContentAreaFilled(false);
+ 	  jol1.setFocusPainted(false);
+ 	  jol1.setSize(50,50);
+ 	  jol1.setLocation(95,315);
+ 	  contentPane.add(jol1);
+  
+      jol2=new JButton(new ImageIcon("red_byung.png"));
+  	  jol2.setBackground(Color.RED);
+  	  jol2.setBorderPainted(false);
+  	  jol2.setContentAreaFilled(false);
+  	  jol2.setFocusPainted(false);
+  	  jol2.setSize(50,50);
+  	  jol2.setLocation(285,315);
+ 	  contentPane.add(jol2);
+  
+      jol3=new JButton(new ImageIcon("red_byung.png"));
+  	  jol3.setBackground(Color.RED);
+  	  jol3.setBorderPainted(false);
+  	  jol3.setContentAreaFilled(false);
+  	  jol3.setFocusPainted(false);
+  	  jol3.setSize(50,50);
+  	  jol3.setLocation(475,315);
+ 	  contentPane.add(jol3);
+ 
+      jol4=new JButton(new ImageIcon("red_byung.png"));
+  	  jol4.setBackground(Color.RED);
+  	  jol4.setBorderPainted(false);
+  	  jol4.setContentAreaFilled(false);
+  	  jol4.setFocusPainted(false);
+  	  jol4.setSize(50,50);
+  	  jol4.setLocation(665,315);
+ 	  contentPane.add(jol4);
+
+      jol5=new JButton(new ImageIcon("red_byung.png"));
+  	  jol5.setBackground(Color.RED);
+  	  jol5.setBorderPainted(false);
+  	  jol5.setContentAreaFilled(false);
+  	  jol5.setFocusPainted(false);
+  	  jol5.setSize(50,50);
+  	  jol5.setLocation(855,315);
+ 	  contentPane.add(jol5);
+
    }
 }
