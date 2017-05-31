@@ -1,18 +1,22 @@
 package JanggiApp;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.Image;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 public class Board extends JFrame {
-
-   private JPanel contentPane;
+   static JButton jol;
+   private JPanel contentPane,boardpiece;
 
    /**
     * Launch the application.
@@ -35,6 +39,7 @@ public class Board extends JFrame {
     */
    public Board() {
 	  final int BJANG = 1,BCHA=2,BPO=3,BSANG=4,BMA=5,BJOL=6,BSA=7,RJANG = 11,RCHA=12,RPO=13,RSANG=14,RMA=15,RJOL=16,RSA=17;
+	  int i,j;
 	  int[][] location = {
 				{ BCHA, 0, 0, BJOL, 0, 0, RJOL, 0, 0, RCHA },
 				{ BSANG, 0, BPO, 0, 0, 0, 0, RPO, 0, RMA },
@@ -57,8 +62,14 @@ public class Board extends JFrame {
     	   }
       };
       contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-      contentPane.setLayout(new BorderLayout(0, 0));
       setContentPane(contentPane);
+      contentPane.setLayout(null);
+      
+      jol=new JButton(new ImageIcon("blue_jol.png"));
+ 	  jol.setBackground(Color.BLUE);
+ 	  jol.setBorderPainted(false);
+ 	  jol.setContentAreaFilled(false);
+ 	  jol.setFocusPainted(false);
+ 	  jol.setSize(50,50);
    }
-
 }
