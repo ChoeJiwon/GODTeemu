@@ -34,8 +34,7 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-public class Inheritance extends JFrame
-{
+public class Inheritance {
 	JFrame frame;
 	JTextArea txt_area;
 	JPanel contentPanel;
@@ -45,28 +44,34 @@ public class Inheritance extends JFrame
 	public void inheritance()
 	{
 		frame = new JFrame("Inheritance");
-		setBounds(0, 0, 450, 650);
+		frame.setBounds(100, 100, 700, 700);
 		
 		contentPanel = new JPanel();
 		contentPanel.setBorder(new TitledBorder(null, "Inheritance"));
 		
 		txt_area = new JTextArea();
+		txt_area.setFont(new Font("±¼¸²", Font.PLAIN, 18));	
 		txt_area.setText(content_string);
 		txt_area.setLineWrap(true);
 		txt_area.setSize(440, 300);
-		txt_area.setBackground(Color.WHITE);
+		txt_area.setBackground(KoreanChess.c);
 		
-		contentPanel.setBackground(Color.WHITE);
+		contentPanel.setBackground(KoreanChess.c);
 		contentPanel.add(txt_area);
 				
 		imagePanel = new JPanel();
+		imagePanel.setBackground(KoreanChess.c);
+		ImageIcon myPicture;
+		JLabel picLabel = new JLabel();
 		
-		BufferedImage myPicture;
 		try {
-			myPicture = ImageIO.read(new File("inheritance.png"));
-			JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+			myPicture = new ImageIcon(new ImageIcon("inheritance.png").getImage().getScaledInstance(450,320, Image.SCALE_DEFAULT));
+			
+			
+			picLabel.setIcon(myPicture);
+			
 			imagePanel.add(picLabel);
-		} catch (IOException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
@@ -76,7 +81,7 @@ public class Inheritance extends JFrame
 		frame.add(imagePanel, BorderLayout.CENTER);
 		frame.setBackground(Color.WHITE);
 		
-		frame.setSize(450, 650);
+		
 		frame.setVisible(true);
 	}
 	
