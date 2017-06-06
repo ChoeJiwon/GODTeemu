@@ -107,6 +107,7 @@ public class Board extends JFrame {
 						int dx,dy;
 						dx=mx*95+30;
 						dy=my*95+30;
+						System.out.println(dx + "  " + dy + "  " + bjol1.getLocation().x + "  "+bjol1.getLocation().y);
 						if (location[mx][my]==BJOL)
 						{
 							if (dx==bjol1.getLocation().x && dy==bjol1.getLocation().y)
@@ -1121,7 +1122,7 @@ public class Board extends JFrame {
 		bjang.setContentAreaFilled(false);
 		bjang.setFocusPainted(false);
 		bjang.setSize(50, 50);
-		bjang.setLocation(410, 795);
+		bjang.setLocation(410, 790);
 		contentPane.add(bjang);
 
 		rcha1 = new JButton(new ImageIcon("red_cha.png"));
