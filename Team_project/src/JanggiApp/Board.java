@@ -108,7 +108,7 @@ public class Board extends JFrame {
 		rjol5.setLocation(855, 315);
 		contentPane.add(rjol5);
 		
-		bjol1 = new JButton(new ImageIcon("blue_jol.png"));
+		bjol1 = new JButton(new ImageIcon("blu	e_jol.png"));
 		bjol1.setBackground(Color.BLUE);
 		bjol1.setBorderPainted(false);
 		bjol1.setContentAreaFilled(false);

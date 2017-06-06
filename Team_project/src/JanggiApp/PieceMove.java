@@ -1,6 +1,5 @@
 package JanggiApp;
 
-public abstract class Piece {
-	
+public abstract class PieceMove {
 	public abstract void move();
 }
