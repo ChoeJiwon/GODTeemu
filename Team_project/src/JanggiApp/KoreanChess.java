@@ -25,6 +25,7 @@ public class KoreanChess extends JFrame {
 
 	/**
 	 * Launch the application.
+	 * 
 	 */
 	public void go() {
 		EventQueue.invokeLater(new Runnable() {
