@@ -6,16 +6,28 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
+
+import lab12_201620980.Student;
+import lab12_201620980.StudentInformationSystem;
+
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.JButton;
+import javax.swing.JFileChooser;
 import javax.swing.JTextArea;
 
 public class Score extends JFrame implements ActionListener {
@@ -24,6 +36,9 @@ public class Score extends JFrame implements ActionListener {
 	private JLabel lblgame,lblintro;
 	private JLabel lblPlayer_1;
 	private JLabel label;
+	JButton btnCheckScore;
+	JButton btnNewButton;
+	JTextArea textArea,textArea_1;
 
 	/**
 	 * Launch the application.
@@ -76,12 +91,77 @@ public class Score extends JFrame implements ActionListener {
 		label = new JLabel(":");
 		label.setFont(new Font("±¼¸²", Font.PLAIN, 23));
 		
-		JButton btnCheckScore = new JButton("Check Score");
-		btnCheckScore.addActionListener(this);
+		btnCheckScore = new JButton("Check Score");
+		btnCheckScore.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent e){
+				JFileChooser fc=new JFileChooser();
+				int result=fc.showOpenDialog(Score.this);           
+				
+				if(result==JFileChooser.APPROVE_OPTION){
+					File f=fc.getSelectedFile();
+					
+					try {
+						FileInputStream fis=new FileInputStream(f);
+						ObjectInputStream ois=new ObjectInputStream(fis);
+						
+						Object o=ois.readObject();
+						
+						if(o instanceof PlayerScore){
+							PlayerScore ps=(PlayerScore) o;
+							
+							textArea.setText(Integer.toString(ps.getPlayer1score()));
+							textArea_1.setText(Integer.toString(ps.getPlayer2score()));
+							
+						}
+						
+					} catch (FileNotFoundException fe) {
+						// TODO Auto-generated catch block
+						fe.printStackTrace();
+					} catch (IOException fe) {
+						// TODO Auto-generated catch block
+						fe.printStackTrace();
+					} catch (ClassNotFoundException fe) {
+						// TODO Auto-generated catch block
+						fe.printStackTrace();
+					}
+				}
+			}
+		});
 		
-		JTextArea textArea = new JTextArea();
+		textArea = new JTextArea();
 		
-		JTextArea textArea_1 = new JTextArea();
+		textArea_1 = new JTextArea();
+		
+		btnNewButton = new JButton("Save Score");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JFileChooser fc=new JFileChooser();
+				int result=fc.showSaveDialog(Score.this);
+				PlayerScore s=new PlayerScore();
+				
+				if(result==JFileChooser.APPROVE_OPTION)
+				{
+					File f=fc.getSelectedFile();
+					s.setPlayer1score(Integer.parseInt(textArea.getText()));
+					s.setPlayer2score(Integer.parseInt(textArea_1.getText()));
+					
+					try {
+						FileOutputStream fos=new FileOutputStream(f);
+						ObjectOutputStream oos = new ObjectOutputStream(fos);
+						oos.writeObject(s);
+						oos.close();
+					} catch (FileNotFoundException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					} catch (IOException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+					
+				}
+			}
+			
+		});
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -92,7 +172,13 @@ public class Score extends JFrame implements ActionListener {
 							.addComponent(lblgame, GroupLayout.PREFERRED_SIZE, 548, GroupLayout.PREFERRED_SIZE))
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addGap(116)
-							.addComponent(lblintro)))
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+								.addGroup(gl_contentPane.createSequentialGroup()
+									.addGap(31)
+									.addComponent(btnCheckScore)
+									.addGap(44)
+									.addComponent(btnNewButton))
+								.addComponent(lblintro))))
 					.addContainerGap(9, Short.MAX_VALUE))
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(38)
@@ -106,10 +192,6 @@ public class Score extends JFrame implements ActionListener {
 					.addPreferredGap(ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
 					.addComponent(lblPlayer_1, GroupLayout.PREFERRED_SIZE, 90, GroupLayout.PREFERRED_SIZE)
 					.addGap(41))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(217)
-					.addComponent(btnCheckScore)
-					.addContainerGap(237, Short.MAX_VALUE))
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -124,9 +206,11 @@ public class Score extends JFrame implements ActionListener {
 								.addComponent(textArea, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
 								.addComponent(lblPlayer, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
 								.addComponent(textArea_1, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE))
-							.addGap(66)
-							.addComponent(btnCheckScore)
-							.addGap(127))
+							.addGap(67)
+							.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+								.addComponent(btnNewButton)
+								.addComponent(btnCheckScore))
+							.addGap(126))
 						.addGroup(gl_contentPane.createSequentialGroup()
 							.addComponent(lblPlayer_1, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 							.addGap(214)))
@@ -135,7 +219,8 @@ public class Score extends JFrame implements ActionListener {
 		contentPane.setLayout(gl_contentPane);
 	}
 	
-	public void actionPerformed(ActionEvent e) {
-		
+	
+	
+	
 	}
-}
+
