@@ -153,42 +153,6 @@ public class Board extends JFrame {
 		bjol5.setLocation(855, 600);
 		contentPane.add(bjol5);
 		
-		rpo1=new JButton(new ImageIcon("red_po.png"));
-		rpo1.setBackground(Color.RED);
-		rpo1.setBorderPainted(false);
-		rpo1.setContentAreaFilled(false);
-		rpo1.setFocusPainted(false);
-		rpo1.setSize(50,50);
-		rpo1.setLocation(185,220);
-		contentPane.add(rpo1);
-
-		rpo2=new JButton(new ImageIcon("red_po.png"));
-		rpo2.setBackground(Color.RED);
-		rpo2.setBorderPainted(false);
-		rpo2.setContentAreaFilled(false);
-		rpo2.setFocusPainted(false);
-		rpo2.setSize(50,50);
-		rpo2.setLocation(755,220);
-		contentPane.add(rpo2);
-		
-		bpo1=new JButton(new ImageIcon("blue_po.png"));
-		bpo1.setBackground(Color.BLUE);
-		bpo1.setBorderPainted(false);
-		bpo1.setContentAreaFilled(false);
-		bpo1.setFocusPainted(false);
-		bpo1.setSize(50,50);
-		bpo1.setLocation(185,695);
-		contentPane.add(bpo1);
-
-		bpo2=new JButton(new ImageIcon("blue_po.png"));
-		bpo2.setBackground(Color.BLUE);
-		bpo2.setBorderPainted(false);
-		bpo2.setContentAreaFilled(false);
-		bpo2.setFocusPainted(false);
-		bpo2.setSize(50,50);
-		bpo2.setLocation(755,695);
-		contentPane.add(bpo2);
-		
 		rjang=new JButton(new ImageIcon("red_jang.png"));
 		rjang.setBackground(Color.RED);
 		rjang.setBorderPainted(false);
@@ -204,6 +168,7 @@ public class Board extends JFrame {
 		bjang.setContentAreaFilled(false);
 		bjang.setFocusPainted(false);
 		bjang.setSize(50,50);
+		bjang.setLocation(475,795);
 		bjang.setLocation(475,790);
 		contentPane.add(bjang);
 		
@@ -213,7 +178,7 @@ public class Board extends JFrame {
 		rcha1.setContentAreaFilled(false);
 		rcha1.setFocusPainted(false);
 		rcha1.setSize(50,50);
-		rcha1.setLocation(90,30);
+		rcha1.setLocation(95,30);
 		contentPane.add(rcha1);
 
 		rcha2=new JButton(new ImageIcon("red_cha.png"));
@@ -222,7 +187,7 @@ public class Board extends JFrame {
 		rcha2.setContentAreaFilled(false);
 		rcha2.setFocusPainted(false);
 		rcha2.setSize(50,50);
-		rcha2.setLocation(850,30);
+		rcha2.setLocation(855,30);
 		contentPane.add(rcha2);
 
 		bcha1=new JButton(new ImageIcon("blue_cha.png"));
@@ -231,7 +196,7 @@ public class Board extends JFrame {
 		bcha1.setContentAreaFilled(false);
 		bcha1.setFocusPainted(false);
 		bcha1.setSize(50,50);
-		bcha1.setLocation(90,885);
+		bcha1.setLocation(95,885);
 		contentPane.add(bcha1);
 
 		bcha2=new JButton(new ImageIcon("blue_cha.png"));
@@ -240,80 +205,9 @@ public class Board extends JFrame {
 		bcha2.setContentAreaFilled(false);
 		bcha2.setFocusPainted(false);
 		bcha2.setSize(50,50);
-		bcha2.setLocation(850,885);
+		bcha2.setLocation(855,885);
 		contentPane.add(bcha2);
 		
-		rsang1=new JButton(new ImageIcon("red_sang.png"));
-		rsang1.setBackground(Color.RED);
-		rsang1.setBorderPainted(false);
-		rsang1.setContentAreaFilled(false);
-		rsang1.setFocusPainted(false);
-		rsang1.setSize(50,50);
-		rsang1.setLocation(185,30);
-		contentPane.add(rsang1);
-		
-		rsang2=new JButton(new ImageIcon("red_sang.png"));
-		rsang2.setBackground(Color.RED);
-		rsang2.setBorderPainted(false);
-		rsang2.setContentAreaFilled(false);
-		rsang2.setFocusPainted(false);
-		rsang2.setSize(50,50);
-		rsang2.setLocation(755,30);
-		contentPane.add(rsang2);
-		
-		bsang1=new JButton(new ImageIcon("blue_sang.png"));
-		bsang1.setBackground(Color.BLUE);
-		bsang1.setBorderPainted(false);
-		bsang1.setContentAreaFilled(false);
-		bsang1.setFocusPainted(false);
-		bsang1.setSize(50,50);
-		bsang1.setLocation(185,885);
-		contentPane.add(bsang1);
-		
-		bsang2=new JButton(new ImageIcon("blue_sang.png"));
-		bsang2.setBackground(Color.BLUE);
-		bsang2.setBorderPainted(false);
-		bsang2.setContentAreaFilled(false);
-		bsang2.setFocusPainted(false);
-		bsang2.setSize(50,50);
-		bsang2.setLocation(755,885);
-		contentPane.add(bsang2);
-		
-		rma1=new JButton(new ImageIcon("red_ma.png"));
-		rma1.setBackground(Color.RED);
-		rma1.setBorderPainted(false);
-		rma1.setContentAreaFilled(false);
-		rma1.setFocusPainted(false);
-		rma1.setSize(50,50);
-		rma1.setLocation(280,30);
-		contentPane.add(rma1);
-		
-		rma2=new JButton(new ImageIcon("red_ma.png"));
-		rma2.setBackground(Color.RED);
-		rma2.setBorderPainted(false);
-		rma2.setContentAreaFilled(false);
-		rma2.setFocusPainted(false);
-		rma2.setSize(50,50);
-		rma2.setLocation(660,30);
-		contentPane.add(rma2);
-		
-		bma1=new JButton(new ImageIcon("blue_ma.png"));
-		bma1.setBackground(Color.BLUE);
-		bma1.setBorderPainted(false);
-		bma1.setContentAreaFilled(false);
-		bma1.setFocusPainted(false);
-		bma1.setSize(50,50);
-		bma1.setLocation(280,885);
-		contentPane.add(bma1);
-		
-		bma2=new JButton(new ImageIcon("blue_ma.png"));
-		bma2.setBackground(Color.BLUE);
-		bma2.setBorderPainted(false);
-		bma2.setContentAreaFilled(false);
-		bma2.setFocusPainted(false);
-		bma2.setSize(50,50);
-		bma2.setLocation(660,885);
-		contentPane.add(bma2);
 		
 		rsa1=new JButton(new ImageIcon("red_sa.png"));
 		rsa1.setBackground(Color.RED);
@@ -321,7 +215,7 @@ public class Board extends JFrame {
 		rsa1.setContentAreaFilled(false);
 		rsa1.setFocusPainted(false);
 		rsa1.setSize(50,50);
-		rsa1.setLocation(375,30);
+		rsa1.setLocation(380,30);
 		contentPane.add(rsa1);
 		
 		rsa2=new JButton(new ImageIcon("red_sa.png"));
@@ -330,7 +224,7 @@ public class Board extends JFrame {
 		rsa2.setContentAreaFilled(false);
 		rsa2.setFocusPainted(false);
 		rsa2.setSize(50,50);
-		rsa2.setLocation(565,30);
+		rsa2.setLocation(570,30);
 		contentPane.add(rsa2);
 		
 		bsa1=new JButton(new ImageIcon("blue_sa.png"));
@@ -339,7 +233,7 @@ public class Board extends JFrame {
 		bsa1.setContentAreaFilled(false);
 		bsa1.setFocusPainted(false);
 		bsa1.setSize(50,50);
-		bsa1.setLocation(375,885);
+		bsa1.setLocation(380,885);
 		contentPane.add(bsa1);
 		
 		bsa2=new JButton(new ImageIcon("blue_sa.png"));
@@ -348,7 +242,7 @@ public class Board extends JFrame {
 		bsa2.setContentAreaFilled(false);
 		bsa2.setFocusPainted(false);
 		bsa2.setSize(50,50);
-		bsa2.setLocation(565,885);
+		bsa2.setLocation(570,885);
 		contentPane.add(bsa2);
 	}
 }
