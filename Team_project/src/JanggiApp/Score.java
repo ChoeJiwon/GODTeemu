@@ -30,7 +30,7 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JTextArea;
 
-public class Score extends JFrame implements ActionListener {
+public class Score extends JFrame {
 
 	private JPanel contentPane;
 	private JLabel lblgame,lblintro;
@@ -218,8 +218,7 @@ public class Score extends JFrame implements ActionListener {
 		);
 		contentPane.setLayout(gl_contentPane);
 	}
-	
-	
+
 	
 	
 	}
