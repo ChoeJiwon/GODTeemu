@@ -41,7 +41,7 @@ public class Board extends JFrame {
 
 	};
 	PieceMove jm = new JolMove();
-	CheckPiece cp= new CheckPiece();
+	PieceMove cm= new ChaMove();
 	/**
 	 * Launch the application.
 	 */
@@ -83,11 +83,11 @@ public class Board extends JFrame {
 		rjol1.setFocusPainted(false);
 		rjol1.setSize(50, 50);
 		rjol1.setLocation(30, 315);
-		x = rjol1.getLocation().x;
-		y = rjol1.getLocation().y;
 		contentPane.add(rjol1);
 		rjol1.addMouseMotionListener(new MouseMotionAdapter() {
 			public void mouseDragged(MouseEvent e) {
+				x = rjol1.getLocation().x;
+				y = rjol1.getLocation().y;
 				xx = e.getX() - temp_x + rjol1.getLocation().x;
 				yy = e.getY() - temp_y + rjol1.getLocation().y;
 				mx = jm.movex(x, xx);
@@ -95,7 +95,6 @@ public class Board extends JFrame {
 			}
 		});
 		rjol1.addMouseListener(new MouseAdapter() {
-	
 			public void mousePressed(MouseEvent e) {
 				temp_x = e.getX();
 				temp_y = e.getY();
@@ -176,7 +175,6 @@ public class Board extends JFrame {
 					rjol1.setLocation(mx*95+30,my*95+30);
 					x = rjol1.getLocation().x;
 					y = rjol1.getLocation().y;
-					
 				}
 			}
 		});
@@ -189,7 +187,101 @@ public class Board extends JFrame {
 		rjol2.setSize(50, 50);
 		rjol2.setLocation(220, 315);
 		contentPane.add(rjol2);
-
+		rjol2.addMouseMotionListener(new MouseMotionAdapter() {
+			public void mouseDragged(MouseEvent e) {
+				x = rjol2.getLocation().x;
+				y = rjol2.getLocation().y;
+				xx = e.getX() - temp_x + rjol2.getLocation().x;
+				yy = e.getY() - temp_y + rjol2.getLocation().y;
+				mx = jm.movex(x, xx);
+				my = jm.movey(y, yy);
+			}
+		});
+		rjol2.addMouseListener(new MouseAdapter() {
+	
+			public void mousePressed(MouseEvent e) {
+				temp_x = e.getX();
+				temp_y = e.getY();
+			}
+			public void mouseReleased(MouseEvent arg0) {
+				if (jm.move(location, mx, my, x / 95, y / 95,rjol2.getBackground()) == true)
+				{
+					if (location[mx][my]!=0) 
+					{
+						int dx,dy;
+						dx=mx*95+30;
+						dy=my*95+30;
+						if (location[mx][my]==BJOL)
+						{
+							if (dx==bjol1.getLocation().x && dy==bjol1.getLocation().y)
+							{
+								contentPane.remove(bjol1);
+								contentPane.repaint();
+							}
+							if (dx==bjol2.getLocation().x && dy==bjol2.getLocation().y)
+							{
+								contentPane.remove(bjol2);
+								contentPane.repaint();
+							}
+							if (dx==bjol3.getLocation().x && dy==bjol3.getLocation().y)
+							{
+								contentPane.remove(bjol3);
+								contentPane.repaint();
+							}
+							if (dx==bjol4.getLocation().x && dy==bjol4.getLocation().y)
+							{
+								contentPane.remove(bjol4);
+								contentPane.repaint();
+							}
+							if (dx==bjol5.getLocation().x && dy==bjol5.getLocation().y)
+							{
+								contentPane.remove(bjol5);
+								contentPane.repaint();
+							}	
+						}
+						else if (location[mx][my]==BCHA)
+						{
+							if (dx==bcha1.getLocation().x && dy==bcha1.getLocation().y)
+							{
+								contentPane.remove(bcha1);
+								contentPane.repaint();
+							}
+							if (dx==bcha2.getLocation().x && dy==bcha2.getLocation().y)
+							{
+								contentPane.remove(bcha2);
+								contentPane.repaint();
+							}
+						}
+						else if (location[mx][my]==BJANG)
+						{
+							if (dx==bjang.getLocation().x && dy==bjang.getLocation().y)
+							{
+								contentPane.remove(bjang);
+								contentPane.repaint();
+							}
+						}
+						else 
+						{
+							if (dx==bsa1.getLocation().x && dy==bsa1.getLocation().y)
+							{
+								contentPane.remove(bsa1);
+								contentPane.repaint();
+							}
+							if (dx==bsa2.getLocation().x && dy==bsa2.getLocation().y)
+							{
+								contentPane.remove(bsa2);
+								contentPane.repaint();
+							}
+						}
+					}	
+					location[mx][my]=RJOL;
+					location[x/95][y/95]=0;
+					rjol2.setLocation(mx*95+30,my*95+30);
+					x = rjol2.getLocation().x;
+					y = rjol2.getLocation().y;					
+				}
+			}
+		});
 		rjol3 = new JButton(new ImageIcon("red_jol.png"));
 		rjol3.setBackground(Color.RED);
 		rjol3.setBorderPainted(false);
@@ -198,7 +290,101 @@ public class Board extends JFrame {
 		rjol3.setSize(50, 50);
 		rjol3.setLocation(410, 315);
 		contentPane.add(rjol3);
-
+		rjol3.addMouseMotionListener(new MouseMotionAdapter() {
+			public void mouseDragged(MouseEvent e) {
+				x = rjol3.getLocation().x;
+				y = rjol3.getLocation().y;
+				xx = e.getX() - temp_x + rjol3.getLocation().x;
+				yy = e.getY() - temp_y + rjol3.getLocation().y;
+				mx = jm.movex(x, xx);
+				my = jm.movey(y, yy);
+			}
+		});
+		rjol3.addMouseListener(new MouseAdapter() {
+	
+			public void mousePressed(MouseEvent e) {
+				temp_x = e.getX();
+				temp_y = e.getY();
+			}
+			public void mouseReleased(MouseEvent arg0) {
+				if (jm.move(location, mx, my, x / 95, y / 95,rjol3.getBackground()) == true)
+				{
+					if (location[mx][my]!=0) 
+					{
+						int dx,dy;
+						dx=mx*95+30;
+						dy=my*95+30;
+						if (location[mx][my]==BJOL)
+						{
+							if (dx==bjol1.getLocation().x && dy==bjol1.getLocation().y)
+							{
+								contentPane.remove(bjol1);
+								contentPane.repaint();
+							}
+							if (dx==bjol2.getLocation().x && dy==bjol2.getLocation().y)
+							{
+								contentPane.remove(bjol2);
+								contentPane.repaint();
+							}
+							if (dx==bjol3.getLocation().x && dy==bjol3.getLocation().y)
+							{
+								contentPane.remove(bjol3);
+								contentPane.repaint();
+							}
+							if (dx==bjol4.getLocation().x && dy==bjol4.getLocation().y)
+							{
+								contentPane.remove(bjol4);
+								contentPane.repaint();
+							}
+							if (dx==bjol5.getLocation().x && dy==bjol5.getLocation().y)
+							{
+								contentPane.remove(bjol5);
+								contentPane.repaint();
+							}	
+						}
+						else if (location[mx][my]==BCHA)
+						{
+							if (dx==bcha1.getLocation().x && dy==bcha1.getLocation().y)
+							{
+								contentPane.remove(bcha1);
+								contentPane.repaint();
+							}
+							if (dx==bcha2.getLocation().x && dy==bcha2.getLocation().y)
+							{
+								contentPane.remove(bcha2);
+								contentPane.repaint();
+							}
+						}
+						else if (location[mx][my]==BJANG)
+						{
+							if (dx==bjang.getLocation().x && dy==bjang.getLocation().y)
+							{
+								contentPane.remove(bjang);
+								contentPane.repaint();
+							}
+						}
+						else 
+						{
+							if (dx==bsa1.getLocation().x && dy==bsa1.getLocation().y)
+							{
+								contentPane.remove(bsa1);
+								contentPane.repaint();
+							}
+							if (dx==bsa2.getLocation().x && dy==bsa2.getLocation().y)
+							{
+								contentPane.remove(bsa2);
+								contentPane.repaint();
+							}
+						}
+					}	
+					location[mx][my]=RJOL;
+					location[x/95][y/95]=0;
+					rjol3.setLocation(mx*95+30,my*95+30);
+					x = rjol3.getLocation().x;
+					y = rjol3.getLocation().y;					
+				}
+			}
+		});
 		rjol4 = new JButton(new ImageIcon("red_jol.png"));
 		rjol4.setBackground(Color.RED);
 		rjol4.setBorderPainted(false);
@@ -207,7 +393,101 @@ public class Board extends JFrame {
 		rjol4.setSize(50, 50);
 		rjol4.setLocation(600, 315);
 		contentPane.add(rjol4);
-
+		rjol4.addMouseMotionListener(new MouseMotionAdapter() {
+			public void mouseDragged(MouseEvent e) {
+				x = rjol4.getLocation().x;
+				y = rjol4.getLocation().y;
+				xx = e.getX() - temp_x + rjol4.getLocation().x;
+				yy = e.getY() - temp_y + rjol4.getLocation().y;
+				mx = jm.movex(x, xx);
+				my = jm.movey(y, yy);
+			}
+		});
+		rjol4.addMouseListener(new MouseAdapter() {
+	
+			public void mousePressed(MouseEvent e) {
+				temp_x = e.getX();
+				temp_y = e.getY();
+			}
+			public void mouseReleased(MouseEvent arg0) {
+				if (jm.move(location, mx, my, x / 95, y / 95,rjol4.getBackground()) == true)
+				{
+					if (location[mx][my]!=0) 
+					{
+						int dx,dy;
+						dx=mx*95+30;
+						dy=my*95+30;
+						if (location[mx][my]==BJOL)
+						{
+							if (dx==bjol1.getLocation().x && dy==bjol1.getLocation().y)
+							{
+								contentPane.remove(bjol1);
+								contentPane.repaint();
+							}
+							if (dx==bjol2.getLocation().x && dy==bjol2.getLocation().y)
+							{
+								contentPane.remove(bjol2);
+								contentPane.repaint();
+							}
+							if (dx==bjol3.getLocation().x && dy==bjol3.getLocation().y)
+							{
+								contentPane.remove(bjol3);
+								contentPane.repaint();
+							}
+							if (dx==bjol4.getLocation().x && dy==bjol4.getLocation().y)
+							{
+								contentPane.remove(bjol4);
+								contentPane.repaint();
+							}
+							if (dx==bjol5.getLocation().x && dy==bjol5.getLocation().y)
+							{
+								contentPane.remove(bjol5);
+								contentPane.repaint();
+							}	
+						}
+						else if (location[mx][my]==BCHA)
+						{
+							if (dx==bcha1.getLocation().x && dy==bcha1.getLocation().y)
+							{
+								contentPane.remove(bcha1);
+								contentPane.repaint();
+							}
+							if (dx==bcha2.getLocation().x && dy==bcha2.getLocation().y)
+							{
+								contentPane.remove(bcha2);
+								contentPane.repaint();
+							}
+						}
+						else if (location[mx][my]==BJANG)
+						{
+							if (dx==bjang.getLocation().x && dy==bjang.getLocation().y)
+							{
+								contentPane.remove(bjang);
+								contentPane.repaint();
+							}
+						}
+						else 
+						{
+							if (dx==bsa1.getLocation().x && dy==bsa1.getLocation().y)
+							{
+								contentPane.remove(bsa1);
+								contentPane.repaint();
+							}
+							if (dx==bsa2.getLocation().x && dy==bsa2.getLocation().y)
+							{
+								contentPane.remove(bsa2);
+								contentPane.repaint();
+							}
+						}
+					}	
+					location[mx][my]=RJOL;
+					location[x/95][y/95]=0;
+					rjol4.setLocation(mx*95+30,my*95+30);
+					x = rjol4.getLocation().x;
+					y = rjol4.getLocation().y;					
+				}
+			}
+		});
 		rjol5 = new JButton(new ImageIcon("red_jol.png"));
 		rjol5.setBackground(Color.RED);
 		rjol5.setBorderPainted(false);
@@ -216,7 +496,101 @@ public class Board extends JFrame {
 		rjol5.setSize(50, 50);
 		rjol5.setLocation(790, 315);
 		contentPane.add(rjol5);
-
+		rjol5.addMouseMotionListener(new MouseMotionAdapter() {
+			public void mouseDragged(MouseEvent e) {
+				x = rjol5.getLocation().x;
+				y = rjol5.getLocation().y;
+				xx = e.getX() - temp_x + rjol5.getLocation().x;
+				yy = e.getY() - temp_y + rjol5.getLocation().y;
+				mx = jm.movex(x, xx);
+				my = jm.movey(y, yy);
+			}
+		});
+		rjol5.addMouseListener(new MouseAdapter() {
+	
+			public void mousePressed(MouseEvent e) {
+				temp_x = e.getX();
+				temp_y = e.getY();
+			}
+			public void mouseReleased(MouseEvent arg0) {
+				if (jm.move(location, mx, my, x / 95, y / 95,rjol5.getBackground()) == true)
+				{
+					if (location[mx][my]!=0) 
+					{
+						int dx,dy;
+						dx=mx*95+30;
+						dy=my*95+30;
+						if (location[mx][my]==BJOL)
+						{
+							if (dx==bjol1.getLocation().x && dy==bjol1.getLocation().y)
+							{
+								contentPane.remove(bjol1);
+								contentPane.repaint();
+							}
+							if (dx==bjol2.getLocation().x && dy==bjol2.getLocation().y)
+							{
+								contentPane.remove(bjol2);
+								contentPane.repaint();
+							}
+							if (dx==bjol3.getLocation().x && dy==bjol3.getLocation().y)
+							{
+								contentPane.remove(bjol3);
+								contentPane.repaint();
+							}
+							if (dx==bjol4.getLocation().x && dy==bjol4.getLocation().y)
+							{
+								contentPane.remove(bjol4);
+								contentPane.repaint();
+							}
+							if (dx==bjol5.getLocation().x && dy==bjol5.getLocation().y)
+							{
+								contentPane.remove(bjol5);
+								contentPane.repaint();
+							}	
+						}
+						else if (location[mx][my]==BCHA)
+						{
+							if (dx==bcha1.getLocation().x && dy==bcha1.getLocation().y)
+							{
+								contentPane.remove(bcha1);
+								contentPane.repaint();
+							}
+							if (dx==bcha2.getLocation().x && dy==bcha2.getLocation().y)
+							{
+								contentPane.remove(bcha2);
+								contentPane.repaint();
+							}
+						}
+						else if (location[mx][my]==BJANG)
+						{
+							if (dx==bjang.getLocation().x && dy==bjang.getLocation().y)
+							{
+								contentPane.remove(bjang);
+								contentPane.repaint();
+							}
+						}
+						else 
+						{
+							if (dx==bsa1.getLocation().x && dy==bsa1.getLocation().y)
+							{
+								contentPane.remove(bsa1);
+								contentPane.repaint();
+							}
+							if (dx==bsa2.getLocation().x && dy==bsa2.getLocation().y)
+							{
+								contentPane.remove(bsa2);
+								contentPane.repaint();
+							}
+						}
+					}	
+					location[mx][my]=RJOL;
+					location[x/95][y/95]=0;
+					rjol5.setLocation(mx*95+30,my*95+30);
+					x = rjol5.getLocation().x;
+					y = rjol5.getLocation().y;					
+				}
+			}
+		});
 		bjol1 = new JButton(new ImageIcon("blue_jol.png"));
 		bjol1.setBackground(Color.BLUE);
 		bjol1.setBorderPainted(false);
@@ -225,7 +599,101 @@ public class Board extends JFrame {
 		bjol1.setSize(50, 50);
 		bjol1.setLocation(30, 600);
 		contentPane.add(bjol1);
-
+		bjol1.addMouseMotionListener(new MouseMotionAdapter() {
+			public void mouseDragged(MouseEvent e) {
+				x = bjol1.getLocation().x;
+				y = bjol1.getLocation().y;
+				xx = e.getX() - temp_x + bjol1.getLocation().x;
+				yy = e.getY() - temp_y + bjol1.getLocation().y;
+				mx = jm.movex(x, xx);
+				my = jm.movey(y, yy);
+			}
+		});
+		bjol1.addMouseListener(new MouseAdapter() {
+	
+			public void mousePressed(MouseEvent e) {
+				temp_x = e.getX();
+				temp_y = e.getY();
+			}
+			public void mouseReleased(MouseEvent arg0) {
+				if (jm.move(location, mx, my, x / 95, y / 95,bjol1.getBackground()) == true)
+				{
+					if (location[mx][my]!=0) 
+					{
+						int dx,dy;
+						dx=mx*95+30;
+						dy=my*95+30;
+						if (location[mx][my]==RJOL)
+						{
+							if (dx==rjol1.getLocation().x && dy==rjol1.getLocation().y)
+							{
+								contentPane.remove(rjol1);
+								contentPane.repaint();
+							}
+							if (dx==rjol2.getLocation().x && dy==rjol2.getLocation().y)
+							{
+								contentPane.remove(rjol2);
+								contentPane.repaint();
+							}
+							if (dx==rjol3.getLocation().x && dy==rjol3.getLocation().y)
+							{
+								contentPane.remove(rjol3);
+								contentPane.repaint();
+							}
+							if (dx==rjol4.getLocation().x && dy==rjol4.getLocation().y)
+							{
+								contentPane.remove(rjol4);
+								contentPane.repaint();
+							}
+							if (dx==rjol5.getLocation().x && dy==rjol5.getLocation().y)
+							{
+								contentPane.remove(rjol5);
+								contentPane.repaint();
+							}	
+						}
+						else if (location[mx][my]==RCHA)
+						{
+							if (dx==rcha1.getLocation().x && dy==rcha1.getLocation().y)
+							{
+								contentPane.remove(rcha1);
+								contentPane.repaint();
+							}
+							if (dx==rcha2.getLocation().x && dy==rcha2.getLocation().y)
+							{
+								contentPane.remove(rcha2);
+								contentPane.repaint();
+							}
+						}
+						else if (location[mx][my]==RJANG)
+						{
+							if (dx==rjang.getLocation().x && dy==rjang.getLocation().y)
+							{
+								contentPane.remove(rjang);
+								contentPane.repaint();
+							}
+						}
+						else 
+						{
+							if (dx==rsa1.getLocation().x && dy==rsa1.getLocation().y)
+							{
+								contentPane.remove(rsa1);
+								contentPane.repaint();
+							}
+							if (dx==rsa2.getLocation().x && dy==rsa2.getLocation().y)
+							{
+								contentPane.remove(rsa2);
+								contentPane.repaint();
+							}
+						}
+					}	
+					location[mx][my]=BJOL;
+					location[x/95][y/95]=0;
+					bjol1.setLocation(mx*95+30,my*95+30);
+					x = bjol1.getLocation().x;
+					y = bjol1.getLocation().y;					
+				}
+			}
+		});
 		bjol2 = new JButton(new ImageIcon("blue_jol.png"));
 		bjol2.setBackground(Color.BLUE);
 		bjol2.setBorderPainted(false);
@@ -234,7 +702,101 @@ public class Board extends JFrame {
 		bjol2.setSize(50, 50);
 		bjol2.setLocation(220, 600);
 		contentPane.add(bjol2);
-
+		bjol2.addMouseMotionListener(new MouseMotionAdapter() {
+			public void mouseDragged(MouseEvent e) {
+				x = bjol2.getLocation().x;
+				y = bjol2.getLocation().y;
+				xx = e.getX() - temp_x + bjol2.getLocation().x;
+				yy = e.getY() - temp_y + bjol2.getLocation().y;
+				mx = jm.movex(x, xx);
+				my = jm.movey(y, yy);
+			}
+		});
+		bjol2.addMouseListener(new MouseAdapter() {
+	
+			public void mousePressed(MouseEvent e) {
+				temp_x = e.getX();
+				temp_y = e.getY();
+			}
+			public void mouseReleased(MouseEvent arg0) {
+				if (jm.move(location, mx, my, x / 95, y / 95,bjol2.getBackground()) == true)
+				{
+					if (location[mx][my]!=0) 
+					{
+						int dx,dy;
+						dx=mx*95+30;
+						dy=my*95+30;
+						if (location[mx][my]==RJOL)
+						{
+							if (dx==rjol1.getLocation().x && dy==rjol1.getLocation().y)
+							{
+								contentPane.remove(rjol1);
+								contentPane.repaint();
+							}
+							if (dx==rjol2.getLocation().x && dy==rjol2.getLocation().y)
+							{
+								contentPane.remove(rjol2);
+								contentPane.repaint();
+							}
+							if (dx==rjol3.getLocation().x && dy==rjol3.getLocation().y)
+							{
+								contentPane.remove(rjol3);
+								contentPane.repaint();
+							}
+							if (dx==rjol4.getLocation().x && dy==rjol4.getLocation().y)
+							{
+								contentPane.remove(rjol4);
+								contentPane.repaint();
+							}
+							if (dx==rjol5.getLocation().x && dy==rjol5.getLocation().y)
+							{
+								contentPane.remove(rjol5);
+								contentPane.repaint();
+							}	
+						}
+						else if (location[mx][my]==RCHA)
+						{
+							if (dx==rcha1.getLocation().x && dy==rcha1.getLocation().y)
+							{
+								contentPane.remove(rcha1);
+								contentPane.repaint();
+							}
+							if (dx==rcha2.getLocation().x && dy==rcha2.getLocation().y)
+							{
+								contentPane.remove(rcha2);
+								contentPane.repaint();
+							}
+						}
+						else if (location[mx][my]==RJANG)
+						{
+							if (dx==rjang.getLocation().x && dy==rjang.getLocation().y)
+							{
+								contentPane.remove(rjang);
+								contentPane.repaint();
+							}
+						}
+						else 
+						{
+							if (dx==rsa1.getLocation().x && dy==rsa1.getLocation().y)
+							{
+								contentPane.remove(rsa1);
+								contentPane.repaint();
+							}
+							if (dx==rsa2.getLocation().x && dy==rsa2.getLocation().y)
+							{
+								contentPane.remove(rsa2);
+								contentPane.repaint();
+							}
+						}
+					}	
+					location[mx][my]=BJOL;
+					location[x/95][y/95]=0;
+					bjol2.setLocation(mx*95+30,my*95+30);
+					x = bjol2.getLocation().x;
+					y = bjol2.getLocation().y;					
+				}
+			}
+		});
 		bjol3 = new JButton(new ImageIcon("blue_jol.png"));
 		bjol3.setBackground(Color.BLUE);
 		bjol3.setBorderPainted(false);
@@ -243,7 +805,101 @@ public class Board extends JFrame {
 		bjol3.setSize(50, 50);
 		bjol3.setLocation(410, 600);
 		contentPane.add(bjol3);
-
+		bjol3.addMouseMotionListener(new MouseMotionAdapter() {
+			public void mouseDragged(MouseEvent e) {
+				x = bjol3.getLocation().x;
+				y = bjol3.getLocation().y;
+				xx = e.getX() - temp_x + bjol3.getLocation().x;
+				yy = e.getY() - temp_y + bjol3.getLocation().y;
+				mx = jm.movex(x, xx);
+				my = jm.movey(y, yy);
+			}
+		});
+		bjol3.addMouseListener(new MouseAdapter() {
+	
+			public void mousePressed(MouseEvent e) {
+				temp_x = e.getX();
+				temp_y = e.getY();
+			}
+			public void mouseReleased(MouseEvent arg0) {
+				if (jm.move(location, mx, my, x / 95, y / 95,bjol3.getBackground()) == true)
+				{
+					if (location[mx][my]!=0) 
+					{
+						int dx,dy;
+						dx=mx*95+30;
+						dy=my*95+30;
+						if (location[mx][my]==RJOL)
+						{
+							if (dx==rjol1.getLocation().x && dy==rjol1.getLocation().y)
+							{
+								contentPane.remove(rjol1);
+								contentPane.repaint();
+							}
+							if (dx==rjol2.getLocation().x && dy==rjol2.getLocation().y)
+							{
+								contentPane.remove(rjol2);
+								contentPane.repaint();
+							}
+							if (dx==rjol3.getLocation().x && dy==rjol3.getLocation().y)
+							{
+								contentPane.remove(rjol3);
+								contentPane.repaint();
+							}
+							if (dx==rjol4.getLocation().x && dy==rjol4.getLocation().y)
+							{
+								contentPane.remove(rjol4);
+								contentPane.repaint();
+							}
+							if (dx==rjol5.getLocation().x && dy==rjol5.getLocation().y)
+							{
+								contentPane.remove(rjol5);
+								contentPane.repaint();
+							}	
+						}
+						else if (location[mx][my]==RCHA)
+						{
+							if (dx==rcha1.getLocation().x && dy==rcha1.getLocation().y)
+							{
+								contentPane.remove(rcha1);
+								contentPane.repaint();
+							}
+							if (dx==rcha2.getLocation().x && dy==rcha2.getLocation().y)
+							{
+								contentPane.remove(rcha2);
+								contentPane.repaint();
+							}
+						}
+						else if (location[mx][my]==RJANG)
+						{
+							if (dx==rjang.getLocation().x && dy==rjang.getLocation().y)
+							{
+								contentPane.remove(rjang);
+								contentPane.repaint();
+							}
+						}
+						else 
+						{
+							if (dx==rsa1.getLocation().x && dy==rsa1.getLocation().y)
+							{
+								contentPane.remove(rsa1);
+								contentPane.repaint();
+							}
+							if (dx==rsa2.getLocation().x && dy==rsa2.getLocation().y)
+							{
+								contentPane.remove(rsa2);
+								contentPane.repaint();
+							}
+						}
+					}	
+					location[mx][my]=BJOL;
+					location[x/95][y/95]=0;
+					bjol3.setLocation(mx*95+30,my*95+30);
+					x = bjol3.getLocation().x;
+					y = bjol3.getLocation().y;					
+				}
+			}
+		});
 		bjol4 = new JButton(new ImageIcon("blue_jol.png"));
 		bjol4.setBackground(Color.BLUE);
 		bjol4.setBorderPainted(false);
@@ -252,7 +908,101 @@ public class Board extends JFrame {
 		bjol4.setSize(50, 50);
 		bjol4.setLocation(600, 600);
 		contentPane.add(bjol4);
-
+		bjol4.addMouseMotionListener(new MouseMotionAdapter() {
+			public void mouseDragged(MouseEvent e) {
+				x = bjol4.getLocation().x;
+				y = bjol4.getLocation().y;
+				xx = e.getX() - temp_x + bjol4.getLocation().x;
+				yy = e.getY() - temp_y + bjol4.getLocation().y;
+				mx = jm.movex(x, xx);
+				my = jm.movey(y, yy);
+			}
+		});
+		bjol4.addMouseListener(new MouseAdapter() {
+	
+			public void mousePressed(MouseEvent e) {
+				temp_x = e.getX();
+				temp_y = e.getY();
+			}
+			public void mouseReleased(MouseEvent arg0) {
+				if (jm.move(location, mx, my, x / 95, y / 95,bjol4.getBackground()) == true)
+				{
+					if (location[mx][my]!=0) 
+					{
+						int dx,dy;
+						dx=mx*95+30;
+						dy=my*95+30;
+						if (location[mx][my]==RJOL)
+						{
+							if (dx==rjol1.getLocation().x && dy==rjol1.getLocation().y)
+							{
+								contentPane.remove(rjol1);
+								contentPane.repaint();
+							}
+							if (dx==rjol2.getLocation().x && dy==rjol2.getLocation().y)
+							{
+								contentPane.remove(rjol2);
+								contentPane.repaint();
+							}
+							if (dx==rjol3.getLocation().x && dy==rjol3.getLocation().y)
+							{
+								contentPane.remove(rjol3);
+								contentPane.repaint();
+							}
+							if (dx==rjol4.getLocation().x && dy==rjol4.getLocation().y)
+							{
+								contentPane.remove(rjol4);
+								contentPane.repaint();
+							}
+							if (dx==rjol5.getLocation().x && dy==rjol5.getLocation().y)
+							{
+								contentPane.remove(rjol5);
+								contentPane.repaint();
+							}	
+						}
+						else if (location[mx][my]==RCHA)
+						{
+							if (dx==rcha1.getLocation().x && dy==rcha1.getLocation().y)
+							{
+								contentPane.remove(rcha1);
+								contentPane.repaint();
+							}
+							if (dx==rcha2.getLocation().x && dy==rcha2.getLocation().y)
+							{
+								contentPane.remove(rcha2);
+								contentPane.repaint();
+							}
+						}
+						else if (location[mx][my]==RJANG)
+						{
+							if (dx==rjang.getLocation().x && dy==rjang.getLocation().y)
+							{
+								contentPane.remove(rjang);
+								contentPane.repaint();
+							}
+						}
+						else 
+						{
+							if (dx==rsa1.getLocation().x && dy==rsa1.getLocation().y)
+							{
+								contentPane.remove(rsa1);
+								contentPane.repaint();
+							}
+							if (dx==rsa2.getLocation().x && dy==rsa2.getLocation().y)
+							{
+								contentPane.remove(rsa2);
+								contentPane.repaint();
+							}
+						}
+					}	
+					location[mx][my]=BJOL;
+					location[x/95][y/95]=0;
+					bjol4.setLocation(mx*95+30,my*95+30);
+					x = bjol4.getLocation().x;
+					y = bjol4.getLocation().y;					
+				}
+			}
+		});
 		bjol5 = new JButton(new ImageIcon("blue_jol.png"));
 		bjol5.setBackground(Color.BLUE);
 		bjol5.setBorderPainted(false);
@@ -261,7 +1011,101 @@ public class Board extends JFrame {
 		bjol5.setSize(50, 50);
 		bjol5.setLocation(790, 600);
 		contentPane.add(bjol5);
-
+		bjol5.addMouseMotionListener(new MouseMotionAdapter() {
+			public void mouseDragged(MouseEvent e) {
+				x = bjol5.getLocation().x;
+				y = bjol5.getLocation().y;
+				xx = e.getX() - temp_x + bjol5.getLocation().x;
+				yy = e.getY() - temp_y + bjol5.getLocation().y;
+				mx = jm.movex(x, xx);
+				my = jm.movey(y, yy);
+			}
+		});
+		bjol5.addMouseListener(new MouseAdapter() {
+	
+			public void mousePressed(MouseEvent e) {
+				temp_x = e.getX();
+				temp_y = e.getY();
+			}
+			public void mouseReleased(MouseEvent arg0) {
+				if (jm.move(location, mx, my, x / 95, y / 95,bjol5.getBackground()) == true)
+				{
+					if (location[mx][my]!=0) 
+					{
+						int dx,dy;
+						dx=mx*95+30;
+						dy=my*95+30;
+						if (location[mx][my]==RJOL)
+						{
+							if (dx==rjol1.getLocation().x && dy==rjol1.getLocation().y)
+							{
+								contentPane.remove(rjol1);
+								contentPane.repaint();
+							}
+							if (dx==rjol2.getLocation().x && dy==rjol2.getLocation().y)
+							{
+								contentPane.remove(rjol2);
+								contentPane.repaint();
+							}
+							if (dx==rjol3.getLocation().x && dy==rjol3.getLocation().y)
+							{
+								contentPane.remove(rjol3);
+								contentPane.repaint();
+							}
+							if (dx==rjol4.getLocation().x && dy==rjol4.getLocation().y)
+							{
+								contentPane.remove(rjol4);
+								contentPane.repaint();
+							}
+							if (dx==rjol5.getLocation().x && dy==rjol5.getLocation().y)
+							{
+								contentPane.remove(rjol5);
+								contentPane.repaint();
+							}	
+						}
+						else if (location[mx][my]==RCHA)
+						{
+							if (dx==rcha1.getLocation().x && dy==rcha1.getLocation().y)
+							{
+								contentPane.remove(rcha1);
+								contentPane.repaint();
+							}
+							if (dx==rcha2.getLocation().x && dy==rcha2.getLocation().y)
+							{
+								contentPane.remove(rcha2);
+								contentPane.repaint();
+							}
+						}
+						else if (location[mx][my]==RJANG)
+						{
+							if (dx==rjang.getLocation().x && dy==rjang.getLocation().y)
+							{
+								contentPane.remove(rjang);
+								contentPane.repaint();
+							}
+						}
+						else 
+						{
+							if (dx==rsa1.getLocation().x && dy==rsa1.getLocation().y)
+							{
+								contentPane.remove(rsa1);
+								contentPane.repaint();
+							}
+							if (dx==rsa2.getLocation().x && dy==rsa2.getLocation().y)
+							{
+								contentPane.remove(rsa2);
+								contentPane.repaint();
+							}
+						}
+					}	
+					location[mx][my]=BJOL;
+					location[x/95][y/95]=0;
+					bjol5.setLocation(mx*95+30,my*95+30);
+					x = bjol5.getLocation().x;
+					y = bjol5.getLocation().y;					
+				}
+			}
+		});
 		rjang = new JButton(new ImageIcon("red_jang.png"));
 		rjang.setBackground(Color.RED);
 		rjang.setBorderPainted(false);
@@ -288,7 +1132,103 @@ public class Board extends JFrame {
 		rcha1.setSize(50, 50);
 		rcha1.setLocation(30, 30);
 		contentPane.add(rcha1);
-
+		rcha1.addMouseMotionListener(new MouseMotionAdapter() {
+	         public void mouseDragged(MouseEvent e) {
+				x = rcha1.getLocation().x;
+				y = rcha1.getLocation().y;
+	            xx = e.getX() - temp_x + rcha1.getLocation().x;
+	            yy = e.getY() - temp_y + rcha1.getLocation().y;
+	            mx = cm.movex(x, xx);
+	            my = cm.movey(y, yy);
+	         }
+	      });
+	      rcha1.addMouseListener(new MouseAdapter() {
+	   
+	         public void mousePressed(MouseEvent e) {
+	            temp_x = e.getX();
+	            temp_y = e.getY();
+	         }
+	         public void mouseReleased(MouseEvent arg0) {
+	            if (cm.move(location, mx, my, x / 95, y / 95,rcha1.getBackground()) == true)
+	            {
+	               if (location[mx][my]!=0) 
+	               {
+	                  int dx,dy;
+	                  dx=mx*95+30;
+	                  dy=my*95+30;
+	                  if (location[mx][my]==BJOL)
+	                  {
+	                     if (dx==bjol1.getLocation().x && dy==bjol1.getLocation().y)
+	                     {
+	                        contentPane.remove(bjol1);
+	                        contentPane.repaint();
+	                     }
+	                     if (dx==bjol2.getLocation().x && dy==bjol2.getLocation().y)
+	                     {
+	                        contentPane.remove(bjol2);
+	                        contentPane.repaint();
+	                     }
+	                     if (dx==bjol3.getLocation().x && dy==bjol3.getLocation().y)
+	                     {
+	                        contentPane.remove(bjol3);
+	                        contentPane.repaint();
+	                     }
+	                     if (dx==bjol4.getLocation().x && dy==bjol4.getLocation().y)
+	                     {
+	                        contentPane.remove(bjol4);
+	                        contentPane.repaint();
+	                     }
+	                     if (dx==bjol5.getLocation().x && dy==bjol5.getLocation().y)
+	                     {
+	                        contentPane.remove(bjol5);
+	                        contentPane.repaint();
+	                     }   
+	                  }
+	                  else if (location[mx][my]==BCHA)
+	                  {
+	                     if (dx==bcha1.getLocation().x && dy==bcha1.getLocation().y)
+	                     {
+	                        contentPane.remove(bcha1);
+	                        contentPane.repaint();
+	                     }
+	                     if (dx==bcha2.getLocation().x && dy==bcha2.getLocation().y)
+	                     {
+	                        contentPane.remove(bcha2);
+	                        contentPane.repaint();
+	                     }
+	                  }
+	                  else if (location[mx][my]==BJANG)
+	                  {
+	                     if (dx==bjang.getLocation().x && dy==bjang.getLocation().y)
+	                     {
+	                        contentPane.remove(bjang);
+	                        contentPane.repaint();
+	                     }
+	                  }
+	                  else 
+	                  {
+	                     if (dx==bsa1.getLocation().x && dy==bsa1.getLocation().y)
+	                     {
+	                        contentPane.remove(bsa1);
+	                        contentPane.repaint();
+	                     }
+	                     if (dx==bsa2.getLocation().x && dy==bsa2.getLocation().y)
+	                     {
+	                        contentPane.remove(bsa2);
+	                        contentPane.repaint();
+	                     }
+	                  }
+	               }   
+	               location[mx][my]=RCHA;
+	               location[x/95][y/95]=0;
+	               rcha1.setLocation(mx*95+30,my*95+30);
+	               x = rcha1.getLocation().x;
+	               y = rcha1.getLocation().y;
+	               
+	            }
+	         }
+	      });
+	      
 		rcha2 = new JButton(new ImageIcon("red_cha.png"));
 		rcha2.setBackground(Color.RED);
 		rcha2.setBorderPainted(false);
@@ -297,6 +1237,102 @@ public class Board extends JFrame {
 		rcha2.setSize(50, 50);
 		rcha2.setLocation(790, 30);
 		contentPane.add(rcha2);
+		rcha2.addMouseMotionListener(new MouseMotionAdapter() {
+	         public void mouseDragged(MouseEvent e) {
+				x = rcha2.getLocation().x;
+				y = rcha2.getLocation().y;
+	            xx = e.getX() - temp_x + rcha2.getLocation().x;
+	            yy = e.getY() - temp_y + rcha2.getLocation().y;
+	            mx = cm.movex(x, xx);
+	            my = cm.movey(y, yy);
+	         }
+	      });
+	      rcha2.addMouseListener(new MouseAdapter() {
+	   
+	         public void mousePressed(MouseEvent e) {
+	            temp_x = e.getX();
+	            temp_y = e.getY();
+	         }
+	         public void mouseReleased(MouseEvent arg0) {
+	            if (cm.move(location, mx, my, x / 95, y / 95,rcha1.getBackground()) == true)
+	            {
+	               if (location[mx][my]!=0) 
+	               {
+	                  int dx,dy;
+	                  dx=mx*95+30;
+	                  dy=my*95+30;
+	                  if (location[mx][my]==BJOL)
+	                  {
+	                     if (dx==bjol1.getLocation().x && dy==bjol1.getLocation().y)
+	                     {
+	                        contentPane.remove(bjol1);
+	                        contentPane.repaint();
+	                     }
+	                     if (dx==bjol2.getLocation().x && dy==bjol2.getLocation().y)
+	                     {
+	                        contentPane.remove(bjol2);
+	                        contentPane.repaint();
+	                     }
+	                     if (dx==bjol3.getLocation().x && dy==bjol3.getLocation().y)
+	                     {
+	                        contentPane.remove(bjol3);
+	                        contentPane.repaint();
+	                     }
+	                     if (dx==bjol4.getLocation().x && dy==bjol4.getLocation().y)
+	                     {
+	                        contentPane.remove(bjol4);
+	                        contentPane.repaint();
+	                     }
+	                     if (dx==bjol5.getLocation().x && dy==bjol5.getLocation().y)
+	                     {
+	                        contentPane.remove(bjol5);
+	                        contentPane.repaint();
+	                     }   
+	                  }
+	                  else if (location[mx][my]==BCHA)
+	                  {
+	                     if (dx==bcha1.getLocation().x && dy==bcha1.getLocation().y)
+	                     {
+	                        contentPane.remove(bcha1);
+	                        contentPane.repaint();
+	                     }
+	                     if (dx==bcha2.getLocation().x && dy==bcha2.getLocation().y)
+	                     {
+	                        contentPane.remove(bcha2);
+	                        contentPane.repaint();
+	                     }
+	                  }
+	                  else if (location[mx][my]==BJANG)
+	                  {
+	                     if (dx==bjang.getLocation().x && dy==bjang.getLocation().y)
+	                     {
+	                        contentPane.remove(bjang);
+	                        contentPane.repaint();
+	                     }
+	                  }
+	                  else 
+	                  {
+	                     if (dx==bsa1.getLocation().x && dy==bsa1.getLocation().y)
+	                     {
+	                        contentPane.remove(bsa1);
+	                        contentPane.repaint();
+	                     }
+	                     if (dx==bsa2.getLocation().x && dy==bsa2.getLocation().y)
+	                     {
+	                        contentPane.remove(bsa2);
+	                        contentPane.repaint();
+	                     }
+	                  }
+	               }   
+	               location[mx][my]=RCHA;
+	               location[x/95][y/95]=0;
+	               rcha2.setLocation(mx*95+30,my*95+30);
+	               x = rcha2.getLocation().x;
+	               y = rcha2.getLocation().y;
+	               
+	            }
+	         }
+	      });
 
 		bcha1 = new JButton(new ImageIcon("blue_cha.png"));
 		bcha1.setBackground(Color.BLUE);
@@ -306,6 +1342,101 @@ public class Board extends JFrame {
 		bcha1.setSize(50, 50);
 		bcha1.setLocation(30, 885);
 		contentPane.add(bcha1);
+		bcha1.addMouseMotionListener(new MouseMotionAdapter() {
+			public void mouseDragged(MouseEvent e) {
+				x = bcha1.getLocation().x;
+				y = bcha1.getLocation().y;
+				xx = e.getX() - temp_x + bcha1.getLocation().x;
+				yy = e.getY() - temp_y + bcha1.getLocation().y;
+				mx = cm.movex(x, xx);
+				my = cm.movey(y, yy);
+			}
+		});
+		bcha1.addMouseListener(new MouseAdapter() {
+	
+			public void mousePressed(MouseEvent e) {
+				temp_x = e.getX();
+				temp_y = e.getY();
+			}
+			public void mouseReleased(MouseEvent arg0) {
+				if (cm.move(location, mx, my, x / 95, y / 95,bjol1.getBackground()) == true)
+				{
+					if (location[mx][my]!=0) 
+					{
+						int dx,dy;
+						dx=mx*95+30;
+						dy=my*95+30;
+						if (location[mx][my]==RJOL)
+						{
+							if (dx==rjol1.getLocation().x && dy==rjol1.getLocation().y)
+							{
+								contentPane.remove(rjol1);
+								contentPane.repaint();
+							}
+							if (dx==rjol2.getLocation().x && dy==rjol2.getLocation().y)
+							{
+								contentPane.remove(rjol2);
+								contentPane.repaint();
+							}
+							if (dx==rjol3.getLocation().x && dy==rjol3.getLocation().y)
+							{
+								contentPane.remove(rjol3);
+								contentPane.repaint();
+							}
+							if (dx==rjol4.getLocation().x && dy==rjol4.getLocation().y)
+							{
+								contentPane.remove(rjol4);
+								contentPane.repaint();
+							}
+							if (dx==rjol5.getLocation().x && dy==rjol5.getLocation().y)
+							{
+								contentPane.remove(rjol5);
+								contentPane.repaint();
+							}	
+						}
+						else if (location[mx][my]==RCHA)
+						{
+							if (dx==rcha1.getLocation().x && dy==rcha1.getLocation().y)
+							{
+								contentPane.remove(rcha1);
+								contentPane.repaint();
+							}
+							if (dx==rcha2.getLocation().x && dy==rcha2.getLocation().y)
+							{
+								contentPane.remove(rcha2);
+								contentPane.repaint();
+							}
+						}
+						else if (location[mx][my]==RJANG)
+						{
+							if (dx==rjang.getLocation().x && dy==rjang.getLocation().y)
+							{
+								contentPane.remove(rjang);
+								contentPane.repaint();
+							}
+						}
+						else 
+						{
+							if (dx==rsa1.getLocation().x && dy==rsa1.getLocation().y)
+							{
+								contentPane.remove(rsa1);
+								contentPane.repaint();
+							}
+							if (dx==rsa2.getLocation().x && dy==rsa2.getLocation().y)
+							{
+								contentPane.remove(rsa2);
+								contentPane.repaint();
+							}
+						}
+					}	
+					location[mx][my]=BCHA;
+					location[x/95][y/95]=0;
+					bcha1.setLocation(mx*95+30,my*95+30);
+					x = bcha1.getLocation().x;
+					y = bcha1.getLocation().y;					
+				}
+			}
+		});
 
 		bcha2 = new JButton(new ImageIcon("blue_cha.png"));
 		bcha2.setBackground(Color.BLUE);
@@ -315,6 +1446,102 @@ public class Board extends JFrame {
 		bcha2.setSize(50, 50);
 		bcha2.setLocation(790, 885);
 		contentPane.add(bcha2);
+		bcha2.addMouseMotionListener(new MouseMotionAdapter() {
+			public void mouseDragged(MouseEvent e) {
+				x = bcha2.getLocation().x;
+				y = bcha2.getLocation().y;
+				xx = e.getX() - temp_x + bcha1.getLocation().x;
+				yy = e.getY() - temp_y + bcha1.getLocation().y;
+				mx = cm.movex(x, xx);
+				my = cm.movey(y, yy);
+			}
+		});
+		bcha2.addMouseListener(new MouseAdapter() {
+	
+			public void mousePressed(MouseEvent e) {
+				temp_x = e.getX();
+				temp_y = e.getY();
+			}
+			public void mouseReleased(MouseEvent arg0) {
+				if (cm.move(location, mx, my, x / 95, y / 95,bjol1.getBackground()) == true)
+				{
+					if (location[mx][my]!=0) 
+					{
+						int dx,dy;
+						dx=mx*95+30;
+						dy=my*95+30;
+						if (location[mx][my]==RJOL)
+						{
+							if (dx==rjol1.getLocation().x && dy==rjol1.getLocation().y)
+							{
+								contentPane.remove(rjol1);
+								contentPane.repaint();
+							}
+							if (dx==rjol2.getLocation().x && dy==rjol2.getLocation().y)
+							{
+								contentPane.remove(rjol2);
+								contentPane.repaint();
+							}
+							if (dx==rjol3.getLocation().x && dy==rjol3.getLocation().y)
+							{
+								contentPane.remove(rjol3);
+								contentPane.repaint();
+							}
+							if (dx==rjol4.getLocation().x && dy==rjol4.getLocation().y)
+							{
+								contentPane.remove(rjol4);
+								contentPane.repaint();
+							}
+							if (dx==rjol5.getLocation().x && dy==rjol5.getLocation().y)
+							{
+								contentPane.remove(rjol5);
+								contentPane.repaint();
+							}	
+						}
+						else if (location[mx][my]==RCHA)
+						{
+							if (dx==rcha1.getLocation().x && dy==rcha1.getLocation().y)
+							{
+								contentPane.remove(rcha1);
+								contentPane.repaint();
+							}
+							if (dx==rcha2.getLocation().x && dy==rcha2.getLocation().y)
+							{
+								contentPane.remove(rcha2);
+								contentPane.repaint();
+							}
+						}
+						else if (location[mx][my]==RJANG)
+						{
+							if (dx==rjang.getLocation().x && dy==rjang.getLocation().y)
+							{
+								contentPane.remove(rjang);
+								contentPane.repaint();
+							}
+						}
+						else 
+						{
+							if (dx==rsa1.getLocation().x && dy==rsa1.getLocation().y)
+							{
+								contentPane.remove(rsa1);
+								contentPane.repaint();
+							}
+							if (dx==rsa2.getLocation().x && dy==rsa2.getLocation().y)
+							{
+								contentPane.remove(rsa2);
+								contentPane.repaint();
+							}
+						}
+					}	
+					location[mx][my]=BCHA;
+					location[x/95][y/95]=0;
+					bcha2.setLocation(mx*95+30,my*95+30);
+					x = bcha2.getLocation().x;
+					y = bcha2.getLocation().y;					
+				}
+			}
+		});
+
 
 		rsa1 = new JButton(new ImageIcon("red_sa.png"));
 		rsa1.setBackground(Color.RED);

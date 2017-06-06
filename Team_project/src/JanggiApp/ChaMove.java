@@ -21,7 +21,7 @@ public class ChaMove extends PieceMove{
 	{
 		if (c==Color.RED)
 		{
-			if (x>=0 && x<9  && y>=0 && y<=9 )
+			if (x>=0 && x<9  && y>=0 && y<=9)
 			{
 				if ((currentx==x && currenty!=y) || (currentx!=x && currenty==y)) 
 				{
