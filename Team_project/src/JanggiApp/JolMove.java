@@ -21,52 +21,8 @@ public class JolMove extends PieceMove{
 	{
 		if (c==Color.RED)
 		{
-			System.out.println(x + "  " + y + "  " + currentx + "  " + currenty);
-			if (currentx==3 && currenty==7 && x==4 && y==8 && Math.abs(currentx-x) <= 1 && Math.abs(currenty-y) <= 1)
-			{
-				
-				if (location[x][y]==0) return true;
-				if (location[x][y]!=0 && location[x][y]/10==0) 
-					{
-						System.out.println("BYE");
-						return true;
-					}
-				else return false;
-			}
-			if (currentx==5 && currenty==7 && x==4 && y==8 && Math.abs(currentx-x) <= 1 && Math.abs(currenty-y) <= 1)
-			{
-				
-				if (location[x][y]==0) return true;
-				if (location[x][y]!=0 && location[x][y]/10==0) 
-					{
-						System.out.println("BYE");
-						return true;
-					}
-				else return false;
-			}
-			if (currentx==4 && currenty==8 && x==3 && y==9 && Math.abs(currentx-x) <= 1 && Math.abs(currenty-y) <= 1)
-			{
-				
-				if (location[x][y]==0) return true;
-				if (location[x][y]!=0 && location[x][y]/10==0) 
-					{
-						System.out.println("BYE");
-						return true;
-					}
-				else return false;
-			}
-			if (currentx==4 && currenty==8 && x==5 && y==9 && Math.abs(currentx-x) <= 1 && Math.abs(currenty-y) <= 1)
-			{
-				
-				if (location[x][y]==0) return true;
-				if (location[x][y]!=0 && location[x][y]/10==0) 
-					{
-						System.out.println("BYE");
-						return true;
-					}
-				else return false;
-			}
-			
+			if((currentx==3||currentx==5)&&currenty==7 && x==4  && y==8) return true;
+			if(currentx==4&&currenty==8&&(x==3||x==5)&&y==9) return true;
 			if (x>=0 && x<9 && Math.abs(currentx-x) <= 1 && y>=0 && y<=9 && Math.abs(currenty-y) <= 1 && currenty<=y)
 			{
 				if ((currentx==x && currenty!=y) || (currentx!=x && currenty==y)) 
@@ -80,6 +36,8 @@ public class JolMove extends PieceMove{
 		}
 		else
 		{
+			if((currentx==3||currentx==5)&&currenty==2 && x==4  && y==1) return true;
+			if(currentx==4&&currenty==1&&(x==3||x==5)&&y==0) return true;
 			if (x>=0 && x<=8 && Math.abs(currentx-x) <= 1 && y>=0 && y<=9 && Math.abs(currenty-y) <= 1 && currenty>=y)
 			{
 				if ((currentx==x && currenty!=y) || (currentx!=x && currenty==y)) 
@@ -92,5 +50,4 @@ public class JolMove extends PieceMove{
 			return false;
 		}
 	}
-
 }
