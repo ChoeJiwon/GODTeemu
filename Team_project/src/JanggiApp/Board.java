@@ -1363,8 +1363,8 @@ public class Board extends JFrame {
 			public void mouseDragged(MouseEvent e) {
 				x = bcha2.getLocation().x;
 				y = bcha2.getLocation().y;
-				xx = e.getX() - temp_x + bcha1.getLocation().x;
-				yy = e.getY() - temp_y + bcha1.getLocation().y;
+				xx = e.getX() - temp_x + bcha2.getLocation().x;
+				yy = e.getY() - temp_y + bcha2.getLocation().y;
 				mx = cm.movex(x, xx);
 				my = cm.movey(y, yy);
 			}
