@@ -58,19 +58,19 @@ public class Setting extends JFrame {
 		
 		lblgame = new JLabel("OOP WITH GAME");
 		lblgame.setForeground(new Color(160, 82, 45));
-		lblgame.setFont(new Font("±¼¸²", Font.PLAIN, 50));
+		lblgame.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 50));
 		lblgame.setBounds(14, 12, 548, 71);
 		lblgame.setHorizontalAlignment(SwingConstants.CENTER);
 		Pane.add(lblgame);
 		
 		lblintro = new JLabel("PRODUCTION BY TEEMU WARRIOUS");
-		lblintro.setFont(new Font("±¼¸²", Font.PLAIN, 20));
+		lblintro.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 20));
 		lblintro.setForeground(new Color(169, 169, 169));
 		lblintro.setBounds(121, 459, 326, 18);
 		Pane.add(lblintro);
 		
 		btnset = new JButton("SETTING");
-		btnset.setFont(new Font("±¼¸²", Font.PLAIN, 30));
+		btnset.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 30));
 		btnset.setForeground(new Color(160, 82, 45));
 		btnset.setBackground(KoreanChess.c);
 		btnset.addActionListener(new ActionListener() {
@@ -96,12 +96,12 @@ public class Setting extends JFrame {
 		Pane.add(btnset);
 		
 		lblSound = new JLabel("SOUND");
-		lblSound.setFont(new Font("±¼¸²", Font.PLAIN, 30));
+		lblSound.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 30));
 		lblSound.setBounds(149, 156, 113, 47);
 		Pane.add(lblSound);
 		
 		lblColor = new JLabel("COLOR");
-		lblColor.setFont(new Font("±¼¸²", Font.PLAIN, 30));
+		lblColor.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 30));
 		lblColor.setBounds(149, 215, 113, 35);
 		Pane.add(lblColor);
 		
@@ -117,7 +117,7 @@ public class Setting extends JFrame {
 		});
 		buttonGroup.add(rdbtnOff);
 		rdbtnOff.setBackground(KoreanChess.c);
-		rdbtnOff.setFont(new Font("±¼¸²", Font.PLAIN, 18));
+		rdbtnOff.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 18));
 		rdbtnOff.setBounds(336, 156, 66, 47);
 		Pane.add(rdbtnOff);
 		
@@ -133,7 +133,7 @@ public class Setting extends JFrame {
 		});
 		buttonGroup.add(rdbtnOn);
 		rdbtnOn.setBackground(KoreanChess.c);
-		rdbtnOn.setFont(new Font("±¼¸²", Font.PLAIN, 18));
+		rdbtnOn.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 18));
 		rdbtnOn.setBounds(272, 156, 58, 47);
 		Pane.add(rdbtnOn);
 		

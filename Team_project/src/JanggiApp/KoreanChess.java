@@ -55,14 +55,14 @@ public class KoreanChess extends JFrame {
 		
 		JLabel lblgame = new JLabel("OOP WITH GAME");
 		lblgame.setForeground(new Color(160, 82, 45));
-		lblgame.setFont(new Font("±¼¸²", Font.PLAIN, 50));
+		lblgame.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 50));
 		lblgame.setBounds(14, 12, 548, 71);
 		lblgame.setHorizontalAlignment(SwingConstants.CENTER);
 		contentPane.add(lblgame);
 		
 		JButton btnstart = new JButton("START");
 		buttonGroup.add(btnstart);
-		btnstart.setFont(new Font("±¼¸²", Font.PLAIN, 30));
+		btnstart.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 30));
 		btnstart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				dispose();
@@ -75,15 +75,15 @@ public class KoreanChess extends JFrame {
 		btnstart.setBounds(193, 182, 179, 64);
 		contentPane.add(btnstart);
 		
-		lblintro = new JLabel("PRODUCTION BY TEEMU WARRIOUS");
-		lblintro.setFont(new Font("±¼¸²", Font.PLAIN, 20));
+		lblintro = new JLabel("PRODUCTION BY TEEMU WARRIORS");
+		lblintro.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 20));
 		lblintro.setForeground(new Color(169, 169, 169));
-		lblintro.setBounds(121, 459, 326, 18);
+		lblintro.setBounds(93, 459, 397, 18);
 		contentPane.add(lblintro);
 		
 		JButton btnmenu = new JButton("MENU");
 		buttonGroup.add(btnmenu);
-		btnmenu.setFont(new Font("±¼¸²", Font.PLAIN, 30));
+		btnmenu.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 30));
 		btnmenu.setForeground(new Color(160, 82, 45));
 		btnmenu.setBackground(c);
 		btnmenu.addActionListener(new ActionListener() {

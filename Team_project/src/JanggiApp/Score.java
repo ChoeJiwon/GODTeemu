@@ -68,25 +68,25 @@ public class Score extends JFrame {
 		
 		lblgame = new JLabel("OOP WITH GAME");
 		lblgame.setForeground(new Color(160, 82, 45));
-		lblgame.setFont(new Font("±¼¸²", Font.PLAIN, 50));
+		lblgame.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 50));
 		lblgame.setBounds(14, 12, 548, 71);
 		lblgame.setHorizontalAlignment(SwingConstants.CENTER);
 		
 		lblintro = new JLabel("PRODUCTION BY TEEMU WARRIOUS");
-		lblintro.setFont(new Font("±¼¸²", Font.PLAIN, 20));
+		lblintro.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 20));
 		lblintro.setForeground(new Color(169, 169, 169));
 		lblintro.setBounds(121, 459, 326, 18);
 		
 		JLabel lblPlayer = new JLabel("Player1");
-		lblPlayer.setFont(new Font("±¼¸²", Font.PLAIN, 25));
+		lblPlayer.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 25));
 		lblPlayer.setForeground(Color.DARK_GRAY);
 		
 		lblPlayer_1 = new JLabel("Player2");
-		lblPlayer_1.setFont(new Font("±¼¸²", Font.PLAIN, 25));
+		lblPlayer_1.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 25));
 		lblPlayer_1.setForeground(Color.DARK_GRAY);
 		
 		label = new JLabel(":");
-		label.setFont(new Font("±¼¸²", Font.PLAIN, 23));
+		label.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 23));
 		
 		btnCheckScore = new JButton("Check Score");
 		btnCheckScore.addActionListener(new ActionListener(){

@@ -34,6 +34,8 @@ import javax.swing.JOptionPane;
 
 public class Encapsulation extends JFrame
 {
+	public Encapsulation() {
+	}
 	JFrame frame;
 	JTextArea txt_area;
 	JPanel contentPanel;
@@ -53,7 +55,7 @@ public class Encapsulation extends JFrame
 		txt_area.setLineWrap(true);
 		txt_area.setSize(440, 300);
 		txt_area.setBackground(Color.WHITE);
-		
+		txt_area.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 18));	
 		contentPanel.setBackground(Color.WHITE);
 		contentPanel.add(txt_area);
 				
@@ -71,7 +73,7 @@ public class Encapsulation extends JFrame
 		
 		
 		frame.getContentPane().add(contentPanel, BorderLayout.NORTH);
-		frame.add(imagePanel, BorderLayout.CENTER);
+		frame.getContentPane().add(imagePanel, BorderLayout.CENTER);
 		frame.setBackground(Color.WHITE);
 		
 		frame.setSize(450, 650);
