@@ -107,8 +107,10 @@ public class ChaMove extends PieceMove {
 							}
 						}
 						if (cnt == 0) {
+							Board.turn = 0;
 							return true;
-						} else if (cnt == 1) {
+						}
+						if (cnt == 1) {
 							if (location[x][y] / 10 == 0 && xx == x) {
 								Board.turn = 0;
 								return true;
@@ -266,7 +268,8 @@ public class ChaMove extends PieceMove {
 
 							Board.turn = 1;
 							return true;
-						} else if (cnt == 1) {
+						}
+						if (cnt == 1) {
 							if (location[x][y] / 10 != 0 && xx == x) {
 								Board.turn = 1;
 								return true;
@@ -281,13 +284,13 @@ public class ChaMove extends PieceMove {
 									xx = i;
 							}
 						}
-						if (cnt == 0)
-						{
-							Board.turn=1;
+						if (cnt == 0) {
+							Board.turn = 1;
 							return true;
-						}else if (cnt == 1) {
+						}
+						if (cnt == 1) {
 							if (location[x][y] / 10 != 0 && xx == x) {
-								Board.turn=1;
+								Board.turn = 1;
 								return true;
 							} else
 								return false;
@@ -306,7 +309,7 @@ public class ChaMove extends PieceMove {
 						}
 						if (cnt == 0) {
 
-							Board.turn=1;
+							Board.turn = 1;
 							return true;
 						} else if (cnt == 1) {
 							if (location[x][y] / 10 != 0 && yy == y) {
@@ -326,7 +329,8 @@ public class ChaMove extends PieceMove {
 						if (cnt == 0) {
 							Board.turn = 1;
 							return true;
-						} else if (cnt == 1) {
+						}
+						if (cnt == 1) {
 							if (location[x][y] / 10 != 0 && yy == y) {
 								Board.turn = 1;
 								return true;
@@ -340,5 +344,4 @@ public class ChaMove extends PieceMove {
 		}
 		return false;
 	}
-
 }
