@@ -5,6 +5,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class MoveAndRemove {
@@ -113,6 +114,8 @@ public class MoveAndRemove {
 							if (dx == J.getLocation().x && dy == J.getLocation().y) {
 								pnl.remove(J);
 								pnl.repaint();
+								JOptionPane.showConfirmDialog(null, "You catch king! Red Win!", "END",JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE,null);
+								System.exit(0);
 							}
 						} else {
 							if (dx == R1.getLocation().x && dy == R1.getLocation().y) {
@@ -210,6 +213,8 @@ public class MoveAndRemove {
 							if (dx == J.getLocation().x && dy == J.getLocation().y) {
 								pnl.remove(J);
 								pnl.repaint();
+								JOptionPane.showConfirmDialog(null, "You catch king! Blue Win!", "END",JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE,null);
+								System.exit(0);
 							}
 						} else {
 							if (dx == R1.getLocation().x && dy == R1.getLocation().y) {
