@@ -11,7 +11,7 @@ public class MoveAndRemove {
 
 	JButton btn;
 	PieceMove pm;
-	int x, y, xx, yy, temp_x, temp_y, mx, my;
+	int x, y, xx, yy, temp_x, temp_y, mx, my,Turn;
 	int[][] location;
 	JPanel pnl;
 	JButton J1 = new JButton();
@@ -57,8 +57,6 @@ public class MoveAndRemove {
 		this.J = j;
 		this.R1 = r1;
 		this.R2 = r2;
-		
-		
 		btn.addMouseMotionListener(new MouseMotionAdapter() {
 			public void mouseDragged(MouseEvent e) {
 				x = btn.getLocation().x;
@@ -76,7 +74,7 @@ public class MoveAndRemove {
 			}
 
 			public void mouseReleased(MouseEvent arg0) {
-				if (pm.move(location, mx, my, x / 95, y / 95, btn.getBackground()) == true) {
+				if (pm.move(location, mx, my, x / 95, y / 95, btn.getBackground(),Board.turn) == true) {
 					if (location[mx][my] != 0) {
 						int dx, dy;
 						dx = mx * 95 + 30;
@@ -154,8 +152,6 @@ public class MoveAndRemove {
 		this.J = j;
 		this.R1 = r1;
 		this.R2 = r2;
-		
-		
 		btn.addMouseMotionListener(new MouseMotionAdapter() {
 			public void mouseDragged(MouseEvent e) {
 				x = btn.getLocation().x;
@@ -164,16 +160,18 @@ public class MoveAndRemove {
 				yy = e.getY() - temp_y + btn.getLocation().y;
 				mx = pm.movex(x, xx);
 				my = pm.movey(y, yy);
+				
 			}
 		});
 		btn.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
 				temp_x = e.getX();
 				temp_y = e.getY();
+				
 			}
 
 			public void mouseReleased(MouseEvent arg0) {
-				if (pm.move(location, mx, my, x / 95, y / 95, btn.getBackground()) == true) {
+				if (pm.move(location, mx, my, x / 95, y / 95, btn.getBackground(),Board.turn) == true) {
 					if (location[mx][my] != 0) {
 						int dx, dy;
 						dx = mx * 95 + 30;

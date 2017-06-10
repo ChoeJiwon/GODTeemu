@@ -42,6 +42,7 @@ public class Board extends JFrame {
 	private JButton bsa2 = new JButton(new ImageIcon("blue_sa.png"));
 	
 	private JPanel contentPane;
+	static int turn=0;
 	final static int BJANG = 1, BCHA = 2, BJOL = 3, BSA = 4, RJANG = 11, RCHA = 12, RJOL = 13, RSA = 14;
 	int[][] location = { { RCHA, 0, 0, RJOL, 0, 0, BJOL, 0, 0, BCHA }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, RJOL, 0, 0, BJOL, 0, 0, 0 }, { RSA, 0, 0, 0, 0, 0, 0, 0, 0, BSA },
@@ -87,7 +88,6 @@ public class Board extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
 		
 		rjol1.setBackground(Color.RED);
 		rjol1.setBorderPainted(false);
