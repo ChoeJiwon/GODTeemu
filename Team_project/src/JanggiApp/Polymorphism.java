@@ -78,7 +78,7 @@ public class Polymorphism extends JFrame
 		frame.setVisible(true);
 	}
 	
-	public static void main(String[] args)
+	public void go()
 	{
 		Polymorphism tool_tip = new Polymorphism();
 		tool_tip.polymorphism();

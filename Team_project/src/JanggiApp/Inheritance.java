@@ -85,7 +85,7 @@ public class Inheritance {
 		frame.setVisible(true);
 	}
 	
-	public static void main(String[] args)
+	public void go()
 	{
 		Inheritance tool_tip = new Inheritance();
 		tool_tip.inheritance();

@@ -28,8 +28,8 @@ public class Player extends JFrame {
    private JPanel contentPane;
    private JLabel lblintro;
    private Board board;
-   JTextField textPlay1;
-   JTextField textPlay2;
+   static JTextField textPlay1;
+   static JTextField textPlay2;
 
    /**
     * Launch the application.
@@ -112,37 +112,6 @@ public class Player extends JFrame {
       textPlay2.setColumns(10);
       textPlay2.setBounds(218, 227, 248, 34);
       contentPane.add(textPlay2);
-      
-      JButton btnBack = new JButton("Save");
-      btnBack.addActionListener(new ActionListener() {
-         public void actionPerformed(ActionEvent e) {
-            
-            JFileChooser fc = new JFileChooser();
-            int result = fc.showSaveDialog(Player.this);
-            PlayerName pn = new PlayerName();
-            
-            if (result == JFileChooser.APPROVE_OPTION){
-               try {
-                  File f=fc.getSelectedFile();
-                  pn.setName1(textPlay1.getText());
-                  pn.setName2(textPlay2.getText());
-                  
-                  FileOutputStream fos=new FileOutputStream(f);
-                  ObjectOutputStream oos = new ObjectOutputStream(fos);
-                  oos.writeObject(pn);
-                  oos.close();
-               } catch (FileNotFoundException e1) {
-                  // TODO Auto-generated catch block
-                  e1.printStackTrace();
-               } catch (IOException e1) {
-                  // TODO Auto-generated catch block
-                  e1.printStackTrace();
-               }
-            }
-         }
-      });
-      btnBack.setBounds(88, 342, 105, 27);
-      contentPane.add(btnBack);
       
       JButton btnBack_1 = new JButton("Back");
       btnBack_1.addActionListener(new ActionListener() {

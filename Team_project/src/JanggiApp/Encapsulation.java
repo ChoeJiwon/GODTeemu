@@ -78,7 +78,7 @@ public class Encapsulation extends JFrame {
 		frame.setVisible(true);
 	}
 
-	public static void main(String[] args) {
+	public void go() {
 		Encapsulation tool_tip = new Encapsulation();
 		tool_tip.encapsulation();
 	}
