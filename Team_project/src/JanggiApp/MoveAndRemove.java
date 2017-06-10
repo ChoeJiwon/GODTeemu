@@ -32,8 +32,8 @@ public class MoveAndRemove extends JFrame {
 	JButton J = new JButton();
 	JButton R1 = new JButton();
 	JButton R2 = new JButton();
-	int player1score = 0;
-	int player2score = 0;
+	ScoreFile sf = new ScoreFile();
+
 	String name;
 
 	public void Drag(JButton b, PieceMove p) {
@@ -125,40 +125,15 @@ public class MoveAndRemove extends JFrame {
 							if (dx == J.getLocation().x && dy == J.getLocation().y) {
 								pnl.remove(J);
 								pnl.repaint();
-								player1score++;
 
 								int result = JOptionPane.showConfirmDialog(null,
-										"You catch king!" + Player.textPlay1.getText()
-												+ "Win!\n\nDo you want to save a result?",
-										"END", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
+										"You catch king! RED Win!\n\nDo you want to save a result?", "END",
+										JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
 
 								if (result == JOptionPane.YES_OPTION) {
-									JFileChooser fc = new JFileChooser();
-									int result2 = fc.showSaveDialog(MoveAndRemove.this);
-									PlayerScore s = new PlayerScore();
 
-									if (result == JFileChooser.APPROVE_OPTION) {
-										File f = fc.getSelectedFile();
-										s.setPlayer1score(player1score);
-										s.setPlayer2score(player2score);
-										s.setPlayer1Name(Player.textPlay1.getText());
-										s.setPlayer2Name(Player.textPlay2.getText());
-
-										try {
-											FileOutputStream fos = new FileOutputStream(f);
-											ObjectOutputStream oos = new ObjectOutputStream(fos);
-											oos.writeObject(s);
-
-											oos.close();
-										} catch (FileNotFoundException e1) {
-											// TODO Auto-generated catch block
-											e1.printStackTrace();
-										} catch (IOException e1) {
-											// TODO Auto-generated catch block
-											e1.printStackTrace();
-										}
-
-									}
+									sf.storeScore(sf.readBScore(), sf.readRScore() + 1);
+									System.out.println("RED " + sf.readRScore() + "Blue " + sf.readBScore());
 								}
 
 								System.exit(0);
@@ -176,16 +151,12 @@ public class MoveAndRemove extends JFrame {
 					}
 					if (name.equals("rjol")) {
 						location[mx][my] = Board.RJOL;
-
 					} else if (name.equals("rcha")) {
 						location[mx][my] = Board.RCHA;
-
 					} else if (name.equals("rsa")) {
 						location[mx][my] = Board.RSA;
-
 					} else if (name.equals("jang")) {
 						location[mx][my] = Board.RJANG;
-
 					}
 					location[x / 95][y / 95] = 0;
 					btn.setLocation(mx * 95 + 30, my * 95 + 30);
@@ -273,40 +244,16 @@ public class MoveAndRemove extends JFrame {
 							if (dx == J.getLocation().x && dy == J.getLocation().y) {
 								pnl.remove(J);
 								pnl.repaint();
-								player2score++;
 
 								int result = JOptionPane.showConfirmDialog(null,
-										Player.textPlay2.getText()
-												+ " catch king! Blue Win!\n\nDo you want to save a result?",
-										"END", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
+										"You catch king! BLUE Win!\n\nDo you want to save a result?", "END",
+										JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
 								if (result == JOptionPane.YES_OPTION) {
-									JFileChooser fc = new JFileChooser();
-									int result2 = fc.showSaveDialog(MoveAndRemove.this);
-									PlayerScore s = new PlayerScore();
 
-									if (result == JFileChooser.APPROVE_OPTION) {
-										File f = fc.getSelectedFile();
-										s.setPlayer1score(player1score);
-										s.setPlayer2score(player2score);
-										s.setPlayer1Name(Player.textPlay1.getText());
-										s.setPlayer2Name(Player.textPlay2.getText());
-
-										try {
-											FileOutputStream fos = new FileOutputStream(f);
-											ObjectOutputStream oos = new ObjectOutputStream(fos);
-											oos.writeObject(s);
-
-											oos.close();
-										} catch (FileNotFoundException e1) {
-											// TODO Auto-generated catch block
-											e1.printStackTrace();
-										} catch (IOException e1) {
-											// TODO Auto-generated catch block
-											e1.printStackTrace();
-										}
-
-									}
+									sf.storeScore(sf.readBScore() + 1, sf.readRScore());
+									System.out.println("RED " + sf.readRScore() + "Blue " + sf.readBScore());
 								}
+
 								System.exit(0);
 							}
 						} else {
@@ -322,16 +269,12 @@ public class MoveAndRemove extends JFrame {
 					}
 					if (name.equals("bjol")) {
 						location[mx][my] = Board.BJOL;
-
 					} else if (name.equals("bcha")) {
 						location[mx][my] = Board.BCHA;
-
 					} else if (name.equals("bjang")) {
 						location[mx][my] = Board.BJANG;
-
-					} else if (name.equals("bjang")) {
-						location[mx][my] = Board.BSA;
-
+					} else if (name.equals("bsa")) {
+						location[mx][my] = Board.RSA;
 					}
 					location[x / 95][y / 95] = 0;
 					btn.setLocation(mx * 95 + 30, my * 95 + 30);

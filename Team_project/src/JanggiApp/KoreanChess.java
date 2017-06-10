@@ -20,8 +20,8 @@ public class KoreanChess extends JFrame {
 	private JPanel contentPane;
 	private JLabel lblintro;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
-	private Player ps;
 	private Menu menu;
+	private Board board;
 
 	/**
 	 * Launch the application.
@@ -65,9 +65,9 @@ public class KoreanChess extends JFrame {
 		btnstart.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 30));
 		btnstart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				dispose();
-				ps = new Player();
-				ps.go();
+				 dispose();
+                 board = new Board();
+                 board.go();
 			}
 		});
 		btnstart.setForeground(new Color(160, 82, 45));
@@ -98,7 +98,7 @@ public class KoreanChess extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		KoreanChess kc=new KoreanChess();
+		KoreanChess kc = new KoreanChess();
 		kc.go();
 	}
 
