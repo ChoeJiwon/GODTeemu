@@ -42,11 +42,6 @@ public class Board extends JFrame {
 	private JButton bsa2 = new JButton(new ImageIcon("blue_sa.png"));
 	
 	private JPanel contentPane;
-	private static int xx, mx;
-	private static int yy, my;
-	private static int temp_x;
-	private static int temp_y;
-	private static int x, y;
 	final static int BJANG = 1, BCHA = 2, BJOL = 3, BSA = 4, RJANG = 11, RCHA = 12, RJOL = 13, RSA = 14;
 	int[][] location = { { RCHA, 0, 0, RJOL, 0, 0, BJOL, 0, 0, BCHA }, { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
 			{ 0, 0, 0, RJOL, 0, 0, BJOL, 0, 0, 0 }, { RSA, 0, 0, 0, 0, 0, 0, 0, 0, BSA },
