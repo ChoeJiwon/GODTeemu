@@ -154,6 +154,7 @@ public class Board extends JFrame {
 					rjol1.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = rjol1.getLocation().x;
 					y = rjol1.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -240,6 +241,7 @@ public class Board extends JFrame {
 					rjol2.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = rjol2.getLocation().x;
 					y = rjol2.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -325,6 +327,7 @@ public class Board extends JFrame {
 					rjol3.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = rjol3.getLocation().x;
 					y = rjol3.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -410,6 +413,7 @@ public class Board extends JFrame {
 					rjol4.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = rjol4.getLocation().x;
 					y = rjol4.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -495,6 +499,7 @@ public class Board extends JFrame {
 					rjol5.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = rjol5.getLocation().x;
 					y = rjol5.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -580,6 +585,7 @@ public class Board extends JFrame {
 					bjol1.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = bjol1.getLocation().x;
 					y = bjol1.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -665,6 +671,7 @@ public class Board extends JFrame {
 					bjol2.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = bjol2.getLocation().x;
 					y = bjol2.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -750,6 +757,7 @@ public class Board extends JFrame {
 					bjol3.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = bjol3.getLocation().x;
 					y = bjol3.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -835,6 +843,7 @@ public class Board extends JFrame {
 					bjol4.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = bjol4.getLocation().x;
 					y = bjol4.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -920,6 +929,7 @@ public class Board extends JFrame {
 					bjol5.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = bjol5.getLocation().x;
 					y = bjol5.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -1004,6 +1014,7 @@ public class Board extends JFrame {
 					rjang.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = rjang.getLocation().x;
 					y = rjang.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -1088,6 +1099,7 @@ public class Board extends JFrame {
 					bjang.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = bjang.getLocation().x;
 					y = bjang.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -1173,7 +1185,7 @@ public class Board extends JFrame {
 					rcha1.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = rcha1.getLocation().x;
 					y = rcha1.getLocation().y;
-
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -1260,7 +1272,7 @@ public class Board extends JFrame {
 					rcha2.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = rcha2.getLocation().x;
 					y = rcha2.getLocation().y;
-
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -1281,6 +1293,7 @@ public class Board extends JFrame {
 				yy = e.getY() - temp_y + bcha1.getLocation().y;
 				mx = cm.movex(x, xx);
 				my = cm.movey(y, yy);
+				new Sound().PlaySound();
 			}
 		});
 		bcha1.addMouseListener(new MouseAdapter() {
@@ -1347,6 +1360,7 @@ public class Board extends JFrame {
 					bcha1.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = bcha1.getLocation().x;
 					y = bcha1.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -1433,6 +1447,7 @@ public class Board extends JFrame {
 					bcha2.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = bcha2.getLocation().x;
 					y = bcha2.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -1518,6 +1533,7 @@ public class Board extends JFrame {
 					rsa1.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = rsa1.getLocation().x;
 					y = rsa1.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -1602,6 +1618,7 @@ public class Board extends JFrame {
 					rsa2.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = rsa2.getLocation().x;
 					y = rsa2.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -1686,6 +1703,7 @@ public class Board extends JFrame {
 					bsa1.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = bsa1.getLocation().x;
 					y = bsa1.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
@@ -1770,6 +1788,7 @@ public class Board extends JFrame {
 					bsa2.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = bsa2.getLocation().x;
 					y = bsa2.getLocation().y;
+					new Sound().PlaySound();
 				}
 			}
 		});
