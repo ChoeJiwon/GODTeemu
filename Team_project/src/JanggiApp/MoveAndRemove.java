@@ -15,7 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class MoveAndRemove extends JFrame{
+public class MoveAndRemove extends JFrame {
 
 	JButton btn;
 	PieceMove pm;
@@ -32,9 +32,10 @@ public class MoveAndRemove extends JFrame{
 	JButton J = new JButton();
 	JButton R1 = new JButton();
 	JButton R2 = new JButton();
-	int player1score=0;
-	int player2score=0;
-	
+	int player1score = 0;
+	int player2score = 0;
+	String name;
+
 	public void Drag(JButton b, PieceMove p) {
 		this.btn = b;
 		this.pm = p;
@@ -51,8 +52,8 @@ public class MoveAndRemove extends JFrame{
 
 	}
 
-	public void RRemove(JButton b, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2, JButton j3, JButton j4,
-			JButton j5, JButton c1, JButton c2, JButton j, JButton r1, JButton r2) {
+	public void RRemove(JButton b, String n, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2, JButton j3,
+			JButton j4, JButton j5, JButton c1, JButton c2, JButton j, JButton r1, JButton r2) {
 		this.btn = b;
 		this.pm = p;
 		this.location = arr;
@@ -67,6 +68,7 @@ public class MoveAndRemove extends JFrame{
 		this.J = j;
 		this.R1 = r1;
 		this.R2 = r2;
+		this.name = n;
 		btn.addMouseMotionListener(new MouseMotionAdapter() {
 			public void mouseDragged(MouseEvent e) {
 				x = btn.getLocation().x;
@@ -124,41 +126,42 @@ public class MoveAndRemove extends JFrame{
 								pnl.remove(J);
 								pnl.repaint();
 								player1score++;
-								
-								int result=JOptionPane.showConfirmDialog(null,"You catch king!"+ Player.textPlay1.getText()+"Win!\n\nDo you want to save a result?", "END",JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
-								
+
+								int result = JOptionPane.showConfirmDialog(null,
+										"You catch king!" + Player.textPlay1.getText()
+												+ "Win!\n\nDo you want to save a result?",
+										"END", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
+
 								if (result == JOptionPane.YES_OPTION) {
-									JFileChooser fc=new JFileChooser();
-						            int result2=fc.showSaveDialog(MoveAndRemove.this);
-						            PlayerScore s=new PlayerScore();
-						            
-						            
-						            if(result==JFileChooser.APPROVE_OPTION)
-						            {
-						               File f=fc.getSelectedFile();
-						               s.setPlayer1score(player1score);
-						               s.setPlayer2score(player2score);
-						               s.setPlayer1Name(Player.textPlay1.getText());
-						               s.setPlayer2Name(Player.textPlay2.getText());
-						               
-						               try {
-						                  FileOutputStream fos=new FileOutputStream(f);
-						                  ObjectOutputStream oos = new ObjectOutputStream(fos);
-						                  oos.writeObject(s);
-						                 
-						                  oos.close();
-						               } catch (FileNotFoundException e1) {
-						                  // TODO Auto-generated catch block
-						                  e1.printStackTrace();
-						               } catch (IOException e1) {
-						                  // TODO Auto-generated catch block
-						                  e1.printStackTrace();
-						               }
-						               
-						            }
+									JFileChooser fc = new JFileChooser();
+									int result2 = fc.showSaveDialog(MoveAndRemove.this);
+									PlayerScore s = new PlayerScore();
+
+									if (result == JFileChooser.APPROVE_OPTION) {
+										File f = fc.getSelectedFile();
+										s.setPlayer1score(player1score);
+										s.setPlayer2score(player2score);
+										s.setPlayer1Name(Player.textPlay1.getText());
+										s.setPlayer2Name(Player.textPlay2.getText());
+
+										try {
+											FileOutputStream fos = new FileOutputStream(f);
+											ObjectOutputStream oos = new ObjectOutputStream(fos);
+											oos.writeObject(s);
+
+											oos.close();
+										} catch (FileNotFoundException e1) {
+											// TODO Auto-generated catch block
+											e1.printStackTrace();
+										} catch (IOException e1) {
+											// TODO Auto-generated catch block
+											e1.printStackTrace();
+										}
+
+									}
 								}
-							
-									System.exit(0);
+
+								System.exit(0);
 							}
 						} else {
 							if (dx == R1.getLocation().x && dy == R1.getLocation().y) {
@@ -171,7 +174,19 @@ public class MoveAndRemove extends JFrame{
 							}
 						}
 					}
-					location[mx][my] = Board.RJOL;
+					if (name.equals("rjol")) {
+						location[mx][my] = Board.RJOL;
+
+					} else if (name.equals("rcha")) {
+						location[mx][my] = Board.RCHA;
+
+					} else if (name.equals("rsa")) {
+						location[mx][my] = Board.RSA;
+
+					} else if (name.equals("jang")) {
+						location[mx][my] = Board.RJANG;
+
+					}
 					location[x / 95][y / 95] = 0;
 					btn.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = btn.getLocation().x;
@@ -182,8 +197,8 @@ public class MoveAndRemove extends JFrame{
 		});
 	}
 
-	public void BRemove(JButton b, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2, JButton j3, JButton j4,
-			JButton j5, JButton c1, JButton c2, JButton j, JButton r1, JButton r2) {
+	public void BRemove(JButton b, String n, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2, JButton j3,
+			JButton j4, JButton j5, JButton c1, JButton c2, JButton j, JButton r1, JButton r2) {
 		this.btn = b;
 		this.pm = p;
 		this.location = arr;
@@ -198,6 +213,8 @@ public class MoveAndRemove extends JFrame{
 		this.J = j;
 		this.R1 = r1;
 		this.R2 = r2;
+		this.name = n;
+
 		btn.addMouseMotionListener(new MouseMotionAdapter() {
 			public void mouseDragged(MouseEvent e) {
 				x = btn.getLocation().x;
@@ -257,37 +274,38 @@ public class MoveAndRemove extends JFrame{
 								pnl.remove(J);
 								pnl.repaint();
 								player2score++;
-								
-								int result = JOptionPane.showConfirmDialog(null,Player.textPlay2.getText()+" catch king! Blue Win!\n\nDo you want to save a result?", "END",
-										JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
+
+								int result = JOptionPane.showConfirmDialog(null,
+										Player.textPlay2.getText()
+												+ " catch king! Blue Win!\n\nDo you want to save a result?",
+										"END", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
 								if (result == JOptionPane.YES_OPTION) {
-									JFileChooser fc=new JFileChooser();
-						            int result2=fc.showSaveDialog(MoveAndRemove.this);
-						            PlayerScore s=new PlayerScore();
-						            
-						            if(result==JFileChooser.APPROVE_OPTION)
-						            {
-						               File f=fc.getSelectedFile();
-						               s.setPlayer1score(player1score);
-						               s.setPlayer2score(player2score);
-						               s.setPlayer1Name(Player.textPlay1.getText());
-						               s.setPlayer2Name(Player.textPlay2.getText());
-						               
-						               try {
-						                  FileOutputStream fos=new FileOutputStream(f);
-						                  ObjectOutputStream oos = new ObjectOutputStream(fos);
-						                  oos.writeObject(s);
-						    
-						                  oos.close();
-						               } catch (FileNotFoundException e1) {
-						                  // TODO Auto-generated catch block
-						                  e1.printStackTrace();
-						               } catch (IOException e1) {
-						                  // TODO Auto-generated catch block
-						                  e1.printStackTrace();
-						               }
-						               
-						            }
+									JFileChooser fc = new JFileChooser();
+									int result2 = fc.showSaveDialog(MoveAndRemove.this);
+									PlayerScore s = new PlayerScore();
+
+									if (result == JFileChooser.APPROVE_OPTION) {
+										File f = fc.getSelectedFile();
+										s.setPlayer1score(player1score);
+										s.setPlayer2score(player2score);
+										s.setPlayer1Name(Player.textPlay1.getText());
+										s.setPlayer2Name(Player.textPlay2.getText());
+
+										try {
+											FileOutputStream fos = new FileOutputStream(f);
+											ObjectOutputStream oos = new ObjectOutputStream(fos);
+											oos.writeObject(s);
+
+											oos.close();
+										} catch (FileNotFoundException e1) {
+											// TODO Auto-generated catch block
+											e1.printStackTrace();
+										} catch (IOException e1) {
+											// TODO Auto-generated catch block
+											e1.printStackTrace();
+										}
+
+									}
 								}
 								System.exit(0);
 							}
@@ -302,7 +320,19 @@ public class MoveAndRemove extends JFrame{
 							}
 						}
 					}
-					location[mx][my] = Board.BJOL;
+					if (name.equals("bjol")) {
+						location[mx][my] = Board.BJOL;
+
+					} else if (name.equals("bcha")) {
+						location[mx][my] = Board.BCHA;
+
+					} else if (name.equals("bjang")) {
+						location[mx][my] = Board.BJANG;
+
+					} else if (name.equals("bjang")) {
+						location[mx][my] = Board.BSA;
+
+					}
 					location[x / 95][y / 95] = 0;
 					btn.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = btn.getLocation().x;

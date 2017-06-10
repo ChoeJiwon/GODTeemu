@@ -97,7 +97,7 @@ public class Board extends JFrame {
 		rjol1.setLocation(30, 315);
 		contentPane.add(rjol1);
 		new MoveAndRemove().Drag(rjol1, jm);
-		new MoveAndRemove().RRemove(rjol1, jm, location, contentPane, bjol1, bjol2
+		new MoveAndRemove().RRemove(rjol1, "rjol", jm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 
 		
@@ -109,7 +109,7 @@ public class Board extends JFrame {
 		rjol2.setLocation(220, 315);
 		contentPane.add(rjol2);
 		new MoveAndRemove().Drag(rjol2, jm);
-		new MoveAndRemove().RRemove(rjol2, jm, location, contentPane, bjol1, bjol2
+		new MoveAndRemove().RRemove(rjol2,"rjol", jm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
 		rjol3.setBackground(Color.RED);
@@ -120,7 +120,7 @@ public class Board extends JFrame {
 		rjol3.setLocation(410, 315);
 		contentPane.add(rjol3);
 		new MoveAndRemove().Drag(rjol3, jm);
-		new MoveAndRemove().RRemove(rjol3, jm, location, contentPane, bjol1, bjol2
+		new MoveAndRemove().RRemove(rjol3,"rjol", jm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
 		rjol4.setBackground(Color.RED);
@@ -131,7 +131,7 @@ public class Board extends JFrame {
 		rjol4.setLocation(600, 315);
 		contentPane.add(rjol4);
 		new MoveAndRemove().Drag(rjol4, jm);
-		new MoveAndRemove().RRemove(rjol4, jm, location, contentPane, bjol1, bjol2
+		new MoveAndRemove().RRemove(rjol4,"rjol", jm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
 		rjol5.setBackground(Color.RED);
@@ -142,7 +142,7 @@ public class Board extends JFrame {
 		rjol5.setLocation(790, 315);
 		contentPane.add(rjol5);
 		new MoveAndRemove().Drag(rjol5, jm);
-		new MoveAndRemove().RRemove(rjol5, jm, location, contentPane, bjol1, bjol2
+		new MoveAndRemove().RRemove(rjol5, "rjol",jm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
 		bjol1.setBackground(Color.BLUE);
@@ -153,7 +153,7 @@ public class Board extends JFrame {
 		bjol1.setLocation(30, 600);
 		contentPane.add(bjol1);
 		new MoveAndRemove().Drag(bjol1, jm);
-		new MoveAndRemove().BRemove(bjol1, jm, location, contentPane, rjol1, rjol2
+		new MoveAndRemove().BRemove(bjol1, "bjol",jm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 				
 		bjol2.setBackground(Color.BLUE);
@@ -164,7 +164,7 @@ public class Board extends JFrame {
 		bjol2.setLocation(220, 600);
 		contentPane.add(bjol2);
 		new MoveAndRemove().Drag(bjol2, jm);
-		new MoveAndRemove().BRemove(bjol2, jm, location, contentPane, rjol1, rjol2
+		new MoveAndRemove().BRemove(bjol2,"bjol", jm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 		
 		bjol3.setBackground(Color.BLUE);
@@ -175,7 +175,7 @@ public class Board extends JFrame {
 		bjol3.setLocation(410, 600);
 		contentPane.add(bjol3);
 		new MoveAndRemove().Drag(bjol3, jm);
-		new MoveAndRemove().BRemove(bjol3, jm, location, contentPane, rjol1, rjol2
+		new MoveAndRemove().BRemove(bjol3,"bjol", jm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 		
 		bjol4.setBackground(Color.BLUE);
@@ -186,7 +186,7 @@ public class Board extends JFrame {
 		bjol4.setLocation(600, 600);
 		contentPane.add(bjol4);
 		new MoveAndRemove().Drag(bjol4, jm);
-		new MoveAndRemove().BRemove(bjol4, jm, location, contentPane, rjol1, rjol2
+		new MoveAndRemove().BRemove(bjol4,"bjol", jm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 				
 		bjol5.setBackground(Color.BLUE);
@@ -197,7 +197,7 @@ public class Board extends JFrame {
 		bjol5.setLocation(790, 600);
 		contentPane.add(bjol5);
 		new MoveAndRemove().Drag(bjol5, jm);
-		new MoveAndRemove().BRemove(bjol5, jm, location, contentPane, rjol1, rjol2
+		new MoveAndRemove().BRemove(bjol5,"bjol", jm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 		
 		rjang.setBackground(Color.RED);
@@ -208,7 +208,7 @@ public class Board extends JFrame {
 		rjang.setLocation(410, 125);
 		contentPane.add(rjang);
 		new MoveAndRemove().Drag(rjang, jsm);
-		new MoveAndRemove().RRemove(rjang, jsm, location, contentPane, bjol1, bjol2
+		new MoveAndRemove().RRemove(rjang, "rjang", jsm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
 			
@@ -220,7 +220,7 @@ public class Board extends JFrame {
 		bjang.setLocation(410, 790);
 		contentPane.add(bjang);
 		new MoveAndRemove().Drag(bjang, jsm);
-		new MoveAndRemove().BRemove(bjang, jsm, location, contentPane, rjol1, rjol2
+		new MoveAndRemove().BRemove(bjang,"bjang", jsm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 		
 		rcha1.setBackground(Color.RED);
@@ -231,7 +231,7 @@ public class Board extends JFrame {
 		rcha1.setLocation(30, 30);
 		contentPane.add(rcha1);
 		new MoveAndRemove().Drag(rcha1, cm);
-		new MoveAndRemove().RRemove(rcha1, cm, location, contentPane, bjol1, bjol2
+		new MoveAndRemove().RRemove(rcha1,"rcha", cm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
 		rcha2.setBackground(Color.RED);
@@ -242,7 +242,7 @@ public class Board extends JFrame {
 		rcha2.setLocation(790, 30);
 		contentPane.add(rcha2);
 		new MoveAndRemove().Drag(rcha2, cm);
-		new MoveAndRemove().RRemove(rcha2, cm, location, contentPane, bjol1, bjol2
+		new MoveAndRemove().RRemove(rcha2,"rcha", cm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
 	
@@ -256,7 +256,7 @@ public class Board extends JFrame {
 		bcha1.setLocation(30, 885);
 		contentPane.add(bcha1);
 		new MoveAndRemove().Drag(bcha1, cm);
-		new MoveAndRemove().BRemove(bcha1, cm, location, contentPane, rjol1, rjol2
+		new MoveAndRemove().BRemove(bcha1,"bcha", cm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 	
 		
@@ -268,7 +268,7 @@ public class Board extends JFrame {
 		bcha2.setLocation(790, 885);
 		contentPane.add(bcha2);
 		new MoveAndRemove().Drag(bcha2, cm);
-		new MoveAndRemove().BRemove(bcha2, cm, location, contentPane, rjol1, rjol2
+		new MoveAndRemove().BRemove(bcha2,"bcha", cm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 	
 		
@@ -280,7 +280,7 @@ public class Board extends JFrame {
 		rsa1.setLocation(315, 30);
 		contentPane.add(rsa1);
 		new MoveAndRemove().Drag(rsa1, jsm);
-		new MoveAndRemove().RRemove(rsa1, jsm, location, contentPane, bjol1, bjol2
+		new MoveAndRemove().RRemove(rsa1,"rsa", jsm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 				
 		rsa2.setBackground(Color.RED);
@@ -291,7 +291,7 @@ public class Board extends JFrame {
 		rsa2.setLocation(505, 30);
 		contentPane.add(rsa2);
 		new MoveAndRemove().Drag(rsa2, jsm);
-		new MoveAndRemove().RRemove(rsa2, jsm, location, contentPane, bjol1, bjol2
+		new MoveAndRemove().RRemove(rsa2,"rsa", jsm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 				
 		bsa1.setBackground(Color.BLUE);
@@ -302,7 +302,7 @@ public class Board extends JFrame {
 		bsa1.setLocation(315, 885);
 		contentPane.add(bsa1);
 		new MoveAndRemove().Drag(bsa1, jsm);
-		new MoveAndRemove().BRemove(bsa1, jsm, location, contentPane, rjol1, rjol2
+		new MoveAndRemove().BRemove(bsa1,"bsa", jsm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 	
 		
@@ -315,7 +315,7 @@ public class Board extends JFrame {
 		bsa2.setLocation(505, 885);
 		contentPane.add(bsa2);
 		new MoveAndRemove().Drag(bsa2, jsm);
-		new MoveAndRemove().BRemove(bsa2, jsm, location, contentPane, rjol1, rjol2
+		new MoveAndRemove().BRemove(bsa2,"bsa", jsm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 	
 	}
