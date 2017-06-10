@@ -50,7 +50,7 @@ public class Inheritance {
 		contentPanel.setBorder(new TitledBorder(null, "Inheritance"));
 		
 		txt_area = new JTextArea();
-		txt_area.setFont(new Font("±¼¸²", Font.PLAIN, 18));	
+		txt_area.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 18));	
 		txt_area.setText(content_string);
 		txt_area.setLineWrap(true);
 		txt_area.setSize(440, 300);

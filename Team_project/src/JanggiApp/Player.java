@@ -1,128 +1,107 @@
 package JanggiApp;
 
-import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
-
-import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
-import javax.swing.JTextField;
 import javax.swing.JButton;
-import javax.swing.LayoutStyle.ComponentPlacement;
+import javax.swing.SwingConstants;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import java.awt.Color;
+import java.awt.Font;
+import javax.swing.ButtonGroup;
+import javax.swing.JTextField;
 
-public class Player extends JFrame implements ActionListener {
-
+public class Player extends JFrame {
 	private JPanel contentPane;
-
-	private JTextField p1text;
-	private JTextField p2text;
-	private JLabel lblgame, lblPlayer1, lblPlayer2, labelintro;
-	private JButton btnStart;
+	private JLabel lblintro;
 	private Board board;
+	private JTextField textPlay1;
+	private JTextField textPlay2;
 
+	/**
+	 * Launch the application.
+	 */
 	public void go() {
-		try {
-			Player frame = new Player();
-			frame.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Player frame = new Player();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
 	}
 
+	/**
+	 * Create the frame.
+	 */
 	public Player() {
-		setTitle("Player");
+		setTitle("MENU");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 594, 568);
 		contentPane = new JPanel();
 		contentPane.setBackground(KoreanChess.c);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
-
-		lblgame = new JLabel("OOP WITH GAME");
+		contentPane.setLayout(null);
+		
+		JLabel lblgame = new JLabel("OOP WITH GAME");
 		lblgame.setForeground(new Color(160, 82, 45));
-		lblgame.setFont(new Font("±¼¸²", Font.PLAIN, 50));
-
-		lblPlayer1 = new JLabel("Player1 :");
-		lblPlayer1.setForeground(new Color(169, 169, 169));
-
-		p1text = new JTextField();
-		p1text.setColumns(10);
-
-		lblPlayer2 = new JLabel("Player2 :");
-		lblPlayer2.setForeground(new Color(169, 169, 169));
-
-		p2text = new JTextField();
-		p2text.setColumns(10);
-
-		btnStart = new JButton("START");
-		btnStart.setForeground(new Color(160, 82, 45));
-		btnStart.setBackground(KoreanChess.c);
-		btnStart.addActionListener(this);
-
-		labelintro = new JLabel("PRODUCTION BY TEEMU WARRIORS");
-		labelintro.setForeground(new Color(169, 169, 169));
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(149)
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPane.createSequentialGroup()
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-										.addComponent(lblPlayer1)
-										.addComponent(lblPlayer2))
-									.addGap(18)
-									.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-										.addComponent(p2text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-										.addComponent(p1text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-								.addComponent(labelintro)))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(78)
-							.addComponent(lblgame))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(223)
-							.addComponent(btnStart)))
-					.addContainerGap(80, Short.MAX_VALUE))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(52)
-					.addComponent(lblgame, GroupLayout.PREFERRED_SIZE, 64, GroupLayout.PREFERRED_SIZE)
-					.addGap(85)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblPlayer1)
-						.addComponent(p1text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(33)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(lblPlayer2)
-						.addComponent(p2text, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(61)
-					.addComponent(btnStart)
-					.addGap(76)
-					.addComponent(labelintro)
-					.addGap(47))
-		);
-		contentPane.setLayout(gl_contentPane);
-	}
-
-	public void actionPerformed(ActionEvent e) {
-		if (p1text.getText().length() != 0 && p2text.getText().length() != 0) {
-			if (!(p1text.getText().equals(p2text.getText()))) {
-				dispose();
-				board = new Board();
-				board.go();
+		lblgame.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 50));
+		lblgame.setBounds(14, 12, 548, 71);
+		lblgame.setHorizontalAlignment(SwingConstants.CENTER);
+		contentPane.add(lblgame);
+		
+		lblintro = new JLabel("PRODUCTION BY TEEMU WARRIORS");
+		lblintro.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 20));
+		lblintro.setForeground(new Color(169, 169, 169));
+		lblintro.setBounds(88, 459, 388, 18);
+		contentPane.add(lblintro);
+		
+		JButton btnstart = new JButton("START");
+		btnstart.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 30));
+		btnstart.setForeground(new Color(160, 82, 45));
+		btnstart.setBackground(KoreanChess.c);
+		btnstart.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if (textPlay1.getText().length() != 0 && textPlay2.getText().length() != 0) {
+					if (!(textPlay1.getText().equals(textPlay2.getText()))) {
+						dispose();
+						board = new Board();
+						board.go();
+					}
+				}
 			}
-		}
+		});
+		btnstart.setBounds(194, 321, 178, 64);
+		contentPane.add(btnstart);
+		
+		JLabel labelPlay = new JLabel("Player1 :");
+		labelPlay.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 25));
+		labelPlay.setBounds(88, 153, 131, 28);
+		contentPane.add(labelPlay);
+		
+		textPlay1 = new JTextField();
+		textPlay1.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 25));
+		textPlay1.setBounds(218, 150, 248, 34);
+		contentPane.add(textPlay1);
+		textPlay1.setColumns(10);
+		
+		JLabel lblPlay2 = new JLabel("Player2 :");
+		lblPlay2.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 25));
+		lblPlay2.setBounds(88, 230, 131, 28);
+		contentPane.add(lblPlay2);
+		
+		textPlay2 = new JTextField();
+		textPlay2.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 25));
+		textPlay2.setColumns(10);
+		textPlay2.setBounds(218, 227, 248, 34);
+		contentPane.add(textPlay2);
 	}
-
 }
