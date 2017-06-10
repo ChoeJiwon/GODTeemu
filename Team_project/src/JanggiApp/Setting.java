@@ -97,12 +97,12 @@ public class Setting extends JFrame {
 		
 		lblSound = new JLabel("SOUND");
 		lblSound.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 30));
-		lblSound.setBounds(149, 156, 113, 47);
+		lblSound.setBounds(139, 156, 123, 47);
 		Pane.add(lblSound);
 		
 		lblColor = new JLabel("COLOR");
 		lblColor.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 30));
-		lblColor.setBounds(149, 215, 113, 35);
+		lblColor.setBounds(139, 215, 123, 35);
 		Pane.add(lblColor);
 		
 		rdbtnOff = new JRadioButton("OFF");
@@ -118,7 +118,7 @@ public class Setting extends JFrame {
 		buttonGroup.add(rdbtnOff);
 		rdbtnOff.setBackground(KoreanChess.c);
 		rdbtnOff.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 18));
-		rdbtnOff.setBounds(336, 156, 66, 47);
+		rdbtnOff.setBounds(336, 156, 81, 47);
 		Pane.add(rdbtnOff);
 		
 		rdbtnOn = new JRadioButton("ON");
@@ -134,7 +134,7 @@ public class Setting extends JFrame {
 		buttonGroup.add(rdbtnOn);
 		rdbtnOn.setBackground(KoreanChess.c);
 		rdbtnOn.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 18));
-		rdbtnOn.setBounds(272, 156, 58, 47);
+		rdbtnOn.setBounds(272, 156, 66, 47);
 		Pane.add(rdbtnOn);
 		
 		comboBox = new JComboBox();
