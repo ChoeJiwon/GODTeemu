@@ -131,5 +131,15 @@ public class Score extends JFrame {
 		contentPane.add(lblBlue);
 		contentPane.add(Reset);
 		contentPane.add(lblintro);
+		
+		JButton btnStudyJava = new JButton("Study JAVA");
+		btnStudyJava.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Encapsulation en=new Encapsulation();
+				en.go();
+			}
+		});
+		btnStudyJava.setBounds(220, 382, 135, 27);
+		contentPane.add(btnStudyJava);
 	}
 }

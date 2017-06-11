@@ -21,7 +21,7 @@ public class KoreanChess extends JFrame {
 	private JLabel lblintro;
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private Menu menu;
-	private Board board;
+	private Inheritance ih;
 
 	/**
 	 * Launch the application.
@@ -66,8 +66,8 @@ public class KoreanChess extends JFrame {
 		btnstart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				 dispose();
-                 board = new Board();
-                 board.go();
+                 ih = new Inheritance();
+                 ih.go();
 			}
 		});
 		btnstart.setForeground(new Color(160, 82, 45));
