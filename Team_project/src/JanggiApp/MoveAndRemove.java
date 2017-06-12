@@ -156,7 +156,7 @@ public class MoveAndRemove extends JFrame {
 						location[mx][my] = Board.RCHA;
 					} else if (name.equals("rsa")) {
 						location[mx][my] = Board.RSA;
-					} else if (name.equals("jang")) {
+					} else if (name.equals("rjang")) {
 						location[mx][my] = Board.RJANG;
 					}
 					location[x / 95][y / 95] = 0;
