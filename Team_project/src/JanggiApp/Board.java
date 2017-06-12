@@ -65,6 +65,15 @@ public class Board extends JFrame {
 			}
 		});
 	}
+	
+	public static void MalDesign(JButton j, Color c, int xloca, int yloca,JPanel jp ){
+		j.setBackground(c);
+		j.setBorderPainted(false);
+		j.setContentAreaFilled(false);
+		j.setSize(50, 50);
+		j.setLocation(30+95*(xloca-1), 30+95*(yloca-1));
+		jp.add(j);
+	}
 
 	/**
 	 * Create the frame.
@@ -84,231 +93,110 @@ public class Board extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		rjol1.setBackground(Color.RED);
-		rjol1.setBorderPainted(false);
-		rjol1.setContentAreaFilled(false);
-		rjol1.setFocusPainted(false);
-		rjol1.setSize(50, 50);
-		rjol1.setLocation(30, 315);
-		contentPane.add(rjol1);
+		MalDesign(rjol1,Color.RED,1,4,contentPane);
 		new MoveAndRemove().Drag(rjol1, jm);
 		new MoveAndRemove().RRemove(rjol1, "rjol", jm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 
-		
-		rjol2.setBackground(Color.RED);
-		rjol2.setBorderPainted(false);
-		rjol2.setContentAreaFilled(false);
-		rjol2.setFocusPainted(false);
-		rjol2.setSize(50, 50);
-		rjol2.setLocation(220, 315);
-		contentPane.add(rjol2);
+		MalDesign(rjol2,Color.RED,3,4,contentPane);
 		new MoveAndRemove().Drag(rjol2, jm);
 		new MoveAndRemove().RRemove(rjol2,"rjol", jm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
-		rjol3.setBackground(Color.RED);
-		rjol3.setBorderPainted(false);
-		rjol3.setContentAreaFilled(false);
-		rjol3.setFocusPainted(false);
-		rjol3.setSize(50, 50);
-		rjol3.setLocation(410, 315);
-		contentPane.add(rjol3);
+		MalDesign(rjol3,Color.RED,5,4,contentPane);
 		new MoveAndRemove().Drag(rjol3, jm);
 		new MoveAndRemove().RRemove(rjol3,"rjol", jm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
-		rjol4.setBackground(Color.RED);
-		rjol4.setBorderPainted(false);
-		rjol4.setContentAreaFilled(false);
-		rjol4.setFocusPainted(false);
-		rjol4.setSize(50, 50);
-		rjol4.setLocation(600, 315);
-		contentPane.add(rjol4);
+		MalDesign(rjol4,Color.RED,7,4,contentPane);
 		new MoveAndRemove().Drag(rjol4, jm);
 		new MoveAndRemove().RRemove(rjol4,"rjol", jm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
-		rjol5.setBackground(Color.RED);
-		rjol5.setBorderPainted(false);
-		rjol5.setContentAreaFilled(false);
-		rjol5.setFocusPainted(false);
-		rjol5.setSize(50, 50);
-		rjol5.setLocation(790, 315);
-		contentPane.add(rjol5);
+		MalDesign(rjol5,Color.RED,9,4,contentPane);
 		new MoveAndRemove().Drag(rjol5, jm);
 		new MoveAndRemove().RRemove(rjol5, "rjol",jm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
-		bjol1.setBackground(Color.BLUE);
-		bjol1.setBorderPainted(false);
-		bjol1.setContentAreaFilled(false);
-		bjol1.setFocusPainted(false);
-		bjol1.setSize(50, 50);
-		bjol1.setLocation(30, 600);
-		contentPane.add(bjol1);
+		MalDesign(bjol1,Color.BLUE,1,7,contentPane);
 		new MoveAndRemove().Drag(bjol1, jm);
 		new MoveAndRemove().BRemove(bjol1, "bjol",jm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 				
-		bjol2.setBackground(Color.BLUE);
-		bjol2.setBorderPainted(false);
-		bjol2.setContentAreaFilled(false);
-		bjol2.setFocusPainted(false);
-		bjol2.setSize(50, 50);
-		bjol2.setLocation(220, 600);
-		contentPane.add(bjol2);
+		MalDesign(bjol2,Color.BLUE,3,7,contentPane);
 		new MoveAndRemove().Drag(bjol2, jm);
 		new MoveAndRemove().BRemove(bjol2,"bjol", jm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 		
-		bjol3.setBackground(Color.BLUE);
-		bjol3.setBorderPainted(false);
-		bjol3.setContentAreaFilled(false);
-		bjol3.setFocusPainted(false);
-		bjol3.setSize(50, 50);
-		bjol3.setLocation(410, 600);
-		contentPane.add(bjol3);
+		MalDesign(bjol3,Color.BLUE,5,7,contentPane);
 		new MoveAndRemove().Drag(bjol3, jm);
 		new MoveAndRemove().BRemove(bjol3,"bjol", jm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 		
-		bjol4.setBackground(Color.BLUE);
-		bjol4.setBorderPainted(false);
-		bjol4.setContentAreaFilled(false);
-		bjol4.setFocusPainted(false);
-		bjol4.setSize(50, 50);
-		bjol4.setLocation(600, 600);
-		contentPane.add(bjol4);
+		MalDesign(bjol4,Color.BLUE,7,7,contentPane);
 		new MoveAndRemove().Drag(bjol4, jm);
 		new MoveAndRemove().BRemove(bjol4,"bjol", jm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 				
-		bjol5.setBackground(Color.BLUE);
-		bjol5.setBorderPainted(false);
-		bjol5.setContentAreaFilled(false);
-		bjol5.setFocusPainted(false);
-		bjol5.setSize(50, 50);
-		bjol5.setLocation(790, 600);
-		contentPane.add(bjol5);
+		MalDesign(bjol5,Color.BLUE,9,7,contentPane);
 		new MoveAndRemove().Drag(bjol5, jm);
 		new MoveAndRemove().BRemove(bjol5,"bjol", jm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 		
-		rjang.setBackground(Color.RED);
-		rjang.setBorderPainted(false);
-		rjang.setContentAreaFilled(false);
-		rjang.setFocusPainted(false);
-		rjang.setSize(50, 50);
-		rjang.setLocation(410, 125);
-		contentPane.add(rjang);
+		MalDesign(rjang,Color.RED,5,2,contentPane);
 		new MoveAndRemove().Drag(rjang, jsm);
 		new MoveAndRemove().RRemove(rjang, "rjang", jsm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
 			
-		bjang.setBackground(Color.BLUE);
-		bjang.setBorderPainted(false);
-		bjang.setContentAreaFilled(false);
-		bjang.setFocusPainted(false);
-		bjang.setSize(50, 50);
-		bjang.setLocation(410, 790);
-		contentPane.add(bjang);
+		MalDesign(bjang,Color.BLUE,5,9,contentPane);
 		new MoveAndRemove().Drag(bjang, jsm);
 		new MoveAndRemove().BRemove(bjang,"bjang", jsm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 		
-		rcha1.setBackground(Color.RED);
-		rcha1.setBorderPainted(false);
-		rcha1.setContentAreaFilled(false);
-		rcha1.setFocusPainted(false);
-		rcha1.setSize(50, 50);
-		rcha1.setLocation(30, 30);
-		contentPane.add(rcha1);
+		MalDesign(rcha1,Color.RED,1,1,contentPane);
 		new MoveAndRemove().Drag(rcha1, cm);
 		new MoveAndRemove().RRemove(rcha1,"rcha", cm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
-		rcha2.setBackground(Color.RED);
-		rcha2.setBorderPainted(false);
-		rcha2.setContentAreaFilled(false);
-		rcha2.setFocusPainted(false);
-		rcha2.setSize(50, 50);
-		rcha2.setLocation(790, 30);
-		contentPane.add(rcha2);
+		MalDesign(rcha2,Color.RED,9,1,contentPane);
 		new MoveAndRemove().Drag(rcha2, cm);
 		new MoveAndRemove().RRemove(rcha2,"rcha", cm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 		
-	
-
 		
-		bcha1.setBackground(Color.BLUE);
-		bcha1.setBorderPainted(false);
-		bcha1.setContentAreaFilled(false);
-		bcha1.setFocusPainted(false);
-		bcha1.setSize(50, 50);
-		bcha1.setLocation(30, 885);
-		contentPane.add(bcha1);
+
+	
+		MalDesign(bcha1,Color.BLUE,1,10,contentPane);
 		new MoveAndRemove().Drag(bcha1, cm);
 		new MoveAndRemove().BRemove(bcha1,"bcha", cm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 	
 		
-		bcha2.setBackground(Color.BLUE);
-		bcha2.setBorderPainted(false);
-		bcha2.setContentAreaFilled(false);
-		bcha2.setFocusPainted(false);
-		bcha2.setSize(50, 50);
-		bcha2.setLocation(790, 885);
-		contentPane.add(bcha2);
+		MalDesign(bcha2,Color.BLUE,9,10,contentPane);
 		new MoveAndRemove().Drag(bcha2, cm);
 		new MoveAndRemove().BRemove(bcha2,"bcha", cm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 	
 		
-		rsa1.setBackground(Color.RED);
-		rsa1.setBorderPainted(false);
-		rsa1.setContentAreaFilled(false);
-		rsa1.setFocusPainted(false);
-		rsa1.setSize(50, 50);
-		rsa1.setLocation(315, 30);
-		contentPane.add(rsa1);
+		MalDesign(rsa1,Color.RED,4,1,contentPane);
 		new MoveAndRemove().Drag(rsa1, jsm);
 		new MoveAndRemove().RRemove(rsa1,"rsa", jsm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 				
-		rsa2.setBackground(Color.RED);
-		rsa2.setBorderPainted(false);
-		rsa2.setContentAreaFilled(false);
-		rsa2.setFocusPainted(false);
-		rsa2.setSize(50, 50);
-		rsa2.setLocation(505, 30);
-		contentPane.add(rsa2);
+		MalDesign(rsa2,Color.RED,6,1,contentPane);
 		new MoveAndRemove().Drag(rsa2, jsm);
 		new MoveAndRemove().RRemove(rsa2,"rsa", jsm, location, contentPane, bjol1, bjol2
 				, bjol3, bjol4, bjol5, bcha1, bcha2, bjang, bsa1, bsa2);
 				
-		bsa1.setBackground(Color.BLUE);
-		bsa1.setBorderPainted(false);
-		bsa1.setContentAreaFilled(false);
-		bsa1.setFocusPainted(false);
-		bsa1.setSize(50, 50);
-		bsa1.setLocation(315, 885);
-		contentPane.add(bsa1);
+		MalDesign(bsa1,Color.BLUE,4,10,contentPane);
 		new MoveAndRemove().Drag(bsa1, jsm);
 		new MoveAndRemove().BRemove(bsa1,"bsa", jsm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);
 	
 		
 		
-		bsa2.setBackground(Color.BLUE);
-		bsa2.setBorderPainted(false);
-		bsa2.setContentAreaFilled(false);
-		bsa2.setFocusPainted(false);
-		bsa2.setSize(50, 50);
-		bsa2.setLocation(505, 885);
-		contentPane.add(bsa2);
+		MalDesign(bsa2,Color.BLUE,6,10,contentPane);
 		new MoveAndRemove().Drag(bsa2, jsm);
 		new MoveAndRemove().BRemove(bsa2,"bsa", jsm, location, contentPane, rjol1, rjol2
 				, rjol3, rjol4, rjol5, rcha1, rcha2, rjang, rsa1, rsa2);

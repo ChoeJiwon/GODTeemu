@@ -123,22 +123,22 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 							}
 						} else if (location[mx][my] == Board.BJANG) {
-							if (dx == J.getLocation().x && dy == J.getLocation().y) {
-								pnl.remove(J);
-								pnl.repaint();
 
-								int result = JOptionPane.showConfirmDialog(null,
-										"You catch king! RED Win!\n\nDo you want to save a result?", "END",
-										JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
+							pnl.remove(J);
+							pnl.repaint();
 
-								if (result == JOptionPane.YES_OPTION) {
+							int result = JOptionPane.showConfirmDialog(null,
+									"You catch king! RED Win!\n\nDo you want to save a result?", "END",
+									JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
 
-									sf.storeScore(sf.readBScore(), sf.readRScore() + 1);
-									System.out.println("RED " + sf.readRScore() + "Blue " + sf.readBScore());
-								}
+							if (result == JOptionPane.YES_OPTION) {
 
-								System.exit(0);
+								sf.storeScore(sf.readBScore(), sf.readRScore() + 1);
+								System.out.println("RED " + sf.readRScore() + "Blue " + sf.readBScore());
 							}
+
+							System.exit(0);
+
 						} else {
 							if (dx == R1.getLocation().x && dy == R1.getLocation().y) {
 								pnl.remove(R1);
@@ -243,21 +243,21 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 							}
 						} else if (location[mx][my] == Board.RJANG) {
-							if (dx == J.getLocation().x && dy == J.getLocation().y) {
-								pnl.remove(J);
-								pnl.repaint();
 
-								int result = JOptionPane.showConfirmDialog(null,
-										"You catch king! BLUE Win!\n\nDo you want to save a result?", "END",
-										JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
-								if (result == JOptionPane.YES_OPTION) {
+							pnl.remove(J);
+							pnl.repaint();
 
-									sf.storeScore(sf.readBScore() + 1, sf.readRScore());
-									System.out.println("RED " + sf.readRScore() + "Blue " + sf.readBScore());
-								}
+							int result = JOptionPane.showConfirmDialog(null,
+									"You catch king! BLUE Win!\n\nDo you want to save a result?", "END",
+									JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
+							if (result == JOptionPane.YES_OPTION) {
 
-								System.exit(0);
+								sf.storeScore(sf.readBScore() + 1, sf.readRScore());
+								System.out.println("RED " + sf.readRScore() + "Blue " + sf.readBScore());
 							}
+
+							System.exit(0);
+
 						} else {
 							if (dx == R1.getLocation().x && dy == R1.getLocation().y) {
 								pnl.remove(R1);
