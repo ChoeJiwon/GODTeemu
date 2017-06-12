@@ -65,9 +65,10 @@ public class Inheritance extends JFrame{
       btnNext=new JButton();
       btnNext.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-            dispose();
+        	frame.dispose();
             Polymorphism1 p=new Polymorphism1();
             p.go();
+       
          }
       });
       btnNext.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 15));
