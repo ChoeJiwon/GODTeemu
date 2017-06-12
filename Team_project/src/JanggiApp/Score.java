@@ -77,18 +77,22 @@ public class Score extends JFrame {
 		lblintro = new JLabel("PRODUCTION BY TEEMU WARRIOUS");
 		lblintro.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 20));
 		lblintro.setForeground(new Color(169, 169, 169));
-		lblintro.setBounds(121, 459, 326, 18);
+		lblintro.setBounds(88, 459, 389, 18);
 
 		label = new JLabel(":");
+		label.setBounds(288, 162, 14, 51);
 		label.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 23));
 
 		Btext = new JTextField();
+		Btext.setBounds(316, 176, 116, 24);
 		Btext.setColumns(10);
 
 		Rtext = new JTextField();
+		Rtext.setBounds(149, 176, 116, 24);
 		Rtext.setColumns(10);
 
 		btnCheckScore = new JButton("Check Score");
+		btnCheckScore.setBounds(148, 275, 117, 27);
 		btnCheckScore.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -103,10 +107,13 @@ public class Score extends JFrame {
 		});
 
 		JLabel lblRed = new JLabel("RED");
+		lblRed.setBounds(88, 179, 29, 18);
 
 		JLabel lblBlue = new JLabel("BLUE");
+		lblBlue.setBounds(464, 179, 37, 18);
 		
-		JButton Reset = new JButton("Rest");
+		JButton Reset = new JButton("Reset");
+		Reset.setBounds(333, 275, 99, 27);
 		Reset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				
@@ -114,61 +121,25 @@ public class Score extends JFrame {
 				
 			}
 		});
-
-		GroupLayout gl_contentPane = new GroupLayout(contentPane);
-		gl_contentPane.setHorizontalGroup(
-			gl_contentPane.createParallelGroup(Alignment.TRAILING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(9)
-					.addComponent(lblgame, GroupLayout.PREFERRED_SIZE, 548, GroupLayout.PREFERRED_SIZE)
-					.addContainerGap(GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addContainerGap(107, Short.MAX_VALUE)
-							.addComponent(lblintro))
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPane.createSequentialGroup()
-									.addGap(82)
-									.addComponent(lblRed)
-									.addGap(32)
-									.addComponent(Rtext, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-									.addGap(31)
-									.addComponent(label, GroupLayout.PREFERRED_SIZE, 14, GroupLayout.PREFERRED_SIZE)
-									.addPreferredGap(ComponentPlacement.RELATED))
-								.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-									.addContainerGap(122, Short.MAX_VALUE)
-									.addComponent(btnCheckScore)
-									.addGap(73)))
-							.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-								.addGroup(gl_contentPane.createSequentialGroup()
-									.addComponent(Btext, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-									.addPreferredGap(ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-									.addComponent(lblBlue))
-								.addComponent(Reset))))
-					.addGap(75))
-		);
-		gl_contentPane.setVerticalGroup(
-			gl_contentPane.createParallelGroup(Alignment.LEADING)
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(7)
-					.addComponent(lblgame, GroupLayout.PREFERRED_SIZE, 71, GroupLayout.PREFERRED_SIZE)
-					.addGap(31)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(Rtext, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(label, GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-						.addComponent(Btext, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-						.addComponent(lblBlue)
-						.addComponent(lblRed))
-					.addGap(70)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-						.addComponent(Reset)
-						.addComponent(btnCheckScore))
-					.addPreferredGap(ComponentPlacement.UNRELATED)
-					.addComponent(lblintro, GroupLayout.PREFERRED_SIZE, 18, GroupLayout.PREFERRED_SIZE)
-					.addGap(138))
-		);
-		contentPane.setLayout(gl_contentPane);
+		contentPane.setLayout(null);
+		contentPane.add(lblgame);
+		contentPane.add(lblRed);
+		contentPane.add(Rtext);
+		contentPane.add(label);
+		contentPane.add(btnCheckScore);
+		contentPane.add(Btext);
+		contentPane.add(lblBlue);
+		contentPane.add(Reset);
+		contentPane.add(lblintro);
+		
+		JButton btnStudyJava = new JButton("Study JAVA");
+		btnStudyJava.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Encapsulation en=new Encapsulation();
+				en.go();
+			}
+		});
+		btnStudyJava.setBounds(220, 382, 135, 27);
+		contentPane.add(btnStudyJava);
 	}
 }
