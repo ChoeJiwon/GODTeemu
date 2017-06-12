@@ -33,6 +33,7 @@ public class MoveAndRemove extends JFrame {
 	JButton R1 = new JButton();
 	JButton R2 = new JButton();
 	ScoreFile sf = new ScoreFile();
+	SoundSettingFile ssf = new SoundSettingFile();
 
 	String name;
 
@@ -162,7 +163,8 @@ public class MoveAndRemove extends JFrame {
 					btn.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = btn.getLocation().x;
 					y = btn.getLocation().y;
-					new Sound().PlaySound();
+					if (ssf.DeconductSerializing() == true)
+						new Sound().PlaySound();
 				}
 			}
 		});
@@ -280,7 +282,8 @@ public class MoveAndRemove extends JFrame {
 					btn.setLocation(mx * 95 + 30, my * 95 + 30);
 					x = btn.getLocation().x;
 					y = btn.getLocation().y;
-					new Sound().PlaySound();
+					if (ssf.DeconductSerializing() == true)
+						new Sound().PlaySound();
 				}
 			}
 		});
