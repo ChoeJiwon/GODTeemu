@@ -33,9 +33,6 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 public class Encapsulation extends JFrame {
-   public Encapsulation() {
-   }
-
    JFrame frame;
    JTextArea txt_area;
    JPanel contentPanel;

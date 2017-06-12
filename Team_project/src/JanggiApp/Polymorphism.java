@@ -22,7 +22,7 @@ import java.io.File;
 import java.io.IOException;
 import java.awt.event.ActionEvent;
 
-public class Polymorphism1 extends JFrame {
+public class Polymorphism extends JFrame {
 
    private JPanel contentPane;
 
@@ -33,7 +33,7 @@ public class Polymorphism1 extends JFrame {
       EventQueue.invokeLater(new Runnable() {
          public void run() {
             try {
-               Polymorphism1 frame = new Polymorphism1();
+               Polymorphism frame = new Polymorphism();
                frame.setVisible(true);
             } catch (Exception e) {
                e.printStackTrace();
@@ -45,7 +45,7 @@ public class Polymorphism1 extends JFrame {
    /**
     * Create the frame.
     */
-   public Polymorphism1() {
+   public Polymorphism() {
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 919, 646);
       contentPane = new JPanel();
