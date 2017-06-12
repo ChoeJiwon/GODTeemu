@@ -68,10 +68,11 @@ public class Polymorphism extends JFrame {
       });
       
       JTextArea txtrInProgrammingLanguages = new JTextArea();
-      txtrInProgrammingLanguages.setFont(new Font("Arial", Font.PLAIN, 13));
+      txtrInProgrammingLanguages.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 13));
       txtrInProgrammingLanguages.setBackground(KoreanChess.c);
       txtrInProgrammingLanguages.setText("In programming languages and type theory, polymorphism (from Greek polys, \\\"many, much\\\" and, morphe, \\\"form, shape\\\") is the provision of a single interface to entities of different types. A polymorphic type is one whose operations can also be applied to values of some other type, or types. There are several fundamentally different kinds of polymorphism.");
       txtrInProgrammingLanguages.setLineWrap(true);
+      txtrInProgrammingLanguages.setEditable(false);
       
       JPanel imagePanel = new JPanel();
       imagePanel.setBackground(KoreanChess.c);

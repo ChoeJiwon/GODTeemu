@@ -60,6 +60,7 @@ public class Inheritance extends JFrame{
       txt_area.setLineWrap(true);
       txt_area.setSize(440, 300);
       txt_area.setBackground(KoreanChess.c);
+      txt_area.setEditable(false);
       
       btnNext=new JButton();
       btnNext.addActionListener(new ActionListener() {

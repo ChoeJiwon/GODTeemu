@@ -58,9 +58,10 @@ public class Encapsulation extends JFrame {
       txt_area.setSize(440, 300);
       txt_area.setBackground(KoreanChess.c);
       txt_area.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 13));
+      txt_area.setEditable(false);
+      
       contentPanel.setBackground(KoreanChess.c);
       contentPanel.add(txt_area);
-
       imagePanel = new JPanel();
       imagePanel.setBackground(KoreanChess.c);
 
