@@ -3,6 +3,7 @@ package JanggiApp;
 import java.io.File;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
+import javax.swing.JOptionPane;
 
 public class Sound {
 	public void PlaySound(){
@@ -13,7 +14,9 @@ public class Sound {
 			
 			Thread.sleep(clip.getMicrosecondLength()/1000);
 		}catch(Exception e){
-			System.out.println("error");
+			 JOptionPane.showConfirmDialog(null,
+						"File Error!!", "Error",
+						JOptionPane.OK_OPTION, JOptionPane.ERROR_MESSAGE, null);
 		}
 	}
 }

@@ -4,8 +4,11 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+
+import javax.swing.JOptionPane;
 
 public class ScoreFile {
 
@@ -59,7 +62,10 @@ public class ScoreFile {
 			b = s.getBscore();
 			in.close();
 
-		} catch (Exception e) {
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			JOptionPane.showMessageDialog(null, "File Error!!");
+			}catch (Exception e) {
 			e.printStackTrace();
 		}
 
