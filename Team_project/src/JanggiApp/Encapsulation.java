@@ -38,7 +38,7 @@ public class Encapsulation extends JFrame {
    JPanel contentPanel;
    JPanel imagePanel;
    JLabel labelEncapsulation;
-   String content_string = "Encapsulation is a process of binding or wrapping the data and the codes that operates on the data into a single entity. This keeps the data safe from outside interface and misuse. One way to understand encapsulation is as a protective wrapper that prevents code and data from being arbitrarily accessed by other code defined outside the wrapper.";
+   final String content_string = "Encapsulation is a process of binding or wrapping the data and the codes that operates on the data into a single entity. This keeps the data safe from outside interface and misuse. One way to understand encapsulation is as a protective wrapper that prevents code and data from being arbitrarily accessed by other code defined outside the wrapper.";
 
    public void encapsulation() {
       frame = new JFrame("Encapsulation");
