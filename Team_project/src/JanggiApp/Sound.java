@@ -6,6 +6,7 @@ import javax.sound.sampled.Clip;
 import javax.swing.JOptionPane;
 
 public class Sound {
+	// play sound method
 	public void PlaySound(){
 		try{
 			Clip clip = AudioSystem.getClip();
