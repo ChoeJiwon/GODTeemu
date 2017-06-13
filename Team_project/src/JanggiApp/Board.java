@@ -107,8 +107,8 @@ public class Board extends JFrame {
       
       /*
        * MalDesign : Designing and locating each pieces 
-       * MoveAndRemove().Drag : Moving method for each pieces(jol=> jm , cha =>cm , jang,sa => jsm)
-       * MoveAndRemove().RedMoveAndRemove : While Checking every pieces, Remove special piece that is eaten up
+       * MoveAndRemove().Red(Blue)MoveAndRemove : While Checking every pieces, Remove special piece that is eaten up.
+       * 										: And move clicked piece
        */
       MalDesign(rjol1,Color.RED,1,4,contentPane);
       new MoveAndRemove().RedMoveAndRemove(rjol1, "rjol", jm, location, contentPane, bjol1, bjol2

@@ -38,12 +38,11 @@ public class MoveAndRemove extends JFrame {
 			JButton j4, JButton j5, JButton c1, JButton c2, JButton j, JButton r1, JButton r2) {
 
 		this.btn = b; // button red piece : jol or jang or sa or cha
-		this.pm = p; // red piece move : jolmove of jangmove or samove or cha
-						// move
+		this.pm = p; // red piece move : jolmove of jangmove or samove or chamove
 		this.location = arr; // red piece location : jol or jang or sa or cha
 		this.pnl = pn; // panel which pieces is located
 		this.J1 = j1; // blue piece jol1
-		this.J2 = j2; // - jol2
+		this.J2 = j2; // 
 		this.J3 = j3;
 		this.J4 = j4;
 		this.J5 = j5;
@@ -59,7 +58,7 @@ public class MoveAndRemove extends JFrame {
 				x = btn.getLocation().x;
 				y = btn.getLocation().y;
 				xx = e.getX() - temp_x + btn.getLocation().x;
-				yy = e.getY() - temp_y + btn.getLocation().y;
+				yy = e.getY() - temp_y + btn.getLocation().y;				// when drag piece, its coordinate is assigned.
 				mx = pm.movex(x, xx);
 				my = pm.movey(y, yy);
 			}
@@ -67,16 +66,18 @@ public class MoveAndRemove extends JFrame {
 		btn.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
 				temp_x = e.getX();
-				temp_y = e.getY();
+				temp_y = e.getY();											// used at mouseDragged.
 			}
 
 			public void mouseReleased(MouseEvent arg0) {
+				// if its piece move is correct, it moves. (move rule, and no same team piece)
 				if (pm.move(location, mx, my, x / 95, y / 95, btn.getBackground(), Board.turn) == true) {
 					if (location[mx][my] != 0) {
 						int dx, dy;
 						dx = mx * 95 + 30;
 						dy = my * 95 + 30;
-						if (location[mx][my] == Board.BJOL) {
+						// when some opponent pieces is located where it moves, remove opponent piece.
+						if (location[mx][my] == Board.BJOL) {				
 							if (dx == J1.getLocation().x && dy == J1.getLocation().y) {
 								pnl.remove(J1);
 								pnl.repaint();
@@ -140,6 +141,7 @@ public class MoveAndRemove extends JFrame {
 							}
 						}
 					}
+					// piece location is changed. for interaction between all pieces
 					if (name.equals("rjol")) {
 						location[mx][my] = Board.RJOL;
 					} else if (name.equals("rcha")) {
@@ -150,16 +152,17 @@ public class MoveAndRemove extends JFrame {
 						location[mx][my] = Board.RJANG;
 					}
 					location[x / 95][y / 95] = 0;
-					btn.setLocation(mx * 95 + 30, my * 95 + 30);
+					btn.setLocation(mx * 95 + 30, my * 95 + 30); 		// piece is located at panel.
 					x = btn.getLocation().x;
 					y = btn.getLocation().y;
-					if (ssf.DeconductSerializing() == true)
+					if (ssf.DeconductSerializing() == true)				// sound setting is on, play sound 
 						new Sound().PlaySound();
 				}
 			}
 		});
 	}
 
+	// same as RedMoveAndRemove
 	public void BlueMoveAndRemove(JButton b, String n, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2, JButton j3,
 			JButton j4, JButton j5, JButton c1, JButton c2, JButton j, JButton r1, JButton r2) {
 		this.btn = b;
