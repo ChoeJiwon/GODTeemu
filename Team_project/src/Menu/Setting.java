@@ -26,6 +26,7 @@ public class Setting extends JFrame {
 	private JButton btnset;
 	private JRadioButton rdbtnOff,rdbtnOn;
 	public SoundSettingFile ssf = new SoundSettingFile();
+	private Boolean sound = true;
 	/**
 	 * Launch the application.
 	 */
@@ -133,7 +134,14 @@ public class Setting extends JFrame {
 		rdbtnOn.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 18));
 		rdbtnOn.setBounds(272, 156, 66, 47);
 		Pane.add(rdbtnOn);
-		
+		sound = ssf.DeconductSerializing();
+		if(sound == true){
+			rdbtnOn.setSelected(true);
+			rdbtnOff.setSelected(false);
+		}else{
+			rdbtnOn.setSelected(false);
+			rdbtnOff.setSelected(true);			
+		}
 		comboBox = new JComboBox();
 		comboBox.setForeground(new Color(0, 0, 0));
 		comboBox.setModel(new DefaultComboBoxModel(new String[] {"GRAY", "PINK", "GREEN", "BLUE", "BEIGE", "YELLOW", "WHITE"}));
