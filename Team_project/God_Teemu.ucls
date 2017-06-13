@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.0" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="JanggiApp.Menu" project="Team_project" 
-    file="/Team_project/src/JanggiApp/Menu.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="1" language="java" name="Menu.Menu" project="Team_project" file="/Team_project/src/Menu/Menu.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="209" y="108"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -10,8 +10,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="JanggiApp.KoreanChess" project="Team_project" 
-    file="/Team_project/src/JanggiApp/KoreanChess.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="2" language="java" name="Menu.KoreanChess" project="Team_project" 
+    file="/Team_project/src/Menu/KoreanChess.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="657" y="110"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -19,8 +19,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="JanggiApp.JolMove" project="Team_project" 
-    file="/Team_project/src/JanggiApp/JolMove.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="3" language="java" name="Game.JolMove" project="Team_project" file="/Team_project/src/Game/JolMove.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1443" y="538"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -28,8 +28,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="JanggiApp.JangSaMove" project="Team_project" 
-    file="/Team_project/src/JanggiApp/JangSaMove.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="4" language="java" name="Game.JangSaMove" project="Team_project" 
+    file="/Team_project/src/Game/JangSaMove.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1603" y="367"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -37,8 +37,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="JanggiApp.Inheritance" project="Team_project" 
-    file="/Team_project/src/JanggiApp/Inheritance.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="5" language="java" name="Explain.Inheritance" project="Team_project" 
+    file="/Team_project/src/Explain/Inheritance.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="-36" y="116"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -46,8 +46,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="JanggiApp.Encapsulation" project="Team_project" 
-    file="/Team_project/src/JanggiApp/Encapsulation.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="6" language="java" name="Explain.Encapsulation" project="Team_project" 
+    file="/Team_project/src/Explain/Encapsulation.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="-191" y="334"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -55,8 +55,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="JanggiApp.ChaMove" project="Team_project" 
-    file="/Team_project/src/JanggiApp/ChaMove.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="7" language="java" name="Game.ChaMove" project="Team_project" file="/Team_project/src/Game/ChaMove.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="1169" y="576"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -64,8 +64,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="JanggiApp.Board" project="Team_project" 
-    file="/Team_project/src/JanggiApp/Board.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="8" language="java" name="Game.Board" project="Team_project" file="/Team_project/src/Game/Board.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="882" y="703"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -73,8 +73,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="JanggiApp.MoveAndRemove" project="Team_project" 
-    file="/Team_project/src/JanggiApp/MoveAndRemove.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="9" language="java" name="Game.MoveAndRemove" project="Team_project" 
+    file="/Team_project/src/Game/MoveAndRemove.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="133" y="959"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -82,8 +82,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="JanggiApp.PieceMove" project="Team_project" 
-    file="/Team_project/src/JanggiApp/PieceMove.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="10" language="java" name="Game.PieceMove" project="Team_project" 
+    file="/Team_project/src/Game/PieceMove.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="983" y="83"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -91,8 +91,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="JanggiApp.PlayerScore" project="Team_project" 
-    file="/Team_project/src/JanggiApp/PlayerScore.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="11" language="java" name="Menu.PlayerScore" project="Team_project" 
+    file="/Team_project/src/Menu/PlayerScore.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="436" y="326"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -100,8 +100,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="12" language="java" name="JanggiApp.Score" project="Team_project" 
-    file="/Team_project/src/JanggiApp/Score.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="12" language="java" name="Menu.Score" project="Team_project" file="/Team_project/src/Menu/Score.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="87" y="369"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -109,8 +109,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="JanggiApp.ScoreFile" project="Team_project" 
-    file="/Team_project/src/JanggiApp/ScoreFile.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="13" language="java" name="Menu.ScoreFile" project="Team_project" 
+    file="/Team_project/src/Menu/ScoreFile.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="446" y="536"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -118,8 +118,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="JanggiApp.Setting" project="Team_project" 
-    file="/Team_project/src/JanggiApp/Setting.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="14" language="java" name="Menu.Setting" project="Team_project" file="/Team_project/src/Menu/Setting.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="275" y="402"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -127,8 +127,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="JanggiApp.Sound" project="Team_project" 
-    file="/Team_project/src/JanggiApp/Sound.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="15" language="java" name="Menu.Sound" project="Team_project" file="/Team_project/src/Menu/Sound.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="430" y="166"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -136,8 +136,8 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="JanggiApp.SoundSettingFile" project="Team_project" 
-    file="/Team_project/src/JanggiApp/SoundSettingFile.java" binary="false" corner="BOTTOM_RIGHT">    
+  <class id="16" language="java" name="Menu.SoundSettingFile" project="Team_project" 
+    file="/Team_project/src/Menu/SoundSettingFile.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="59" y="576"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
@@ -146,103 +146,147 @@
     </display>  
   </class>  
   <association id="17">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="18" name="score"/>      
-      <multiplicity id="19" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="18" name="menu">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="19" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="12" navigable="true"/>    
+    <end type="TARGET" refId="1" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="20">    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="21" name="pm"/>      
-      <multiplicity id="22" minimum="0" maximum="1"/>    
+      <attribute id="21" name="sf">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="22" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
+    <end type="TARGET" refId="13" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <generalization id="23">    
-    <end type="SOURCE" refId="4"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <generalization id="24">    
     <end type="SOURCE" refId="7"/>    
     <end type="TARGET" refId="10"/>  
   </generalization>  
-  <association id="25">    
+  <association id="24">    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="26" name="jm"/>      
-      <multiplicity id="27" minimum="0" maximum="1"/>    
+      <attribute id="25" name="jm">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="26" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <generalization id="27">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
   <association id="28">    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="29" name="cm"/>      
-      <multiplicity id="30" minimum="0" maximum="1"/>    
+      <attribute id="29" name="jsm">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="30" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="31">    
+  <association id="31">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="32" name="s">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="33" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="34">    
     <end type="SOURCE" refId="3"/>    
     <end type="TARGET" refId="10"/>  
   </generalization>  
-  <association id="32">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="33" name="jsm"/>      
-      <multiplicity id="34" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
   <association id="35">    
     <end type="SOURCE" refId="14" navigable="false">      
-      <attribute id="36" name="ssf"/>      
-      <multiplicity id="37" minimum="0" maximum="1"/>    
+      <attribute id="36" name="ssf">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="37" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="38">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="39" name="menu"/>      
-      <multiplicity id="40" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="39" name="cm">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="40" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="1" navigable="true"/>    
+    <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="41">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="42" name="pm">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="43" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="44">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="42" name="set"/>      
-      <multiplicity id="43" minimum="0" maximum="1"/>    
+      <attribute id="45" name="set">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="46" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="14" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="44">    
+  <association id="47">    
     <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="45" name="ssf"/>      
-      <multiplicity id="46" minimum="0" maximum="1"/>    
+      <attribute id="48" name="ssf">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="49" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="16" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="47">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="48" name="sf"/>      
-      <multiplicity id="49" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="13" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
   <association id="50">    
-    <end type="SOURCE" refId="13" navigable="false">      
-      <attribute id="51" name="s"/>      
-      <multiplicity id="52" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="51" name="score">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="52" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
+    <end type="TARGET" refId="12" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

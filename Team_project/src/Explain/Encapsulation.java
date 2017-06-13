@@ -1,36 +1,18 @@
-package JanggiApp;
+package Explain;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.TitledBorder;
-import javax.swing.GroupLayout;
-import javax.swing.GroupLayout.Alignment;
+import Menu.KoreanChess;
 import javax.swing.ImageIcon;
-import javax.swing.JTextField;
-import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JButton;
-import javax.swing.JComboBox;
 import javax.imageio.ImageIO;
-import javax.swing.DefaultComboBoxModel;
 import java.awt.Font;
-import java.awt.Graphics;
-import java.awt.Image;
-import javax.swing.JPopupMenu;
 import javax.swing.JTextArea;
-import java.awt.Component;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import javax.swing.JOptionPane;
 
 public class Encapsulation extends JFrame {
    JFrame frame;

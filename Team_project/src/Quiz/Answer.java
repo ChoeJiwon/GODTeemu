@@ -1,4 +1,4 @@
-package JanggiApp;
+package Quiz;
 
 import javax.swing.JOptionPane;
 

@@ -1,19 +1,17 @@
-package JanggiApp;
+package Game;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
-
 import javax.swing.JButton;
-import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import Menu.ScoreFile;
+import Menu.Sound;
+import Menu.SoundSettingFile;
+import Quiz.Quiz1;
+import Quiz.Quiz3;
 
 public class MoveAndRemove extends JFrame {
 

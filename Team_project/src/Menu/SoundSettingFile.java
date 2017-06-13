@@ -1,7 +1,6 @@
-package JanggiApp;
+package Menu;
 
 import java.io.*;
-
 
 public class SoundSettingFile implements Serializable {
 	// when on  combo box is selected, store true

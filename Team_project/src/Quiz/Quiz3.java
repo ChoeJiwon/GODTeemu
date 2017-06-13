@@ -1,4 +1,4 @@
-package JanggiApp;
+package Quiz;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -7,6 +7,9 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Menu.KoreanChess;
+
 import javax.imageio.ImageIO;
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;

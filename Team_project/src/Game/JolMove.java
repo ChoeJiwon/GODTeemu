@@ -1,4 +1,4 @@
-package JanggiApp;
+package Game;
 
 import java.awt.Color;
 

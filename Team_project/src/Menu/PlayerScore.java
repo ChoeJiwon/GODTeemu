@@ -1,4 +1,4 @@
-package JanggiApp;
+package Menu;
 
 import java.io.Serializable;
 

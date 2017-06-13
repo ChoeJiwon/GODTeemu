@@ -1,21 +1,18 @@
-package JanggiApp;
+package Explain;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import Game.Board;
+import Menu.KoreanChess;
 import javax.imageio.ImageIO;
 import javax.swing.GroupLayout;
 import javax.swing.ImageIcon;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.JLabel;
-import java.awt.Color;
-import java.awt.Font;
 import javax.swing.JButton;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.JTextArea;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
