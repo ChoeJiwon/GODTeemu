@@ -16,7 +16,7 @@ public class ScoreFile {
 	private PlayerScore s = new PlayerScore();
 
 	
-	/*store score in texfile*/
+	/*store score in text file*/
 	public void storeScore(int Bs, int Rs) {
 		try {
 			FileOutputStream fos = new FileOutputStream("score.txt");
@@ -35,28 +35,30 @@ public class ScoreFile {
 	}
 	
 	
+	/*load a file to read player RED score*/
 	public int readRScore() {
 		
-		int b = 0;
+		int r = 0;  //red score (initial state) 
 		try {
 			FileInputStream fis = new FileInputStream("score.txt");
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			ObjectInputStream in = new ObjectInputStream(bis);
 			
 			s = (PlayerScore) in.readObject();
-			b = s.getRscore();
+			r = s.getRscore();
 			in.close();
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
-		return b;
+		return r;
 	}
-
+	
+	/*load a file to read player RED score*/
 	public int readBScore() {
 		
-		int b = 0;
+		int b = 0;   //blue score(initial state)
 		try {
 			FileInputStream fis = new FileInputStream("score.txt");
 			BufferedInputStream bis = new BufferedInputStream(fis);
