@@ -72,7 +72,7 @@ public class Polymorphism extends JFrame {
       }
       
       
-      JButton btnNewButton = new JButton("Start Janggi!"); //button to stat Janggi game
+      JButton btnNewButton = new JButton("Start Janggi!"); //button to start Janggi game
       
       /*button action listener to go over to Janggi board screen*/
       btnNewButton.addActionListener(new ActionListener() {

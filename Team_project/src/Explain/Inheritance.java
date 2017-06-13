@@ -46,7 +46,7 @@ public class Inheritance extends JFrame {
     */
    public Inheritance() {
       
-      /*Make Panel in Polymorphism Frame and decorate Panel(contentPane)*/
+      /*Make Panel in Inheritance Frame and decorate Panel(contentPane)*/
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 920, 737);
       contentPane = new JPanel();
@@ -54,12 +54,12 @@ public class Inheritance extends JFrame {
       setContentPane(contentPane);
       contentPane.setBackground(KoreanChess.c);
       
-      /*Make Panel in Polymorphism Frame and decorate Panel(imagePanel) to insert an image*/
+      /*Make Panel in Inheritance Frame and decorate Panel(imagePanel) to insert an image*/
       JPanel imagePanel = new JPanel();
       imagePanel.setBackground(KoreanChess.c);
       
       
-      /*image to explain polymorphism and insert an image*/
+      /*image to explain inheritance and insert an image*/
       BufferedImage myPicture;
       try {
          myPicture = ImageIO.read(new File("inheritance.png"));
@@ -72,9 +72,9 @@ public class Inheritance extends JFrame {
       }
       
       
-      JButton btnNewButton = new JButton("Next"); //button to stat Janggi game
+      JButton btnNewButton = new JButton("Next"); //button to start Janggi game
       
-      /*button action listener to go over to Janggi board screen*/
+      /*button action listener to go over to Polymorphism explainment screen*/
       btnNewButton.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             dispose();
