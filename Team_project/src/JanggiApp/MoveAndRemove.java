@@ -96,6 +96,8 @@ public class MoveAndRemove extends JFrame {
 							if (dx == J1.getLocation().x && dy == J1.getLocation().y) {
 								pnl.remove(J1);
 								pnl.repaint();
+								Quiz1 q1=new Quiz1();
+								q1.go();
 							}
 							if (dx == J2.getLocation().x && dy == J2.getLocation().y) {
 								pnl.remove(J2);

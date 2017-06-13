@@ -31,6 +31,7 @@ public class Quiz1 extends JFrame {
    private JLabel lblanswerMustBe;
    private JTextField textField_1;
    private JButton btnCheck;
+   private Answer a;
 
    /**
     * Launch the application.
@@ -82,83 +83,98 @@ public class Quiz1 extends JFrame {
       textField_1 = new JTextField();
       textField_1.setColumns(10);
       
+      
       JLabel lblAnswer = new JLabel("Answer :");
       
       btnCheck = new JButton("Check");
       btnCheck.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-            
-            try{
-            if(textField_1.getText().equals("2")){
-               dispose();
-               
-            }
-            else{JOptionPane.showMessageDialog(null,"You select wrong answer!");
-               
-            }
-               }catch(NumberFormatException e1){
-                  JOptionPane.showMessageDialog(null, "You must be typed in number!");
-            }
+        	 
+           	  if(a.getAnswer()==2){
+            		 dispose();
+            	 }
+            	 else{
+            		 JOptionPane.showMessageDialog(null,"You select wrong answer!");
+            	 }
+             
          }
+      });
+      
+      JButton btnSave = new JButton("save");
+      btnSave.addActionListener(new ActionListener() {
+      	public void actionPerformed(ActionEvent e) {
+      		try{
+      			a.setAnswer(Integer.parseInt(textField_1.getText()));
+      		}catch(NumberFormatException e1){
+      			JOptionPane.showMessageDialog(null, "Answer must be written in number!!");
+      		}
+      	}
       });
       
       GroupLayout gl_contentPane = new GroupLayout(contentPane);
       gl_contentPane.setHorizontalGroup(
-         gl_contentPane.createParallelGroup(Alignment.TRAILING)
-            .addGroup(gl_contentPane.createSequentialGroup()
-               .addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-                  .addGroup(gl_contentPane.createSequentialGroup()
-                     .addContainerGap()
-                     .addComponent(textField, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
-                     .addPreferredGap(ComponentPlacement.UNRELATED)
-                     .addComponent(lblIs))
-                  .addGroup(gl_contentPane.createSequentialGroup()
-                     .addGap(281)
-                     .addComponent(lblQuiz))
-                  .addGroup(gl_contentPane.createSequentialGroup()
-                     .addGap(32)
-                     .addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-                        .addComponent(lblanswerMustBe)
-                        .addComponent(lblJanggi)
-                        .addComponent(lblEncapsulation)
-                        .addComponent(lblNewLabel)
-                        .addComponent(lblInheritance))))
-               .addContainerGap(20, Short.MAX_VALUE))
-            .addGroup(gl_contentPane.createSequentialGroup()
-               .addContainerGap(436, Short.MAX_VALUE)
-               .addComponent(lblAnswer)
-               .addGap(18)
-               .addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-                  .addComponent(btnCheck)
-                  .addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 47, GroupLayout.PREFERRED_SIZE))
-               .addGap(52))
+      	gl_contentPane.createParallelGroup(Alignment.TRAILING)
+      		.addGroup(gl_contentPane.createSequentialGroup()
+      			.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+      				.addGroup(gl_contentPane.createSequentialGroup()
+      					.addContainerGap()
+      					.addComponent(textField, GroupLayout.PREFERRED_SIZE, 93, GroupLayout.PREFERRED_SIZE)
+      					.addPreferredGap(ComponentPlacement.UNRELATED)
+      					.addComponent(lblIs))
+      				.addGroup(gl_contentPane.createSequentialGroup()
+      					.addGap(281)
+      					.addComponent(lblQuiz))
+      				.addGroup(gl_contentPane.createSequentialGroup()
+      					.addGap(32)
+      					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+      						.addComponent(lblanswerMustBe)
+      						.addComponent(lblJanggi)
+      						.addComponent(lblEncapsulation)
+      						.addComponent(lblNewLabel)
+      						.addComponent(lblInheritance))))
+      			.addContainerGap(20, Short.MAX_VALUE))
+      		.addGroup(gl_contentPane.createSequentialGroup()
+      			.addContainerGap(430, Short.MAX_VALUE)
+      			.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
+      				.addGroup(gl_contentPane.createSequentialGroup()
+      					.addComponent(lblAnswer)
+      					.addGap(18))
+      				.addGroup(gl_contentPane.createSequentialGroup()
+      					.addComponent(btnSave)
+      					.addPreferredGap(ComponentPlacement.RELATED)))
+      			.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+      				.addComponent(btnCheck)
+      				.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 47, GroupLayout.PREFERRED_SIZE))
+      			.addGap(52))
       );
       gl_contentPane.setVerticalGroup(
-         gl_contentPane.createParallelGroup(Alignment.LEADING)
-            .addGroup(gl_contentPane.createSequentialGroup()
-               .addContainerGap()
-               .addComponent(lblQuiz)
-               .addGap(34)
-               .addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-                  .addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                  .addComponent(lblIs))
-               .addGap(9)
-               .addComponent(lblanswerMustBe)
-               .addGap(25)
-               .addComponent(lblInheritance)
-               .addGap(18)
-               .addComponent(lblNewLabel)
-               .addGap(18)
-               .addComponent(lblEncapsulation)
-               .addGap(18)
-               .addComponent(lblJanggi)
-               .addPreferredGap(ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
-               .addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-                  .addComponent(lblAnswer)
-                  .addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-               .addGap(27)
-               .addComponent(btnCheck)
-               .addContainerGap())
+      	gl_contentPane.createParallelGroup(Alignment.LEADING)
+      		.addGroup(gl_contentPane.createSequentialGroup()
+      			.addContainerGap()
+      			.addComponent(lblQuiz)
+      			.addGap(34)
+      			.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+      				.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+      				.addComponent(lblIs))
+      			.addGap(9)
+      			.addComponent(lblanswerMustBe)
+      			.addGap(25)
+      			.addComponent(lblInheritance)
+      			.addGap(18)
+      			.addComponent(lblNewLabel)
+      			.addGap(18)
+      			.addComponent(lblEncapsulation)
+      			.addGap(18)
+      			.addComponent(lblJanggi)
+      			.addPreferredGap(ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+      			.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+      				.addComponent(lblAnswer)
+      				.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+      			.addGap(27)
+      			.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+      				.addComponent(btnCheck)
+      				.addComponent(btnSave))
+      			.addContainerGap())
       );
       contentPane.setLayout(gl_contentPane);
    }
