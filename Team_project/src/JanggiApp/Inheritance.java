@@ -42,6 +42,9 @@ public class Inheritance extends JFrame{
    final String content_string = "In object-oriented programming, inheritance is when an object or class is based on another object (prototypal inheritance) or class (class-based inheritance), using the same implementation (inheriting from an object or class: inheriting behavior, programming by difference) or specifying a new implementation to maintain the same behavior (realizing an interface). Such an inherited class is called a subclass of its parent class or super class. It is a mechanism for code reuse and to allow independent extensions of the original software via public classes and interfaces. The relationships of objects or classes through inheritance give rise to a hierarchy.";
    JButton btnNext;
    Polymorphism p;
+   ImageIcon myPicture1;
+   ImageIcon myPicture2;
+   ImageIcon myPicture3;
    
    public void inheritance()
    {
@@ -82,9 +85,7 @@ public class Inheritance extends JFrame{
             
       imagePanel = new JPanel();
       imagePanel.setBackground(KoreanChess.c);
-      ImageIcon myPicture1;
-      ImageIcon myPicture2;
-      ImageIcon myPicture3;
+      
       JLabel picLabel = new JLabel();
       JLabel picLabel2=new JLabel();
       JLabel picLabel3=new JLabel();
