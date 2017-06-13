@@ -29,6 +29,8 @@ public class Polymorphism extends JFrame {
    /**
     * Launch the application.
     */
+   
+   /*Running GUI*/
    public void go() {
       EventQueue.invokeLater(new Runnable() {
          public void run() {
@@ -46,6 +48,8 @@ public class Polymorphism extends JFrame {
     * Create the frame.
     */
    public Polymorphism() {
+	   
+	   /*Make Panel in Polymorphism Frame and decorate Panel(contentPane)*/
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
       setBounds(100, 100, 919, 650);
       contentPane = new JPanel();
@@ -53,9 +57,12 @@ public class Polymorphism extends JFrame {
       setContentPane(contentPane);
       contentPane.setBackground(KoreanChess.c);
       
+      /*Make Panel in Polymorphism Frame and decorate Panel(imagePanel) to insert an image*/
       JPanel imagePanel = new JPanel();
       imagePanel.setBackground(KoreanChess.c);
       
+      
+      /*image to explain polymorphism and insert an image*/
       BufferedImage myPicture;
       try {
          myPicture = ImageIO.read(new File("polymorphism.png"));
@@ -67,7 +74,10 @@ public class Polymorphism extends JFrame {
          e.printStackTrace();
       }
       
-      JButton btnNewButton = new JButton("Start Janggi!");
+      
+      JButton btnNewButton = new JButton("Start Janggi!"); //button to stat Janggi game
+      
+      /*button action listener to go over to Janggi board screen*/
       btnNewButton.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             dispose();
@@ -75,6 +85,8 @@ public class Polymorphism extends JFrame {
             i.go();
          }
       });
+      
+      /*set contentpane layout(group layout) and add button in contentpane*/
       GroupLayout gl_contentPane = new GroupLayout(contentPane);
       gl_contentPane.setHorizontalGroup(
       	gl_contentPane.createParallelGroup(Alignment.TRAILING)
