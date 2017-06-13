@@ -31,7 +31,7 @@ public class Quiz1 extends JFrame {
    private JLabel lblanswerMustBe;
    private JTextField textField_1;
    private JButton btnCheck;
-   private Answer a;
+   private Answer a = new Answer();
 
    /**
     * Launch the application.
@@ -82,32 +82,29 @@ public class Quiz1 extends JFrame {
       
       textField_1 = new JTextField();
       textField_1.setColumns(10);
-      
-      
       JLabel lblAnswer = new JLabel("Answer :");
       
       btnCheck = new JButton("Check");
       btnCheck.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-        	 
+        	 try{
+           	  a.setAnswer(Integer.parseInt(textField_1.getText()));
            	  if(a.getAnswer()==2){
-            		 dispose();
-            	 }
-            	 else{
-            		 JOptionPane.showMessageDialog(null,"You select wrong answer!");
-            	 }
-             
+           		  JOptionPane.showMessageDialog(null, "Your answer is correct!");
+           		  dispose();
+           	  }
+           	  else{
+           		JOptionPane.showMessageDialog(null, "Your answer is wrong");
+           	  }
+             }catch(NumberFormatException e2){
+           	  JOptionPane.showMessageDialog(null, "Answer must be written in number!!");
+             }
          }
       });
       
-      JButton btnSave = new JButton("save");
-      btnSave.addActionListener(new ActionListener() {
+      JButton btnHint = new JButton("Hint");
+      btnHint.addActionListener(new ActionListener() {
       	public void actionPerformed(ActionEvent e) {
-      		try{
-      			a.setAnswer(Integer.parseInt(textField_1.getText()));
-      		}catch(NumberFormatException e1){
-      			JOptionPane.showMessageDialog(null, "Answer must be written in number!!");
-      		}
       	}
       });
       
@@ -134,14 +131,14 @@ public class Quiz1 extends JFrame {
       						.addComponent(lblInheritance))))
       			.addContainerGap(20, Short.MAX_VALUE))
       		.addGroup(gl_contentPane.createSequentialGroup()
-      			.addContainerGap(430, Short.MAX_VALUE)
+      			.addContainerGap(424, Short.MAX_VALUE)
       			.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING)
       				.addGroup(gl_contentPane.createSequentialGroup()
       					.addComponent(lblAnswer)
       					.addGap(18))
       				.addGroup(gl_contentPane.createSequentialGroup()
-      					.addComponent(btnSave)
-      					.addPreferredGap(ComponentPlacement.RELATED)))
+      					.addComponent(btnHint)
+      					.addPreferredGap(ComponentPlacement.UNRELATED)))
       			.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
       				.addComponent(btnCheck)
       				.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 47, GroupLayout.PREFERRED_SIZE))
@@ -173,7 +170,7 @@ public class Quiz1 extends JFrame {
       			.addGap(27)
       			.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
       				.addComponent(btnCheck)
-      				.addComponent(btnSave))
+      				.addComponent(btnHint))
       			.addContainerGap())
       );
       contentPane.setLayout(gl_contentPane);

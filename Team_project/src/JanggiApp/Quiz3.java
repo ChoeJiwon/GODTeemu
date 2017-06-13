@@ -25,7 +25,7 @@ public class Quiz3 extends JFrame {
    private JTextField textField;
    private JTextField textField_1;
    private JTextField textField_2;
-
+   private Answer a=new Answer();
    /**
     * Launch the application.
     */
@@ -87,13 +87,18 @@ public class Quiz3 extends JFrame {
       JButton btnCheck = new JButton("Check");
       btnCheck.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-            if(textField_2.equals("3")){
-               dispose();
-            }
-            
-            else{
-               JOptionPane.showMessageDialog(null,"You select wrong answer!");
-            }
+        	 try{
+              	  a.setAnswer(Integer.parseInt(textField_1.getText()));
+              	  if(a.getAnswer()==3){
+              		  JOptionPane.showMessageDialog(null, "Your answer is correct!");
+              		  dispose();
+              	  }
+              	  else{
+              		JOptionPane.showMessageDialog(null, "Your answer is wrong");
+              	  }
+                }catch(NumberFormatException e2){
+              	  JOptionPane.showMessageDialog(null, "Answer must be written in number!!");
+                }
          }
       });
       GroupLayout gl_contentPane = new GroupLayout(contentPane);

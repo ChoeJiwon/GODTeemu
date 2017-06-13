@@ -31,7 +31,7 @@ public class Quiz2 extends JFrame {
    private JLabel lblAnswer;
    private JButton btnCheck;
    private JLabel lblanswerMustBe;
-
+   private Answer a=new Answer();
    /**
     * Launch the application.
     */
@@ -85,14 +85,20 @@ public class Quiz2 extends JFrame {
       btnCheck = new JButton("Check");
       btnCheck.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
-            if(textField_1.getText().equals("1")){
-               dispose();
+        	 try{
+              	  a.setAnswer(Integer.parseInt(textField_1.getText()));
+              	  if(a.getAnswer()==1){
+              		  JOptionPane.showMessageDialog(null, "Your answer is correct!");
+              		  dispose();
+              	  }
+              	  else{
+              		  JOptionPane.showMessageDialog(null, "Your answer is wrong");
+              	  }
+                }catch(NumberFormatException e2){
+              	  JOptionPane.showMessageDialog(null, "Answer must be written in number!!");
+                }
             }
-            
-            else{
-               JOptionPane.showMessageDialog(null,"You select wrong answer!");
-            }
-         }
+         
       });
       
       lblanswerMustBe = new JLabel("(Answer must be written in number!!)");
