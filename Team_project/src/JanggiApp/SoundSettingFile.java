@@ -4,6 +4,8 @@ import java.io.*;
 
 
 public class SoundSettingFile implements Serializable {
+	// when on  combo box is selected, store true
+	// when off combo box is selected, store false
 	public static void conductSerializing(String s){
 		try{
 			FileOutputStream fos = new FileOutputStream("sound.txt");
@@ -18,7 +20,8 @@ public class SoundSettingFile implements Serializable {
 			e.printStackTrace();
 		}
 	}
-	
+
+	// when a piece moves, if stored sound.txt is true, play sound
 	public static boolean DeconductSerializing(){
 		String s;
 		boolean b = true;

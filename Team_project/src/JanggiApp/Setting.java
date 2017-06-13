@@ -18,6 +18,7 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ButtonGroup;
 
+//Frame with background color selection, sound on off combo box
 public class Setting extends JFrame {
  
 	private JPanel Pane;
