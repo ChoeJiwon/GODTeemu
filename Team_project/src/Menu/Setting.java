@@ -122,7 +122,6 @@ public class Setting extends JFrame {
 		rdbtnOn = new JRadioButton("ON");
 		rdbtnOn.addActionListener(new ActionListener(){
 
-			@Override
 			public void actionPerformed(ActionEvent e) {
 				
 				ssf.conductSerializing("true");
