@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.ButtonGroup;
-
+// frame has score and settin button
 public class Menu extends JFrame {
 	private JPanel contentPane;
 	private JLabel lblintro;

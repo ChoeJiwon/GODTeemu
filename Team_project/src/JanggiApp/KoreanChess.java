@@ -14,7 +14,7 @@ import java.awt.Color;
 import java.awt.Font;
 import javax.swing.ButtonGroup; 
 
-// Start Frame with start, setting button
+// Start Frame with start, menu button
 public class KoreanChess extends JFrame {
 	
 	static Color c=new Color(255, 218, 185);
