@@ -58,28 +58,25 @@ public class Quiz3 extends JFrame {
 	 * Create the frame.
 	 */
 	public Quiz3() {
+		 /*Frame setting*/
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setBounds(100, 100, 783, 785);
+		
+		
+		/*Make Panel in Quiz1 Frame and decorate Panel(contentPane)*/
 		contentPane = new JPanel();
 		contentPane.setBackground(KoreanChess.c);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 
+		/*Make label in Panel(contentPane)*/
 		JLabel lblQuiz = new JLabel("Quiz3");
 		lblQuiz.setForeground(Color.BLUE);
 		lblQuiz.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 24));
 
-		textField = new JTextField();
-		textField.setColumns(10);
-		textField.setEditable(false);
-
 		JLabel lblNewLabel = new JLabel(", Subclasses extend a Superclass. What is ");
 
 		JLabel lblIn = new JLabel("In");
-
-		textField_1 = new JTextField();
-		textField_1.setColumns(10);
-		textField_1.setEditable(false);
 
 		JLabel label = new JLabel("?");
 
@@ -92,27 +89,48 @@ public class Quiz3 extends JFrame {
 		JLabel lblGui = new JLabel("4. gui");
 
 		JLabel lblAnswer = new JLabel("Answer :");
+		
+		
+		/*Make TextField in Panel(contentPane)*/
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setEditable(false);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setEditable(false);
 
 		textField_2 = new JTextField();
 		textField_2.setColumns(10);
 
+		
+		/*Make Button in Panel(contentPane)*/
 		JButton btnCheck = new JButton("Check");
 		btnCheck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
 					a.setAnswer(Integer.parseInt(textField_2.getText()));
-					if (a.getAnswer() == 3) {
+					if (a.getAnswer() == 3) {  //You select correct answer
 						JOptionPane.showMessageDialog(null, "Your answer is correct!");
 						dispose();
-					} else {
+					} else {  //You select wrong answer
 						JOptionPane.showMessageDialog(null, "Your answer is wrong");
 					}
-				} catch (NumberFormatException e2) {
+				} catch (NumberFormatException e2) { //You don't write number 
 					JOptionPane.showMessageDialog(null, "Answer must be written in number!!");
 				}
 			}
 		});
 		
+		JButton btnHint = new JButton("Hint");
+		btnHint.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				imagePanel.setVisible(true);  //When you push "Hint" button, imagePanel is setVisble!
+			}
+		});
+		
+		
+		 /*Make Panel in Quiz1 Frame and decorate,set Panel(imagePanel)*/
 		  imagePanel = new JPanel();
 	      imagePanel.setBackground(KoreanChess.c);
 	      BufferedImage myPicture;
@@ -128,14 +146,8 @@ public class Quiz3 extends JFrame {
 	         
 	      imagePanel.setVisible(false);
 	      
-	     
-		
-		JButton btnHint = new JButton("Hint");
-		btnHint.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				imagePanel.setVisible(true);
-			}
-		});
+	      
+	      /*Add label,textField,Button to Panel*/
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
