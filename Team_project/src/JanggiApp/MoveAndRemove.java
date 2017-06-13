@@ -22,54 +22,38 @@ public class MoveAndRemove extends JFrame {
 	int x, y, xx, yy, temp_x, temp_y, mx, my, Turn;
 	int[][] location;
 	JPanel pnl;
-	JButton J1 = new JButton();
-	JButton J2 = new JButton();
-	JButton J3 = new JButton();
-	JButton J4 = new JButton();
-	JButton J5 = new JButton();
-	JButton C1 = new JButton();
-	JButton C2 = new JButton();
-	JButton J = new JButton();
-	JButton R1 = new JButton();
-	JButton R2 = new JButton();
+	JButton J1,J2,J3,J4,J5 ;
+	JButton C1,C2;
+	JButton J;
+	JButton R1, R2;
 	ScoreFile sf = new ScoreFile();
 	SoundSettingFile ssf = new SoundSettingFile();
 
 	String name;
 
-	public void Drag(JButton b, PieceMove p) {
-		this.btn = b;
-		this.pm = p;
-		b.addMouseMotionListener(new MouseMotionAdapter() {
-			public void mouseDragged(MouseEvent e) {
-				x = btn.getLocation().x;
-				y = btn.getLocation().y;
-				xx = e.getX() - temp_x + btn.getLocation().x;
-				yy = e.getY() - temp_y + btn.getLocation().y;
-				mx = pm.movex(x, xx);
-				my = pm.movey(y, yy);
-			}
-		});
+	// If you drag a piece, it moves
 
-	}
-
-	public void RRemove(JButton b, String n, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2, JButton j3,
+	// If a red Piece eat a blue piece, that blue piece get removed
+	public void RedMoveAndRemove(JButton b, String n, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2, JButton j3,
 			JButton j4, JButton j5, JButton c1, JButton c2, JButton j, JButton r1, JButton r2) {
-		this.btn = b;
-		this.pm = p;
-		this.location = arr;
-		this.pnl = pn;
-		this.J1 = j1;
-		this.J2 = j2;
+
+		this.btn = b; // button red piece : jol or jang or sa or cha
+		this.pm = p; // red piece move : jolmove of jangmove or samove or cha
+						// move
+		this.location = arr; // red piece location : jol or jang or sa or cha
+		this.pnl = pn; // panel which pieces is located
+		this.J1 = j1; // blue piece jol1
+		this.J2 = j2; // - jol2
 		this.J3 = j3;
 		this.J4 = j4;
 		this.J5 = j5;
-		this.C1 = c1;
+		this.C1 = c1; // blue piece cha1
 		this.C2 = c2;
-		this.J = j;
-		this.R1 = r1;
+		this.J = j; // blue piece jang
+		this.R1 = r1; // blue piece sa1
 		this.R2 = r2;
-		this.name = n;
+		this.name = n; // string red piece : jol or jang or sa or cha
+
 		btn.addMouseMotionListener(new MouseMotionAdapter() {
 			public void mouseDragged(MouseEvent e) {
 				x = btn.getLocation().x;
@@ -96,19 +80,19 @@ public class MoveAndRemove extends JFrame {
 							if (dx == J1.getLocation().x && dy == J1.getLocation().y) {
 								pnl.remove(J1);
 								pnl.repaint();
-								Quiz1 q1=new Quiz1();
+								Quiz1 q1 = new Quiz1();
 								q1.go();
 							}
 							if (dx == J2.getLocation().x && dy == J2.getLocation().y) {
 								pnl.remove(J2);
 								pnl.repaint();
-								Quiz2 q2=new Quiz2();
+								Quiz2 q2 = new Quiz2();
 								q2.go();
 							}
 							if (dx == J3.getLocation().x && dy == J3.getLocation().y) {
 								pnl.remove(J3);
 								pnl.repaint();
-								Quiz3 q3=new Quiz3();
+								Quiz3 q3 = new Quiz3();
 								q3.go();
 							}
 							if (dx == J4.getLocation().x && dy == J4.getLocation().y) {
@@ -176,7 +160,7 @@ public class MoveAndRemove extends JFrame {
 		});
 	}
 
-	public void BRemove(JButton b, String n, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2, JButton j3,
+	public void BlueMoveAndRemove(JButton b, String n, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2, JButton j3,
 			JButton j4, JButton j5, JButton c1, JButton c2, JButton j, JButton r1, JButton r2) {
 		this.btn = b;
 		this.pm = p;
