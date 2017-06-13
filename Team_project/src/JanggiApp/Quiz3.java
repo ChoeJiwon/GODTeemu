@@ -46,7 +46,7 @@ public class Quiz3 extends JFrame {
     * Create the frame.
     */
    public Quiz3() {
-      setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
       setBounds(100, 100, 642, 505);
       contentPane = new JPanel();
       contentPane.setBackground(KoreanChess.c);
