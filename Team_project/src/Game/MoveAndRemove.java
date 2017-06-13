@@ -91,9 +91,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt++;
 								temp = Board.cnt;
-								if (temp == 3) {
+								if (temp == 2) {
 									q1.go();
-								} else if (temp == 6) {
+								} else if (temp == 4) {
 									q3.go();
 								}
 							}
@@ -102,9 +102,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt++;
 								temp = Board.cnt;
-								if (temp == 3) {
+								if (temp == 2) {
 									q1.go();
-								} else if (temp == 6) {
+								} else if (temp == 4) {
 									q3.go();
 								}
 							}
@@ -113,9 +113,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt++;
 								temp = Board.cnt;
-								if (temp == 3) {
+								if (temp == 2) {
 									q1.go();
-								} else if (temp == 6) {
+								} else if (temp == 4) {
 									q3.go();
 								}
 							}
@@ -124,9 +124,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt++;
 								temp = Board.cnt;
-								if (temp == 3) {
+								if (temp == 2) {
 									q1.go();
-								} else if (temp == 6) {
+								} else if (temp == 4) {
 									q3.go();
 								}
 							}
@@ -135,9 +135,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt++;
 								temp = Board.cnt;
-								if (temp == 3) {
+								if (temp == 2) {
 									q1.go();
-								} else if (temp == 6) {
+								} else if (temp == 4) {
 									q3.go();
 								}
 							}
@@ -147,9 +147,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt++;
 								temp = Board.cnt;
-								if (temp == 3) {
+								if (temp == 2) {
 									q1.go();
-								} else if (temp == 6) {
+								} else if (temp == 4) {
 									q3.go();
 								}
 							}
@@ -158,9 +158,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt++;
 								temp = Board.cnt;
-								if (temp == 3) {
+								if (temp == 2) {
 									q1.go();
-								} else if (temp == 6) {
+								} else if (temp == 4) {
 									q3.go();
 								}
 							}
@@ -170,9 +170,9 @@ public class MoveAndRemove extends JFrame {
 							pnl.repaint();
 							Board.cnt++;
 							temp = Board.cnt;
-							if (temp == 3) {
+							if (temp == 2) {
 								q1.go();
-							} else if (temp == 6) {
+							} else if (temp == 4) {
 								q3.go();
 							}
 							int result = JOptionPane.showConfirmDialog(null,
@@ -193,9 +193,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt++;
 								temp = Board.cnt;
-								if (temp == 3) {
+								if (temp == 2) {
 									q1.go();
-								} else if (temp == 6) {
+								} else if (temp == 4) {
 									q3.go();
 								}
 							}
@@ -204,9 +204,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt++;
 								temp = Board.cnt;
-								if (temp == 3) {
+								if (temp == 2) {
 									q1.go();
-								} else if (temp == 6) {
+								} else if (temp == 4) {
 									q3.go();
 								}
 							}
@@ -288,9 +288,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt2++;
 								temp2 = Board.cnt2;
-								if (temp2 == 3) {
+								if (temp2 == 2) {
 									q1.go();
-								} else if (temp2 == 6) {
+								} else if (temp2 == 4) {
 									q3.go();
 								}
 							}
@@ -299,9 +299,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt2++;
 								temp2 = Board.cnt2;
-								if (temp2 == 3) {
+								if (temp2 == 2) {
 									q1.go();
-								} else if (temp2 == 6) {
+								} else if (temp2 == 4) {
 									q3.go();
 								}
 							}
@@ -310,9 +310,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt2++;
 								temp2 = Board.cnt2;
-								if (temp2 == 3) {
+								if (temp2 == 2) {
 									q1.go();
-								} else if (temp2 == 6) {
+								} else if (temp2 == 4) {
 									q3.go();
 								}
 							}
@@ -321,9 +321,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt2++;
 								temp2 = Board.cnt2;
-								if (temp2 == 3) {
+								if (temp2 == 2) {
 									q1.go();
-								} else if (temp2 == 6) {
+								} else if (temp2 == 4) {
 									q3.go();
 								}
 							}
@@ -332,9 +332,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt2++;
 								temp2 = Board.cnt2;
-								if (temp2 == 3) {
+								if (temp2 == 2) {
 									q1.go();
-								} else if (temp2 == 6) {
+								} else if (temp2 == 4) {
 									q3.go();
 								}
 							}
@@ -344,9 +344,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt2++;
 								temp2 = Board.cnt2;
-								if (temp2 == 3) {
+								if (temp2 == 2) {
 									q1.go();
-								} else if (temp2 == 6) {
+								} else if (temp2 == 4) {
 									q3.go();
 								}
 							}
@@ -355,9 +355,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt2++;
 								temp2 = Board.cnt2;
-								if (temp2 == 3) {
+								if (temp2 == 2) {
 									q1.go();
-								} else if (temp2 == 6) {
+								} else if (temp2 == 4) {
 									q3.go();
 								}
 							}
@@ -367,9 +367,9 @@ public class MoveAndRemove extends JFrame {
 							pnl.repaint();
 							Board.cnt2++;
 							temp2 = Board.cnt2;
-							if (temp2 == 3) {
+							if (temp2 == 2) {
 								q1.go();
-							} else if (temp2 == 6) {
+							} else if (temp2 == 4) {
 								q3.go();
 							}
 
@@ -390,9 +390,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt2++;
 								temp2 = Board.cnt2;
-								if (temp2 == 3) {
+								if (temp2 == 2) {
 									q1.go();
-								} else if (temp2 == 6) {
+								} else if (temp2 == 4) {
 									q3.go();
 								}
 							}
@@ -401,9 +401,9 @@ public class MoveAndRemove extends JFrame {
 								pnl.repaint();
 								Board.cnt2++;
 								temp2 = Board.cnt2;
-								if (temp2 == 3) {
+								if (temp2 == 2) {
 									q1.go();
-								} else if (temp2 == 6) {
+								} else if (temp2 == 4) {
 									q3.go();
 								}
 							}
