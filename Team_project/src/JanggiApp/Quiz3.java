@@ -55,7 +55,7 @@ public class Quiz3 extends JFrame {
 	 */
 	public Quiz3() {
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-		setBounds(100, 100, 642, 505);
+		setBounds(100, 100, 783, 785);
 		contentPane = new JPanel();
 		contentPane.setBackground(KoreanChess.c);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -113,7 +113,7 @@ public class Quiz3 extends JFrame {
 	      imagePanel.setBackground(KoreanChess.c);
 	      BufferedImage myPicture;
 	      try {
-			myPicture = ImageIO.read(new File("reencapsulation.png"));
+			myPicture = ImageIO.read(new File("inheritance4.png"));
 			JLabel picLabel = new JLabel(new ImageIcon(myPicture));
 	         imagePanel.add(picLabel);
 	      
@@ -136,43 +136,45 @@ public class Quiz3 extends JFrame {
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(266)
-					.addComponent(lblQuiz))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(48)
-					.addComponent(lblIn)
-					.addGap(6)
-					.addComponent(textField, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
-					.addGap(6)
-					.addComponent(lblNewLabel)
-					.addGap(6)
-					.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
-					.addGap(6)
-					.addComponent(label))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(24)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(lblNewLabel_1)
-						.addComponent(lblInterface)
-						.addComponent(lblInheritance)
-						.addComponent(lblGui))
-					.addGap(18)
-					.addComponent(imagePanel, GroupLayout.PREFERRED_SIZE, 417, GroupLayout.PREFERRED_SIZE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(426)
-					.addComponent(lblAnswer)
-					.addGap(8)
-					.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE))
-				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(426)
-					.addComponent(btnHint)
-					.addGap(8)
-					.addComponent(btnCheck))
+						.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+							.addGroup(gl_contentPane.createSequentialGroup()
+								.addGap(48)
+								.addComponent(lblIn)
+								.addGap(6)
+								.addComponent(textField, GroupLayout.PREFERRED_SIZE, 94, GroupLayout.PREFERRED_SIZE)
+								.addGap(6)
+								.addComponent(lblNewLabel)
+								.addGap(6)
+								.addComponent(textField_1, GroupLayout.PREFERRED_SIZE, 86, GroupLayout.PREFERRED_SIZE)
+								.addGap(6)
+								.addComponent(label))
+							.addGroup(gl_contentPane.createSequentialGroup()
+								.addGap(24)
+								.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
+									.addComponent(lblNewLabel_1)
+									.addComponent(lblInterface)
+									.addComponent(lblInheritance)
+									.addComponent(lblGui))
+								.addGap(18)
+								.addComponent(imagePanel, GroupLayout.DEFAULT_SIZE, 601, Short.MAX_VALUE))
+							.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+								.addComponent(lblAnswer)
+								.addGap(18)
+								.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, 66, GroupLayout.PREFERRED_SIZE))
+							.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+								.addComponent(btnHint)
+								.addPreferredGap(ComponentPlacement.UNRELATED)
+								.addComponent(btnCheck)))
+						.addGroup(gl_contentPane.createSequentialGroup()
+							.addGap(305)
+							.addComponent(lblQuiz)))
+					.addContainerGap())
 		);
 		gl_contentPane.setVerticalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
-					.addGap(41)
+					.addGap(44)
 					.addComponent(lblQuiz)
 					.addGap(18)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
@@ -197,17 +199,16 @@ public class Quiz3 extends JFrame {
 							.addComponent(lblInheritance)
 							.addGap(18)
 							.addComponent(lblGui))
-						.addComponent(imagePanel, GroupLayout.PREFERRED_SIZE, 192, GroupLayout.PREFERRED_SIZE))
-					.addGap(20)
+						.addComponent(imagePanel, GroupLayout.DEFAULT_SIZE, 384, Short.MAX_VALUE))
+					.addPreferredGap(ComponentPlacement.UNRELATED)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(lblAnswer))
+					.addGap(18)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addGroup(gl_contentPane.createSequentialGroup()
-							.addGap(3)
-							.addComponent(lblAnswer))
-						.addComponent(textField_2, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-					.addGap(12)
-					.addGroup(gl_contentPane.createParallelGroup(Alignment.LEADING)
-						.addComponent(btnHint)
-						.addComponent(btnCheck)))
+						.addComponent(btnCheck)
+						.addComponent(btnHint))
+					.addGap(31))
 		);
 		contentPane.setLayout(gl_contentPane);
 	}

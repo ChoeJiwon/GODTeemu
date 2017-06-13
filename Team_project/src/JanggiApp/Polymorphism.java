@@ -31,7 +31,7 @@ public class Polymorphism extends JFrame {
     */
    
    /*Running GUI*/
-   public void go() {
+   public void go(){
       EventQueue.invokeLater(new Runnable() {
          public void run() {
             try {

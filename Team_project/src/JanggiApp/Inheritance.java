@@ -52,7 +52,7 @@ public class Inheritance extends JFrame{
    public void inheritance()
    {
       frame = new JFrame("Inheritance");
-      frame.setBounds(100, 100, 920, 650);
+      frame.setBounds(100, 100, 920, 700);
       
       contentPanel = new JPanel();
       
@@ -103,9 +103,11 @@ public class Inheritance extends JFrame{
       frame.getContentPane().add(contentPanel, BorderLayout.NORTH);
       frame.getContentPane().add(imagePanel, BorderLayout.CENTER);
       frame.setBackground(Color.WHITE);
+     
       
       
       frame.setVisible(true);
+      
    }
    
    public void go()
