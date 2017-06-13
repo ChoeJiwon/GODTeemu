@@ -35,11 +35,14 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 
 public class Inheritance extends JFrame{
+	public Inheritance() {
+	}
    JFrame frame;
    JTextArea txt_area;
    JPanel contentPanel;
    JPanel imagePanel;
-   final String content_string = "In object-oriented programming, inheritance is when an object or class is based on another object (prototypal inheritance) or class (class-based inheritance), using the same implementation (inheriting from an object or class: inheriting behavior, programming by difference) or specifying a new implementation to maintain the same behavior (realizing an interface). Such an inherited class is called a subclass of its parent class or super class. It is a mechanism for code reuse and to allow independent extensions of the original software via public classes and interfaces. The relationships of objects or classes through inheritance give rise to a hierarchy.";
+   JLabel picLabel;
+   //final String content_string = "In object-oriented programming, inheritance is when an object or class is based on another object (prototypal inheritance) or class (class-based inheritance), using the same implementation (inheriting from an object or class: inheriting behavior, programming by difference) or specifying a new implementation to maintain the same behavior (realizing an interface). Such an inherited class is called a subclass of its parent class or super class. It is a mechanism for code reuse and to allow independent extensions of the original software via public classes and interfaces. The relationships of objects or classes through inheritance give rise to a hierarchy.";
    JButton btnNext;
    Polymorphism p;
    ImageIcon myPicture1;
@@ -49,17 +52,13 @@ public class Inheritance extends JFrame{
    public void inheritance()
    {
       frame = new JFrame("Inheritance");
-      frame.setBounds(100, 100, 1000, 800);
+      frame.setBounds(100, 100, 920, 650);
       
       contentPanel = new JPanel();
-      JLabel lblInheritance = new JLabel("Inheritance");
-      lblInheritance.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 24));
-      lblInheritance.setForeground(Color.BLUE);
-      lblInheritance.setBackground(KoreanChess.c);
       
       txt_area = new JTextArea();
       txt_area.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 13));   
-      txt_area.setText(content_string);
+      //txt_area.setText(content_string);
       txt_area.setLineWrap(true);
       txt_area.setSize(440, 300);
       txt_area.setBackground(KoreanChess.c);
@@ -79,29 +78,20 @@ public class Inheritance extends JFrame{
       btnNext.setBackground(Color.lightGray);
       
       contentPanel.setBackground(KoreanChess.c);
-      contentPanel.add(lblInheritance);
-      contentPanel.add(txt_area);
       contentPanel.add(btnNext);
             
       imagePanel = new JPanel();
       imagePanel.setBackground(KoreanChess.c);
       
-      JLabel picLabel = new JLabel();
-      JLabel picLabel2=new JLabel();
-      JLabel picLabel3=new JLabel();
+      
+      BufferedImage myPicture;
       
       try {
-         myPicture1 = new ImageIcon(new ImageIcon("reInheritance1.png").getImage().getScaledInstance(494,50, Image.SCALE_DEFAULT));
-         myPicture2=new ImageIcon(new ImageIcon("reInheritance2.png").getImage().getScaledInstance(524,261, Image.SCALE_DEFAULT));
-         myPicture3=new ImageIcon(new ImageIcon("reInheritance3.png").getImage().getScaledInstance(534,261, Image.SCALE_DEFAULT));
          
-         picLabel.setIcon(myPicture1);
-         picLabel2.setIcon(myPicture2);
-         picLabel3.setIcon(myPicture3);
-         
-         imagePanel.add(picLabel);
-         imagePanel.add(picLabel2);
-         imagePanel.add(picLabel3);
+            myPicture = ImageIO.read(new File("inheritance.png"));
+            
+            JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+            imagePanel.add(picLabel);
       
          
       } catch (Exception e) {
