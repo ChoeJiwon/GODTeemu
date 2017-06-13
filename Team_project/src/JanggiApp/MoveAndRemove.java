@@ -22,27 +22,32 @@ public class MoveAndRemove extends JFrame {
 	int x, y, xx, yy, temp_x, temp_y, mx, my, Turn;
 	int[][] location;
 	JPanel pnl;
-	JButton J1,J2,J3,J4,J5 ;
-	JButton C1,C2;
+	JButton J1, J2, J3, J4, J5;
+	JButton C1, C2;
 	JButton J;
 	JButton R1, R2;
 	ScoreFile sf = new ScoreFile();
 	SoundSettingFile ssf = new SoundSettingFile();
+	int temp = 0;
+	int temp2 = 0;
+	Quiz1 q1 = new Quiz1();
+	Quiz3 q3 = new Quiz3();
 
 	String name;
 
 	// If you drag a piece, it moves
 
 	// If a red Piece eat a blue piece, that blue piece get removed
-	public void RedMoveAndRemove(JButton b, String n, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2, JButton j3,
-			JButton j4, JButton j5, JButton c1, JButton c2, JButton j, JButton r1, JButton r2) {
+	public void RedMoveAndRemove(JButton b, String n, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2,
+			JButton j3, JButton j4, JButton j5, JButton c1, JButton c2, JButton j, JButton r1, JButton r2) {
 
 		this.btn = b; // button red piece : jol or jang or sa or cha
-		this.pm = p; // red piece move : jolmove of jangmove or samove or chamove
+		this.pm = p; // red piece move : jolmove of jangmove or samove or
+						// chamove
 		this.location = arr; // red piece location : jol or jang or sa or cha
 		this.pnl = pn; // panel which pieces is located
 		this.J1 = j1; // blue piece jol1
-		this.J2 = j2; // 
+		this.J2 = j2; //
 		this.J3 = j3;
 		this.J4 = j4;
 		this.J5 = j5;
@@ -58,7 +63,10 @@ public class MoveAndRemove extends JFrame {
 				x = btn.getLocation().x;
 				y = btn.getLocation().y;
 				xx = e.getX() - temp_x + btn.getLocation().x;
-				yy = e.getY() - temp_y + btn.getLocation().y;				// when drag piece, its coordinate is assigned.
+				yy = e.getY() - temp_y + btn.getLocation().y; // when drag
+																// piece, its
+																// coordinate is
+																// assigned.
 				mx = pm.movex(x, xx);
 				my = pm.movey(y, yy);
 			}
@@ -66,58 +74,109 @@ public class MoveAndRemove extends JFrame {
 		btn.addMouseListener(new MouseAdapter() {
 			public void mousePressed(MouseEvent e) {
 				temp_x = e.getX();
-				temp_y = e.getY();											// used at mouseDragged.
+				temp_y = e.getY(); // used at mouseDragged.
 			}
 
 			public void mouseReleased(MouseEvent arg0) {
-				// if its piece move is correct, it moves. (move rule, and no same team piece)
+				// if its piece move is correct, it moves. (move rule, and no
+				// same team piece)
 				if (pm.move(location, mx, my, x / 95, y / 95, btn.getBackground(), Board.turn) == true) {
 					if (location[mx][my] != 0) {
 						int dx, dy;
 						dx = mx * 95 + 30;
 						dy = my * 95 + 30;
-						// when some opponent pieces is located where it moves, remove opponent piece.
-						if (location[mx][my] == Board.BJOL) {				
+						// when some opponent pieces is located where it moves,
+						// remove opponent piece.
+						if (location[mx][my] == Board.BJOL) {
 							if (dx == J1.getLocation().x && dy == J1.getLocation().y) {
 								pnl.remove(J1);
 								pnl.repaint();
-								Quiz1 q1 = new Quiz1();
-								q1.go();
+								Board.cnt++;
+								temp = Board.cnt;
+								if (temp == 3) {
+									q1.go();
+								} else if (temp == 6) {
+									q3.go();
+								}
 							}
 							if (dx == J2.getLocation().x && dy == J2.getLocation().y) {
 								pnl.remove(J2);
 								pnl.repaint();
-								Quiz2 q2 = new Quiz2();
-								q2.go();
+								Board.cnt++;
+								temp = Board.cnt;
+								if (temp == 3) {
+									q1.go();
+								} else if (temp == 6) {
+									q3.go();
+								}
 							}
 							if (dx == J3.getLocation().x && dy == J3.getLocation().y) {
 								pnl.remove(J3);
 								pnl.repaint();
-								Quiz3 q3 = new Quiz3();
-								q3.go();
+								Board.cnt++;
+								temp = Board.cnt;
+								if (temp == 3) {
+									q1.go();
+								} else if (temp == 6) {
+									q3.go();
+								}
 							}
 							if (dx == J4.getLocation().x && dy == J4.getLocation().y) {
 								pnl.remove(J4);
 								pnl.repaint();
+								Board.cnt++;
+								temp = Board.cnt;
+								if (temp == 3) {
+									q1.go();
+								} else if (temp == 6) {
+									q3.go();
+								}
 							}
 							if (dx == J5.getLocation().x && dy == J5.getLocation().y) {
 								pnl.remove(J5);
 								pnl.repaint();
+								Board.cnt++;
+								temp = Board.cnt;
+								if (temp == 3) {
+									q1.go();
+								} else if (temp == 6) {
+									q3.go();
+								}
 							}
 						} else if (location[mx][my] == Board.BCHA) {
 							if (dx == C1.getLocation().x && dy == C1.getLocation().y) {
 								pnl.remove(C1);
 								pnl.repaint();
+								Board.cnt++;
+								temp = Board.cnt;
+								if (temp == 3) {
+									q1.go();
+								} else if (temp == 6) {
+									q3.go();
+								}
 							}
 							if (dx == C2.getLocation().x && dy == C2.getLocation().y) {
 								pnl.remove(C2);
 								pnl.repaint();
+								Board.cnt++;
+								temp = Board.cnt;
+								if (temp == 3) {
+									q1.go();
+								} else if (temp == 6) {
+									q3.go();
+								}
 							}
 						} else if (location[mx][my] == Board.BJANG) {
 
 							pnl.remove(J);
 							pnl.repaint();
-
+							Board.cnt++;
+							temp = Board.cnt;
+							if (temp == 3) {
+								q1.go();
+							} else if (temp == 6) {
+								q3.go();
+							}
 							int result = JOptionPane.showConfirmDialog(null,
 									"You catch king! RED Win!\n\nDo you want to save a result?", "END",
 									JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
@@ -134,14 +193,31 @@ public class MoveAndRemove extends JFrame {
 							if (dx == R1.getLocation().x && dy == R1.getLocation().y) {
 								pnl.remove(R1);
 								pnl.repaint();
+								Board.cnt++;
+								temp = Board.cnt;
+								if (temp == 3) {
+									q1.go();
+								} else if (temp == 6) {
+									q3.go();
+								}
 							}
 							if (dx == R2.getLocation().x && dy == R2.getLocation().y) {
 								pnl.remove(R2);
 								pnl.repaint();
+								Board.cnt++;
+								temp = Board.cnt;
+								if (temp == 3) {
+									q1.go();
+								} else if (temp == 6) {
+									q3.go();
+								}
 							}
 						}
+
 					}
-					// piece location is changed. for interaction between all pieces
+
+					// piece location is changed. for interaction between all
+					// pieces
 					if (name.equals("rjol")) {
 						location[mx][my] = Board.RJOL;
 					} else if (name.equals("rcha")) {
@@ -152,10 +228,13 @@ public class MoveAndRemove extends JFrame {
 						location[mx][my] = Board.RJANG;
 					}
 					location[x / 95][y / 95] = 0;
-					btn.setLocation(mx * 95 + 30, my * 95 + 30); 		// piece is located at panel.
+					btn.setLocation(mx * 95 + 30, my * 95 + 30); // piece is
+																	// located
+																	// at panel.
 					x = btn.getLocation().x;
 					y = btn.getLocation().y;
-					if (ssf.DeconductSerializing() == true)				// sound setting is on, play sound 
+					if (ssf.DeconductSerializing() == true) // sound setting is
+															// on, play sound
 						new Sound().PlaySound();
 				}
 			}
@@ -163,8 +242,8 @@ public class MoveAndRemove extends JFrame {
 	}
 
 	// same as RedMoveAndRemove
-	public void BlueMoveAndRemove(JButton b, String n, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2, JButton j3,
-			JButton j4, JButton j5, JButton c1, JButton c2, JButton j, JButton r1, JButton r2) {
+	public void BlueMoveAndRemove(JButton b, String n, PieceMove p, int[][] arr, JPanel pn, JButton j1, JButton j2,
+			JButton j3, JButton j4, JButton j5, JButton c1, JButton c2, JButton j, JButton r1, JButton r2) {
 		this.btn = b;
 		this.pm = p;
 		this.location = arr;
@@ -209,36 +288,92 @@ public class MoveAndRemove extends JFrame {
 							if (dx == J1.getLocation().x && dy == J1.getLocation().y) {
 								pnl.remove(J1);
 								pnl.repaint();
+								Board.cnt2++;
+								temp2 = Board.cnt2;
+								if (temp2 == 3) {
+									q1.go();
+								} else if (temp2 == 6) {
+									q3.go();
+								}
 							}
 							if (dx == J2.getLocation().x && dy == J2.getLocation().y) {
 								pnl.remove(J2);
 								pnl.repaint();
+								Board.cnt2++;
+								temp2 = Board.cnt2;
+								if (temp2 == 3) {
+									q1.go();
+								} else if (temp2 == 6) {
+									q3.go();
+								}
 							}
 							if (dx == J3.getLocation().x && dy == J3.getLocation().y) {
 								pnl.remove(J3);
 								pnl.repaint();
+								Board.cnt2++;
+								temp2 = Board.cnt2;
+								if (temp2 == 3) {
+									q1.go();
+								} else if (temp2 == 6) {
+									q3.go();
+								}
 							}
 							if (dx == J4.getLocation().x && dy == J4.getLocation().y) {
 								pnl.remove(J4);
 								pnl.repaint();
+								Board.cnt2++;
+								temp2 = Board.cnt2;
+								if (temp2 == 3) {
+									q1.go();
+								} else if (temp2 == 6) {
+									q3.go();
+								}
 							}
 							if (dx == J5.getLocation().x && dy == J5.getLocation().y) {
 								pnl.remove(J5);
 								pnl.repaint();
+								Board.cnt2++;
+								temp2 = Board.cnt2;
+								if (temp2 == 3) {
+									q1.go();
+								} else if (temp2 == 6) {
+									q3.go();
+								}
 							}
 						} else if (location[mx][my] == Board.RCHA) {
 							if (dx == C1.getLocation().x && dy == C1.getLocation().y) {
 								pnl.remove(C1);
 								pnl.repaint();
+								Board.cnt2++;
+								temp2 = Board.cnt2;
+								if (temp2 == 3) {
+									q1.go();
+								} else if (temp2 == 6) {
+									q3.go();
+								}
 							}
 							if (dx == C2.getLocation().x && dy == C2.getLocation().y) {
 								pnl.remove(C2);
 								pnl.repaint();
+								Board.cnt2++;
+								temp2 = Board.cnt2;
+								if (temp2 == 3) {
+									q1.go();
+								} else if (temp2 == 6) {
+									q3.go();
+								}
 							}
 						} else if (location[mx][my] == Board.RJANG) {
 
 							pnl.remove(J);
 							pnl.repaint();
+							Board.cnt2++;
+							temp2 = Board.cnt2;
+							if (temp2 == 3) {
+								q1.go();
+							} else if (temp2 == 6) {
+								q3.go();
+							}
 
 							int result = JOptionPane.showConfirmDialog(null,
 									"You catch king! BLUE Win!\n\nDo you want to save a result?", "END",
@@ -255,10 +390,24 @@ public class MoveAndRemove extends JFrame {
 							if (dx == R1.getLocation().x && dy == R1.getLocation().y) {
 								pnl.remove(R1);
 								pnl.repaint();
+								Board.cnt2++;
+								temp2 = Board.cnt2;
+								if (temp2 == 3) {
+									q1.go();
+								} else if (temp2 == 6) {
+									q3.go();
+								}
 							}
 							if (dx == R2.getLocation().x && dy == R2.getLocation().y) {
 								pnl.remove(R2);
 								pnl.repaint();
+								Board.cnt2++;
+								temp2 = Board.cnt2;
+								if (temp2 == 3) {
+									q1.go();
+								} else if (temp2 == 6) {
+									q3.go();
+								}
 							}
 						}
 					}
@@ -277,6 +426,7 @@ public class MoveAndRemove extends JFrame {
 					y = btn.getLocation().y;
 					if (ssf.DeconductSerializing() == true)
 						new Sound().PlaySound();
+					System.out.println(temp2);
 				}
 			}
 		});
