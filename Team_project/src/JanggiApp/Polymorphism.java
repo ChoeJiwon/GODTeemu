@@ -51,7 +51,7 @@ public class Polymorphism extends JFrame {
 	   
 	   /*Make Panel in Polymorphism Frame and decorate Panel(contentPane)*/
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      setBounds(100, 100, 919, 650);
+      setBounds(100, 100, 920, 737);
       contentPane = new JPanel();
       contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
       setContentPane(contentPane);
@@ -89,20 +89,20 @@ public class Polymorphism extends JFrame {
       /*set contentpane layout(group layout) and add button in contentpane*/
       GroupLayout gl_contentPane = new GroupLayout(contentPane);
       gl_contentPane.setHorizontalGroup(
-      	gl_contentPane.createParallelGroup(Alignment.TRAILING)
-      		.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
+      	gl_contentPane.createParallelGroup(Alignment.LEADING)
+      		.addGroup(gl_contentPane.createSequentialGroup()
       			.addGap(386)
       			.addComponent(btnNewButton)
-      			.addContainerGap(403, Short.MAX_VALUE))
-      		.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
-      			.addComponent(imagePanel, GroupLayout.DEFAULT_SIZE, 897, Short.MAX_VALUE)
+      			.addContainerGap(404, Short.MAX_VALUE))
+      		.addGroup(gl_contentPane.createSequentialGroup()
+      			.addComponent(imagePanel, GroupLayout.DEFAULT_SIZE, 898, Short.MAX_VALUE)
       			.addGap(12))
       );
       gl_contentPane.setVerticalGroup(
-      	gl_contentPane.createParallelGroup(Alignment.LEADING)
-      		.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
-      			.addComponent(imagePanel, GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
-      			.addGap(18)
+      	gl_contentPane.createParallelGroup(Alignment.TRAILING)
+      		.addGroup(gl_contentPane.createSequentialGroup()
+      			.addComponent(imagePanel, GroupLayout.DEFAULT_SIZE, 590, Short.MAX_VALUE)
+      			.addPreferredGap(ComponentPlacement.RELATED)
       			.addComponent(btnNewButton)
       			.addContainerGap())
       );
