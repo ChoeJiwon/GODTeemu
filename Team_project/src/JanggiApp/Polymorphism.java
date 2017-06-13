@@ -47,16 +47,25 @@ public class Polymorphism extends JFrame {
     */
    public Polymorphism() {
       setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-      setBounds(100, 100, 919, 646);
+      setBounds(100, 100, 919, 650);
       contentPane = new JPanel();
       contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
       setContentPane(contentPane);
       contentPane.setBackground(KoreanChess.c);
       
-      JLabel lblPolymorphism = new JLabel("Polymorphism");
-      lblPolymorphism.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 24));
-      lblPolymorphism.setForeground(Color.BLUE);
-      lblPolymorphism.setBackground(KoreanChess.c);
+      JPanel imagePanel = new JPanel();
+      imagePanel.setBackground(KoreanChess.c);
+      
+      BufferedImage myPicture;
+      try {
+         myPicture = ImageIO.read(new File("polymorphism.png"));
+         
+         JLabel picLabel = new JLabel(new ImageIcon(myPicture));
+         imagePanel.add(picLabel);
+      } catch (IOException e) {
+         // TODO Auto-generated catch block
+         e.printStackTrace();
+      }
       
       JButton btnNewButton = new JButton("Start Janggi!");
       btnNewButton.addActionListener(new ActionListener() {
@@ -66,55 +75,24 @@ public class Polymorphism extends JFrame {
             i.go();
          }
       });
-      
-      JTextArea txtrInProgrammingLanguages = new JTextArea();
-      txtrInProgrammingLanguages.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 13));
-      txtrInProgrammingLanguages.setBackground(KoreanChess.c);
-      txtrInProgrammingLanguages.setText("In programming languages and type theory, polymorphism (from Greek polys, \\\"many, much\\\" and, morphe, \\\"form, shape\\\") is the provision of a single interface to entities of different types. A polymorphic type is one whose operations can also be applied to values of some other type, or types. There are several fundamentally different kinds of polymorphism.");
-      txtrInProgrammingLanguages.setLineWrap(true);
-      txtrInProgrammingLanguages.setEditable(false);
-      
-      JPanel imagePanel = new JPanel();
-      imagePanel.setBackground(KoreanChess.c);
-      
-      BufferedImage myPicture;
-      BufferedImage myPicture2;
-      try {
-         myPicture = ImageIO.read(new File("polymorphism1.png"));
-         myPicture2 = ImageIO.read(new File("polymorphism2.png"));
-         
-         JLabel picLabel = new JLabel(new ImageIcon(myPicture));
-         JLabel picLabel2 = new JLabel(new ImageIcon(myPicture2));
-         imagePanel.add(picLabel);
-         imagePanel.add(picLabel2);
-      } catch (IOException e) {
-         // TODO Auto-generated catch block
-         e.printStackTrace();
-      }
       GroupLayout gl_contentPane = new GroupLayout(contentPane);
       gl_contentPane.setHorizontalGroup(
-         gl_contentPane.createParallelGroup(Alignment.LEADING)
-            .addGroup(gl_contentPane.createSequentialGroup()
-               .addContainerGap(268, Short.MAX_VALUE)
-               .addComponent(lblPolymorphism)
-               .addGap(213)
-               .addComponent(btnNewButton)
-               .addGap(40))
-            .addComponent(txtrInProgrammingLanguages, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(imagePanel, Alignment.TRAILING, GroupLayout.DEFAULT_SIZE, 817, Short.MAX_VALUE)
+      	gl_contentPane.createParallelGroup(Alignment.TRAILING)
+      		.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
+      			.addGap(386)
+      			.addComponent(btnNewButton)
+      			.addContainerGap(403, Short.MAX_VALUE))
+      		.addGroup(Alignment.LEADING, gl_contentPane.createSequentialGroup()
+      			.addComponent(imagePanel, GroupLayout.DEFAULT_SIZE, 897, Short.MAX_VALUE)
+      			.addGap(12))
       );
       gl_contentPane.setVerticalGroup(
-         gl_contentPane.createParallelGroup(Alignment.LEADING)
-            .addGroup(gl_contentPane.createSequentialGroup()
-               .addContainerGap()
-               .addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
-                  .addComponent(btnNewButton)
-                  .addComponent(lblPolymorphism))
-               .addGap(18)
-               .addComponent(txtrInProgrammingLanguages, GroupLayout.PREFERRED_SIZE, 106, GroupLayout.PREFERRED_SIZE)
-               .addPreferredGap(ComponentPlacement.RELATED)
-               .addComponent(imagePanel, GroupLayout.DEFAULT_SIZE, 404, Short.MAX_VALUE)
-               .addContainerGap())
+      	gl_contentPane.createParallelGroup(Alignment.LEADING)
+      		.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+      			.addComponent(imagePanel, GroupLayout.DEFAULT_SIZE, 565, Short.MAX_VALUE)
+      			.addGap(18)
+      			.addComponent(btnNewButton)
+      			.addContainerGap())
       );
       contentPane.setLayout(gl_contentPane);
    }
