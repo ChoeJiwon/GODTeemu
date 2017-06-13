@@ -135,7 +135,7 @@ public class Quiz3 extends JFrame {
 	      imagePanel.setBackground(KoreanChess.c);
 	      BufferedImage myPicture;
 	      try {
-			myPicture = ImageIO.read(new File("Quiz\\inheritance4.png"));
+			myPicture = ImageIO.read(new File("Quiz\\inheritance1.png"));
 			JLabel picLabel = new JLabel(new ImageIcon(myPicture));
 	         imagePanel.add(picLabel);
 	      
