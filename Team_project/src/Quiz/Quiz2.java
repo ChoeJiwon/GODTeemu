@@ -64,22 +64,23 @@ public class Quiz2 extends JFrame {
     * Create the frame.
     */
    public Quiz2() {
+	   /*Frame setting*/
       setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
       setBounds(100, 100, 839, 702);
+      
+      /*Make Panel in Quiz1 Frame and decorate Panel(contentPane)*/
       contentPane = new JPanel();
       contentPane.setBackground(KoreanChess.c);
       contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
       setContentPane(contentPane);
       
+      /*Make label in Panel(contentPane)*/
       JLabel lblQuiz = new JLabel("Quiz2");
       lblQuiz.setForeground(Color.BLUE);
       lblQuiz.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 24));
       
-      textField = new JTextField();
-      textField.setHorizontalAlignment(SwingConstants.CENTER);
-      textField.setColumns(10);
-      textField.setEditable(false);
       
+      /*Make TextField in Panel(contentPane)*/
       JLabel lblNewLabel = new JLabel("means that we hide instance variables and provide methods for accessing and changing them.");
       lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
       
@@ -91,9 +92,17 @@ public class Quiz2 extends JFrame {
       
       lblGui = new JLabel("4. gui");
       
+      /*Make TextField in Panel(contentPane)*/
+      textField = new JTextField();
+      textField.setHorizontalAlignment(SwingConstants.CENTER);
+      textField.setColumns(10);
+      textField.setEditable(false);
+      
       textField_1 = new JTextField();
       textField_1.setColumns(10);
       
+      
+      /*Make Button in Panel(contentPane)*/
       lblAnswer = new JLabel("Answer: ");
       
       btnCheck = new JButton("Check");
@@ -101,14 +110,14 @@ public class Quiz2 extends JFrame {
          public void actionPerformed(ActionEvent e) {
             try{
                    a.setAnswer(Integer.parseInt(textField_1.getText()));
-                   if(a.getAnswer()==1){
+                   if(a.getAnswer()==1){   //You select correct answer
                       JOptionPane.showMessageDialog(null, "Your answer is correct!");
                       dispose();
                    }
-                   else{
+                   else{  //You select wrong answer
                       JOptionPane.showMessageDialog(null, "Your answer is wrong");
                    }
-                }catch(NumberFormatException e2){
+                }catch(NumberFormatException e2){  //You don't write number
                    JOptionPane.showMessageDialog(null, "Answer must be written in number!!");
                 }
             }
@@ -120,11 +129,12 @@ public class Quiz2 extends JFrame {
       JButton btnHint = new JButton("Hint");
       btnHint.addActionListener(new ActionListener() {
       	public void actionPerformed(ActionEvent e) {
-      		imagePanel.setVisible(true);
+      		imagePanel.setVisible(true);   //When you push "Hint" button, imagePanel is setVisble!
       	}
       });
       
 
+      /*Make Panel in Quiz1 Frame and decorate,set Panel(imagePanel)*/
 	  imagePanel = new JPanel();
       imagePanel.setBackground(KoreanChess.c);
       BufferedImage myPicture;
@@ -139,6 +149,9 @@ public class Quiz2 extends JFrame {
 	}
          
       imagePanel.setVisible(false);
+      
+      
+      /*Add label,textField,Button to Panel*/
       GroupLayout gl_contentPane = new GroupLayout(contentPane);
       gl_contentPane.setHorizontalGroup(
       	gl_contentPane.createParallelGroup(Alignment.LEADING)

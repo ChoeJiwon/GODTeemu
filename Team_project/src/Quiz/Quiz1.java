@@ -63,20 +63,21 @@ public class Quiz1 extends JFrame {
     * Create the frame.
     */
    public Quiz1() {
+	  /*Frame setting*/
       setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
       setBounds(100, 100, 696, 478);
+      
+      /*Make Panel in Quiz1 Frame and decorate Panel(contentPane)*/
       contentPane = new JPanel();
       contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
       contentPane.setBackground(KoreanChess.c);
       setContentPane(contentPane);
       
+      /*Make label in Panel(contentPane)*/
       JLabel lblQuiz = new JLabel("Quiz1");
       lblQuiz.setForeground(Color.BLUE);
       lblQuiz.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 24));
       
-      textField = new JTextField();
-      textField.setColumns(10);
-      textField.setEditable(false);
       
       lblIs = new JLabel("means that a reference variable and the object it refers to can be different types.");
       
@@ -90,23 +91,31 @@ public class Quiz1 extends JFrame {
       
       lblanswerMustBe = new JLabel("(Answer must be written in number!!)");
       
+      
+      /*Make TextField in Panel(contentPane)*/
+      textField = new JTextField();
+      textField.setColumns(10);
+      textField.setEditable(false);
+      
       textField_1 = new JTextField();
       textField_1.setColumns(10);
       JLabel lblAnswer = new JLabel("Answer :");
       
+      
+      /*Make Button in Panel(contentPane)*/
       btnCheck = new JButton("Check");
       btnCheck.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             try{
                 a.setAnswer(Integer.parseInt(textField_1.getText()));
-                if(a.getAnswer()==2){
+                if(a.getAnswer()==2){   //You select correct answer
                    JOptionPane.showMessageDialog(null, "Your answer is correct!");
                    dispose();
                 }
-                else{
+                else{ //You select wrong answer
                  JOptionPane.showMessageDialog(null, "Your answer is wrong");
                 }
-             }catch(NumberFormatException e2){
+             }catch(NumberFormatException e2){  //You don't write number
                 JOptionPane.showMessageDialog(null, "Answer must be written in number!!");
              }
          }
@@ -115,11 +124,12 @@ public class Quiz1 extends JFrame {
       JButton btnHint = new JButton("Hint");
       btnHint.addActionListener(new ActionListener() {
       	public void actionPerformed(ActionEvent e) {
-      		imagePanel.setVisible(true);
+      		imagePanel.setVisible(true);         //When you push "Hint" button, imagePanel is setVisble!
       	}
       });
       
 
+      /*Make Panel in Quiz1 Frame and decorate,set Panel(imagePanel)*/
 	  imagePanel = new JPanel();
       imagePanel.setBackground(KoreanChess.c);
       BufferedImage myPicture;
@@ -133,6 +143,9 @@ public class Quiz1 extends JFrame {
 		e1.printStackTrace();
 	}
       imagePanel.setVisible(false);
+      
+      
+      /*Add label,textField,Button to Panel*/
       GroupLayout gl_contentPane = new GroupLayout(contentPane);
       gl_contentPane.setHorizontalGroup(
       	gl_contentPane.createParallelGroup(Alignment.TRAILING)
