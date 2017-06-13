@@ -39,6 +39,7 @@ public class Quiz3 extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+	/*Quiz3 is about inheritance*/
 	public void go() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {

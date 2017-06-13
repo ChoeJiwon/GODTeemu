@@ -45,6 +45,7 @@ public class Quiz1 extends JFrame {
    /**
     * Launch the application.
     */
+   /*Quiz1 is about polymorphism*/
    public void go() {
       EventQueue.invokeLater(new Runnable() {
          public void run() {

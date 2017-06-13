@@ -46,6 +46,7 @@ public class Quiz2 extends JFrame {
    /**
     * Launch the application.
     */
+   /*Quiz2 is about encapsulation*/
    public void go() {
       EventQueue.invokeLater(new Runnable() {
          public void run() {
