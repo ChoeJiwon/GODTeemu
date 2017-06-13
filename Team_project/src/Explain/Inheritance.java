@@ -62,7 +62,7 @@ public class Inheritance extends JFrame {
       /*image to explain inheritance and insert an image*/
       BufferedImage myPicture;
       try {
-         myPicture = ImageIO.read(new File("inheritance.png"));
+         myPicture = ImageIO.read(new File("Explain\\inheritance.png"));
          
          JLabel picLabel = new JLabel(new ImageIcon(myPicture));
          imagePanel.add(picLabel);

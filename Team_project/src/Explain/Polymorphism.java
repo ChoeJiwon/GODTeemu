@@ -62,7 +62,7 @@ public class Polymorphism extends JFrame {
       /*image to explain polymorphism and insert an image*/
       BufferedImage myPicture;
       try {
-         myPicture = ImageIO.read(new File("polymorphism.png"));
+         myPicture = ImageIO.read(new File("Explain\\polymorphism.png"));
          
          JLabel picLabel = new JLabel(new ImageIcon(myPicture));
          imagePanel.add(picLabel);

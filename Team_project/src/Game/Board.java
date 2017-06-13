@@ -11,32 +11,32 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 public class Board extends JFrame {      
-   private JButton rjol1 = new JButton(new ImageIcon("red_jol.png"));
-   private JButton rjol2 = new JButton(new ImageIcon("red_jol.png"));
-   private JButton rjol3 = new JButton(new ImageIcon("red_jol.png"));
-   private JButton rjol4 = new JButton(new ImageIcon("red_jol.png"));
-   private JButton rjol5 = new JButton(new ImageIcon("red_jol.png"));
+   private JButton rjol1 = new JButton(new ImageIcon("Piece\\red_jol.png"));
+   private JButton rjol2 = new JButton(new ImageIcon("Piece\\red_jol.png"));
+   private JButton rjol3 = new JButton(new ImageIcon("Piece\\red_jol.png"));
+   private JButton rjol4 = new JButton(new ImageIcon("Piece\\red_jol.png"));
+   private JButton rjol5 = new JButton(new ImageIcon("Piece\\red_jol.png"));
    
-   private JButton bjol1 = new JButton(new ImageIcon("blue_jol.png"));
-   private JButton bjol2 = new JButton(new ImageIcon("blue_jol.png"));
-   private JButton bjol3 = new JButton(new ImageIcon("blue_jol.png"));
-   private JButton bjol4 = new JButton(new ImageIcon("blue_jol.png"));
-   private JButton bjol5 = new JButton(new ImageIcon("blue_jol.png"));
+   private JButton bjol1 = new JButton(new ImageIcon("Piece\\blue_jol.png"));
+   private JButton bjol2 = new JButton(new ImageIcon("Piece\\blue_jol.png"));
+   private JButton bjol3 = new JButton(new ImageIcon("Piece\\blue_jol.png"));
+   private JButton bjol4 = new JButton(new ImageIcon("Piece\\blue_jol.png"));
+   private JButton bjol5 = new JButton(new ImageIcon("Piece\\blue_jol.png"));
    
-   private JButton rjang = new JButton(new ImageIcon("red_jang.png"));
-   private JButton bjang = new JButton(new ImageIcon("blue_jang.png"));
+   private JButton rjang = new JButton(new ImageIcon("Piece\\red_jang.png"));
+   private JButton bjang = new JButton(new ImageIcon("Piece\\blue_jang.png"));
    
-   private JButton bcha1 = new JButton(new ImageIcon("blue_cha.png"));
-   private JButton bcha2 = new JButton(new ImageIcon("blue_cha.png"));
+   private JButton bcha1 = new JButton(new ImageIcon("Piece\\blue_cha.png"));
+   private JButton bcha2 = new JButton(new ImageIcon("Piece\\blue_cha.png"));
    
-   private JButton rcha1 = new JButton(new ImageIcon("red_cha.png"));
-   private JButton rcha2 = new JButton(new ImageIcon("red_cha.png"));
+   private JButton rcha1 = new JButton(new ImageIcon("Piece\\red_cha.png"));
+   private JButton rcha2 = new JButton(new ImageIcon("Piece\\red_cha.png"));
    
-   private JButton rsa1 = new JButton(new ImageIcon("red_sa.png"));
-   private JButton rsa2 = new JButton(new ImageIcon("red_sa.png"));
+   private JButton rsa1 = new JButton(new ImageIcon("Piece\\red_sa.png"));
+   private JButton rsa2 = new JButton(new ImageIcon("Piece\\red_sa.png"));
    
-   private JButton bsa1 = new JButton(new ImageIcon("blue_sa.png"));
-   private JButton bsa2 = new JButton(new ImageIcon("blue_sa.png"));
+   private JButton bsa1 = new JButton(new ImageIcon("Piece\\blue_sa.png"));
+   private JButton bsa2 = new JButton(new ImageIcon("Piece\\blue_sa.png"));
    
    private JPanel contentPane;
    
@@ -100,7 +100,7 @@ static int turn=0;         //variable for Checking turn
       setSize(890, 1000);
       contentPane = new JPanel() {
          public void paintComponent(Graphics g) {
-            Image img = new ImageIcon("board.png").getImage();
+            Image img = new ImageIcon("Piece\\board.png").getImage();
             g.drawImage(img, 0, 0, null);
          }
       };

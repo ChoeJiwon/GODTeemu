@@ -124,7 +124,7 @@ public class Quiz1 extends JFrame {
       imagePanel.setBackground(KoreanChess.c);
       BufferedImage myPicture;
       try {
-		myPicture = ImageIO.read(new File("polymorphism1.png"));
+		myPicture = ImageIO.read(new File("Quiz\\polymorphism1.png"));
 		JLabel picLabel = new JLabel(new ImageIcon(myPicture));
          imagePanel.add(picLabel);
       
