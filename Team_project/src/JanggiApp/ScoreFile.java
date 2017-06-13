@@ -11,9 +11,12 @@ import java.io.ObjectOutputStream;
 import javax.swing.JOptionPane;
 
 public class ScoreFile {
-
+	
+	/*Make Object(PlayerScore)*/ 
 	private PlayerScore s = new PlayerScore();
 
+	
+	/*store score in texfile*/
 	public void storeScore(int Bs, int Rs) {
 		try {
 			FileOutputStream fos = new FileOutputStream("score.txt");
@@ -30,7 +33,8 @@ public class ScoreFile {
 			e.printStackTrace();
 		}
 	}
-
+	
+	
 	public int readRScore() {
 		
 		int b = 0;

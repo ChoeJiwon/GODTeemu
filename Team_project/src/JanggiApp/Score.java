@@ -41,6 +41,7 @@ public class Score extends JFrame {
 	/**
 	 * Launch the application.
 	 */
+	/*Running GUI*/
 	public void go() {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -52,22 +53,25 @@ public class Score extends JFrame {
 				}
 			}
 		});
-	}
+	}   
 
 	/**
 	 * Create the frame.
 	 */
 	public Score() {
-		
+	
 		setTitle("Score");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 594, 568);
+		
+		/*Make Panel in Score Frame and decorate Panel(contentPane)*/
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setBackground(KoreanChess.c);
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
+		
+		/*Make label in Panel(contentPane)*/
 		lblgame = new JLabel("OOP WITH GAME");
 		lblgame.setForeground(new Color(160, 82, 45));
 		lblgame.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 50));
@@ -82,7 +86,15 @@ public class Score extends JFrame {
 		label = new JLabel(":");
 		label.setBounds(288, 162, 14, 51);
 		label.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 23));
+		
+		JLabel lblRed = new JLabel("RED");
+		lblRed.setBounds(88, 179, 29, 18);
 
+		JLabel lblBlue = new JLabel("BLUE");
+		lblBlue.setBounds(464, 179, 37, 18);
+		
+		
+		/*Make TextField in Panel(contentPane)*/
 		Btext = new JTextField();
 		Btext.setBounds(316, 176, 116, 24);
 		Btext.setColumns(10);
@@ -90,7 +102,7 @@ public class Score extends JFrame {
 		Rtext = new JTextField();
 		Rtext.setBounds(149, 176, 116, 24);
 		Rtext.setColumns(10);
-
+		
 		btnCheckScore = new JButton("Check Score");
 		btnCheckScore.setBounds(148, 275, 117, 27);
 		btnCheckScore.addActionListener(new ActionListener() {
@@ -105,13 +117,9 @@ public class Score extends JFrame {
 			}
 
 		});
-
-		JLabel lblRed = new JLabel("RED");
-		lblRed.setBounds(88, 179, 29, 18);
-
-		JLabel lblBlue = new JLabel("BLUE");
-		lblBlue.setBounds(464, 179, 37, 18);
 		
+		
+		/*Make Button in Panel(contentPane)*/
 		JButton Reset = new JButton("Reset");
 		Reset.setBounds(333, 275, 99, 27);
 		Reset.addActionListener(new ActionListener() {
@@ -121,6 +129,19 @@ public class Score extends JFrame {
 				
 			}
 		});
+		
+		
+		JButton btnStudyJava = new JButton("Study JAVA");
+		btnStudyJava.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Encapsulation en=new Encapsulation();
+				en.go();
+			}
+		});
+		btnStudyJava.setBounds(220, 382, 135, 27);
+		
+		
+		/*Add label,textField,Button to Panel(contentPane)*/
 		contentPane.setLayout(null);
 		contentPane.add(lblgame);
 		contentPane.add(lblRed);
@@ -131,15 +152,6 @@ public class Score extends JFrame {
 		contentPane.add(lblBlue);
 		contentPane.add(Reset);
 		contentPane.add(lblintro);
-		
-		JButton btnStudyJava = new JButton("Study JAVA");
-		btnStudyJava.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				Encapsulation en=new Encapsulation();
-				en.go();
-			}
-		});
-		btnStudyJava.setBounds(220, 382, 135, 27);
 		contentPane.add(btnStudyJava);
 	}
 }
