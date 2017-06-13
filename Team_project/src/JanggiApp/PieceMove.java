@@ -4,7 +4,7 @@ import java.awt.Color;
 
 public abstract class PieceMove {
    public abstract int movex(int currentx, int laterx);   //x's moving(current x, later x)
-   public abstract int movey(int currentx, int latery);   //y's moving(current x, later x)
+   public abstract int movey(int currenty, int latery);   //y's moving(current x, later x)
    public abstract boolean move(int location[][], int x, int y,int currentx,int currenty,Color c,int turn);   
    /*
     * 'location[][]' is coordinate of piece
@@ -16,3 +16,4 @@ public abstract class PieceMove {
 }      
 //Every Move's superclass (abstract class)
 //Polymorphism
+
