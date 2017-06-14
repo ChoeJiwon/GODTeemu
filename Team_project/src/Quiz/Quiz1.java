@@ -79,7 +79,7 @@ public class Quiz1 extends JFrame {
       lblQuiz.setFont(new Font("Copperplate Gothic Light", Font.PLAIN, 24));
       
       
-      lblIs = new JLabel("means that a reference variable and the object that refers to can be different types.");
+      lblIs = new JLabel("means that a reference variable and the object ,it refers to can be different types.");
       
       lblInheritance = new JLabel("1. inheritance");
       
