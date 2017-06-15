@@ -22,6 +22,7 @@ public class Score extends JFrame {
 	JButton btnCheckScore;
 	private JTextField Btext;
 	private JTextField Rtext;
+	private KoreanChess kc=new KoreanChess();;
 
 	/**
 	 * Launch the application.
@@ -138,5 +139,15 @@ public class Score extends JFrame {
 		contentPane.add(Reset);
 		contentPane.add(lblintro);
 		contentPane.add(btnStudyJava);
+		
+		JButton btnBack = new JButton("Back");
+		btnBack.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				dispose();
+				kc.go();
+			}
+		});
+		btnBack.setBounds(14, 420, 105, 27);
+		contentPane.add(btnBack);
 	}
 }
