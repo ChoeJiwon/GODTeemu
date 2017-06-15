@@ -107,7 +107,7 @@ public class Quiz1 extends JFrame {
       btnCheck.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             try{
-                a.setAnswer(Integer.parseInt(textField_1.getText()));
+                a.setAnswer(Integer.parseInt(textField_1.getText()), true);
                 if(a.getAnswer()==2){   //You select correct answer
                    JOptionPane.showMessageDialog(null, "Your answer is correct!");
                    dispose();

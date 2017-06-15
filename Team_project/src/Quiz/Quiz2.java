@@ -43,6 +43,7 @@ public class Quiz2 extends JFrame {
    private Answer a=new Answer();
    private JButton btnHint;
    private JPanel imagePanel;
+
    /**
     * Launch the application.
     */
@@ -109,7 +110,7 @@ public class Quiz2 extends JFrame {
       btnCheck.addActionListener(new ActionListener() {
          public void actionPerformed(ActionEvent e) {
             try{
-                   a.setAnswer(Integer.parseInt(textField_1.getText()));
+                   a.setAnswer(Integer.parseInt(textField_1.getText()),false);
                    if(a.getAnswer()==1){   //You select correct answer
                       JOptionPane.showMessageDialog(null, "Your answer is correct!");
                       dispose();

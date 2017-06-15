@@ -109,7 +109,7 @@ public class Quiz3 extends JFrame {
 		btnCheck.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				try {
-					a.setAnswer(Integer.parseInt(textField_2.getText()));
+					a.setAnswer(Integer.parseInt(textField_2.getText()),true);
 					if (a.getAnswer() == 3) {  //You select correct answer
 						JOptionPane.showMessageDialog(null, "Your answer is correct!");
 						dispose();
