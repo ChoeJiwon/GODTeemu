@@ -20,7 +20,7 @@ public class ScoreFile {
 	public void storeScore(int Bs, int Rs) {
 		try {
 			FileOutputStream fos = new FileOutputStream("score.txt");
-			BufferedOutputStream bos = new BufferedOutputStream(fos);
+			BufferedOutputStream bos=new BufferedOutputStream(fos);
 			ObjectOutputStream out = new ObjectOutputStream(bos);
 
 			s.setBscore(Bs);
@@ -41,7 +41,7 @@ public class ScoreFile {
 		int r = 0;  //red score (initial state) 
 		try {
 			FileInputStream fis = new FileInputStream("score.txt");
-			BufferedInputStream bis = new BufferedInputStream(fis);
+			BufferedInputStream bis=new BufferedInputStream(fis);
 			ObjectInputStream in = new ObjectInputStream(bis);
 			
 			s = (PlayerScore) in.readObject();
@@ -61,7 +61,7 @@ public class ScoreFile {
 		int b = 0;   //blue score(initial state)
 		try {
 			FileInputStream fis = new FileInputStream("score.txt");
-			BufferedInputStream bis = new BufferedInputStream(fis);
+			BufferedInputStream bis=new BufferedInputStream(fis);
 			ObjectInputStream in = new ObjectInputStream(bis);
 			
 			s = (PlayerScore) in.readObject();
